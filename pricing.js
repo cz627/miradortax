@@ -69,7 +69,8 @@ const ZUSATZ_OPTIONS = [{
   kind: "addon",
   price: 249,
   once: false,
-  priceLabel: "+249 € / Jahr",
+  unit: "pro Anmeldung",
+  priceLabel: "+249 € pro Anmeldung",
   info: "Nur relevant, wenn Ihre HoldCo Dividenden an ihre Gesellschafter ausschüttet. Erfordert zusätzliche Steuerformulare und aktuell noch manuelle Arbeit. Keine Gebühr bei Rückzahlung oder Vergabe von Gesellschafterdarlehen."
 }, {
   key: "beratung",
@@ -87,6 +88,7 @@ const ADDONS = ZUSATZ_OPTIONS.filter(o => o.kind === "addon").map(o => ({
   t: o.t,
   price: o.price,
   once: o.once,
+  unit: o.unit,
   d: o.info
 }));
 const REFERRAL_DISCOUNT = 250;

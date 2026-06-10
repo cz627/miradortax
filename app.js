@@ -96,7 +96,7 @@ function App() {
       img.src = dark ? "assets/logo-light.png" : "assets/logo-dark.png";
     });
   }, [t]);
-  const priceFrom = "600";
+  const priceFrom = "499";
   const page = typeof window !== "undefined" && window.PAGE || "home";
   function renderPage() {
     switch (page) {

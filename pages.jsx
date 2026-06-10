@@ -94,7 +94,7 @@ function WechselSection() {
         </div>
         <div className="wechsel">
           <div className="wechsel__text reveal">
-            <p>Informieren Sie Ihre bisherige Steuerberatung darüber, dass Sie die Zusammenarbeit in steuerlichen Angelegenheiten künftig über Mirador Tax organisieren. Über unseren vorbereiteten E-Mail-Entwurf stößen Sie den Wechsel mit wenigen Klicks an – wir begleiten Sie anschließend durch den gesamten Prozess und kümmern uns um die nächsten Schritte für einen reibungslosen Übergang.</p>
+            <p>Informieren Sie Ihre bisherige Steuerberatung darüber, dass Sie die Zusammenarbeit in steuerlichen Angelegenheiten künftig über Mirador Tax organisieren. Über unseren vorbereiteten E-Mail-Entwurf stoßen Sie den Wechsel mit wenigen Klicks an – wir begleiten Sie anschließend durch den gesamten Prozess und kümmern uns um die nächsten Schritte für einen reibungslosen Übergang.</p>
             <div className="wechsel__highlight">
               <Icon name="doc" size={18} sw={2} />
               <span>Wichtig: Wir benötigen den <b>DATEV-Datenexport der Gesellschaft für die Vorjahre</b> sowie die Steuerbescheide des Vorjahres.</span>
@@ -276,7 +276,7 @@ function PreisePage({ onSurvey, priceFrom }) {
               <div key={a.key} className="addon-card reveal">
                 <div className="addon-card__top">
                   <h3 className="addon-card__t">{a.t}</h3>
-                  <div className="addon-card__price"><span className="addon-card__amt">{fmtEUR(a.price)}&nbsp;€</span><span className="addon-card__per">{a.once ? "einmalig" : "/ Jahr"}</span></div>
+                  <div className="addon-card__price"><span className="addon-card__amt">{fmtEUR(a.price)}&nbsp;€</span><span className="addon-card__per">{a.once ? "einmalig" : (a.unit || "/ Jahr")}</span></div>
                 </div>
                 <p className="addon-card__d">{a.d}</p>
               </div>

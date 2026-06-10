@@ -273,19 +273,19 @@ function Leistungen({
     n: "02",
     t: "Jahresabschluss",
     d: "Bilanz, GuV und Anhang nach HGB – Software wurde von Steuerexpert:innen entwickelt, geprüft und gewartet.",
-    list: ["Bilanz & GuV nach HGB", "E-Bilanz ans Finanzamt", "Anhang & Anlageverzeichnis"]
+    list: ["Bilanz & GuV nach HGB", "E-Bilanz ans Finanzamt", "Anlageverzeichnis"]
   }, {
     ic: "upload",
     n: "03",
     t: "Offenlegung",
     d: "Elektronische Einreichung beim Bundesanzeiger – pünktlich und ohne Bußgeldrisiko.",
-    list: ["Bundesanzeiger-Einreichung", "Größenklassen-Prüfung", "Fristenüberwachung"]
+    list: ["Bundesanzeiger-Einreichung", "Größenklassen-Prüfung", "Fristenerinnerungen"]
   }, {
     ic: "receipt",
     n: "04",
     t: "Steuererklärung",
     d: "Körperschaft-, Gewerbe- und Umsatzsteuer – vollständig erstellt und elektronisch übermittelt.",
-    list: ["KSt, GewSt & USt", "ELSTER-Übermittlung", "Bescheidprüfung inklusive"]
+    list: ["KSt, GewSt & USt", "ELSTER-Übermittlung", "Ablage für Steuererklärungen"]
   }];
   return /*#__PURE__*/React.createElement("section", {
     className: "section",

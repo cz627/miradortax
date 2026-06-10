@@ -143,9 +143,9 @@ function Logos() {
 function Leistungen({ hideHead }) {
   const cards = [
   { ic: "book", n: "01", t: "Buchhaltung", d: "Laufende Finanzbuchhaltung für Ihre Holding – Kontoauszüge werden automatisch importiert; Transaktionen werden automatisch kategorisiert.", list: ["Bank- & Depot-Upload", "Beteiligungen & Darlehen", "Alle Beteiligungen in einer Übersicht"] },
-  { ic: "doc", n: "02", t: "Jahresabschluss", d: "Bilanz, GuV und Anhang nach HGB – Software wurde von Steuerexpert:innen entwickelt, geprüft und gewartet.", list: ["Bilanz & GuV nach HGB", "E-Bilanz ans Finanzamt", "Anhang & Anlageverzeichnis"] },
-  { ic: "upload", n: "03", t: "Offenlegung", d: "Elektronische Einreichung beim Bundesanzeiger – pünktlich und ohne Bußgeldrisiko.", list: ["Bundesanzeiger-Einreichung", "Größenklassen-Prüfung", "Fristenüberwachung"] },
-  { ic: "receipt", n: "04", t: "Steuererklärung", d: "Körperschaft-, Gewerbe- und Umsatzsteuer – vollständig erstellt und elektronisch übermittelt.", list: ["KSt, GewSt & USt", "ELSTER-Übermittlung", "Bescheidprüfung inklusive"] }];
+  { ic: "doc", n: "02", t: "Jahresabschluss", d: "Bilanz, GuV und Anhang nach HGB – Software wurde von Steuerexpert:innen entwickelt, geprüft und gewartet.", list: ["Bilanz & GuV nach HGB", "E-Bilanz ans Finanzamt", "Anlageverzeichnis"] },
+  { ic: "upload", n: "03", t: "Offenlegung", d: "Elektronische Einreichung beim Bundesanzeiger – pünktlich und ohne Bußgeldrisiko.", list: ["Bundesanzeiger-Einreichung", "Größenklassen-Prüfung", "Fristenerinnerungen"] },
+  { ic: "receipt", n: "04", t: "Steuererklärung", d: "Körperschaft-, Gewerbe- und Umsatzsteuer – vollständig erstellt und elektronisch übermittelt.", list: ["KSt, GewSt & USt", "ELSTER-Übermittlung", "Ablage für Steuererklärungen"] }];
 
   return (
     <section className="section" id="leistungen">

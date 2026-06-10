@@ -48,7 +48,7 @@ const ZUSATZ_OPTIONS = [
   },
   {
     key: "kest", t: "Kapitalertragsteuer-Anmeldung", kind: "addon",
-    price: 249, once: false, priceLabel: "+249 € / Jahr",
+    price: 249, once: false, unit: "pro Anmeldung", priceLabel: "+249 € pro Anmeldung",
     info: "Nur relevant, wenn Ihre HoldCo Dividenden an ihre Gesellschafter ausschüttet. Erfordert zusätzliche Steuerformulare und aktuell noch manuelle Arbeit. Keine Gebühr bei Rückzahlung oder Vergabe von Gesellschafterdarlehen.",
   },
   {
@@ -60,7 +60,7 @@ const ZUSATZ_OPTIONS = [
 
 // Zusatzleistungen-Karten (Preise-Seite) — abgeleitet aus den Addon-Optionen
 const ADDONS = ZUSATZ_OPTIONS.filter((o) => o.kind === "addon").map((o) => ({
-  key: o.key, t: o.t, price: o.price, once: o.once, d: o.info,
+  key: o.key, t: o.t, price: o.price, once: o.once, unit: o.unit, d: o.info,
 }));
 
 const REFERRAL_DISCOUNT = 250;

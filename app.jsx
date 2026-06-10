@@ -75,7 +75,7 @@ function App() {
     });
   }, [t]);
 
-  const priceFrom = "600";
+  const priceFrom = "499";
   const page = (typeof window !== "undefined" && window.PAGE) || "home";
 
   function renderPage() {

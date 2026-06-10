@@ -380,7 +380,7 @@ function Survey({
     key: o.key,
     on: !!a.zusatz[o.key],
     t: o.t,
-    price: fmtEUR(o.price) + " € " + (o.once ? "einmalig" : "/ Jahr"),
+    price: fmtEUR(o.price) + " € " + (o.once ? "einmalig" : o.unit || "/ Jahr"),
     d: o.d,
     info: o.d,
     onToggle: () => toggleZ(o.key)
@@ -428,7 +428,7 @@ function Survey({
   }, /*#__PURE__*/React.createElement("span", null, s.t), /*#__PURE__*/React.createElement("b", null, "+", fmtEUR(s.v), " \u20AC"))), priced.addonItems.filter(x => !x.once).map(x => /*#__PURE__*/React.createElement("div", {
     key: x.key,
     className: "ri"
-  }, /*#__PURE__*/React.createElement("span", null, x.t), /*#__PURE__*/React.createElement("b", null, "+", fmtEUR(x.price), " \u20AC / Jahr"))), priced.addonItems.filter(x => x.once).map(x => /*#__PURE__*/React.createElement("div", {
+  }, /*#__PURE__*/React.createElement("span", null, x.t), /*#__PURE__*/React.createElement("b", null, "+", fmtEUR(x.price), " \u20AC ", x.unit || "/ Jahr"))), priced.addonItems.filter(x => x.once).map(x => /*#__PURE__*/React.createElement("div", {
     key: x.key,
     className: "ri"
   }, /*#__PURE__*/React.createElement("span", null, x.t, " (einmalig)"), /*#__PURE__*/React.createElement("b", null, "+", fmtEUR(x.price), " \u20AC"))), priced.discountItems.map(x => /*#__PURE__*/React.createElement("div", {

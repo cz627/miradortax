@@ -232,7 +232,7 @@ function Survey({ open, onClose }) {
               <div className="opts">
                 {ADDONS.map((o) =>
               <OptionRow key={o.key} on={!!a.zusatz[o.key]} t={o.t}
-              price={fmtEUR(o.price) + " € " + (o.once ? "einmalig" : "/ Jahr")}
+              price={fmtEUR(o.price) + " € " + (o.once ? "einmalig" : (o.unit || "/ Jahr"))}
               d={o.d} info={o.d} onToggle={() => toggleZ(o.key)} />
               )}
               </div>
@@ -262,7 +262,7 @@ function Survey({ open, onClose }) {
             <div className="result-list">
                   <div className="ri"><span>{priced.plan}-Paket</span><b>{fmtEUR(priced.basePrice)} €</b></div>
                   {priced.surchargeItems.map((s) => <div key={s.t} className="ri"><span>{s.t}</span><b>+{fmtEUR(s.v)} €</b></div>)}
-                  {priced.addonItems.filter((x) => !x.once).map((x) => <div key={x.key} className="ri"><span>{x.t}</span><b>+{fmtEUR(x.price)} € / Jahr</b></div>)}
+                  {priced.addonItems.filter((x) => !x.once).map((x) => <div key={x.key} className="ri"><span>{x.t}</span><b>+{fmtEUR(x.price)} € {x.unit || "/ Jahr"}</b></div>)}
                   {priced.addonItems.filter((x) => x.once).map((x) => <div key={x.key} className="ri"><span>{x.t} (einmalig)</span><b>+{fmtEUR(x.price)} €</b></div>)}
                   {priced.discountItems.map((x) => <div key={x.t} className="ri ri--discount"><span>{x.t} (einmalig)</span><b>−{fmtEUR(x.v)} €</b></div>)}
                 </div>

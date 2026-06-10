@@ -129,7 +129,7 @@ function WechselSection() {
     className: "wechsel"
   }, /*#__PURE__*/React.createElement("div", {
     className: "wechsel__text reveal"
-  }, /*#__PURE__*/React.createElement("p", null, "Informieren Sie Ihre bisherige Steuerberatung dar\xFCber, dass Sie die Zusammenarbeit in steuerlichen Angelegenheiten k\xFCnftig \xFCber Mirador Tax organisieren. \xDCber unseren vorbereiteten E-Mail-Entwurf st\xF6\xDFen Sie den Wechsel mit wenigen Klicks an \u2013 wir begleiten Sie anschlie\xDFend durch den gesamten Prozess und k\xFCmmern uns um die n\xE4chsten Schritte f\xFCr einen reibungslosen \xDCbergang."), /*#__PURE__*/React.createElement("div", {
+  }, /*#__PURE__*/React.createElement("p", null, "Informieren Sie Ihre bisherige Steuerberatung dar\xFCber, dass Sie die Zusammenarbeit in steuerlichen Angelegenheiten k\xFCnftig \xFCber Mirador Tax organisieren. \xDCber unseren vorbereiteten E-Mail-Entwurf sto\xDFen Sie den Wechsel mit wenigen Klicks an \u2013 wir begleiten Sie anschlie\xDFend durch den gesamten Prozess und k\xFCmmern uns um die n\xE4chsten Schritte f\xFCr einen reibungslosen \xDCbergang."), /*#__PURE__*/React.createElement("div", {
     className: "wechsel__highlight"
   }, /*#__PURE__*/React.createElement(Icon, {
     name: "doc",
@@ -399,7 +399,7 @@ function PreisePage({
     className: "addon-card__amt"
   }, fmtEUR(a.price), "\xA0\u20AC"), /*#__PURE__*/React.createElement("span", {
     className: "addon-card__per"
-  }, a.once ? "einmalig" : "/ Jahr"))), /*#__PURE__*/React.createElement("p", {
+  }, a.once ? "einmalig" : a.unit || "/ Jahr"))), /*#__PURE__*/React.createElement("p", {
     className: "addon-card__d"
   }, a.d)))), /*#__PURE__*/React.createElement("div", {
     className: "price-operator reveal"
