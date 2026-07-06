@@ -241,7 +241,7 @@ const USP_DATA = [
   stat: { b: "100 %", s: "Fristen eingehalten – jeden Jahresabschluss" },
   feature: {
     quote: "Die Offenlegung lief zum ersten Mal völlig stressfrei. Frist im Blick, ein Klick, erledigt – und bei Rückfragen antwortet immer ein freundlicher Mensch.",
-    name: "Dr. Katrin Bähr", role: "Geschäftsführerin, Bähr Family Office", ava: "#9a7b66", photo: "https://randomuser.me/api/portraits/women/12.jpg"
+    name: "Alexander U.", role: "Geschäftsführer, AU Holding GmbH", ava: "#9a7b66", photo: "https://randomuser.me/api/portraits/men/34.jpg"
   },
   cards: [
   { quote: "Korrekt, pünktlich, kein böses Erwachen vom Finanzamt.", name: "Andreas Wolff", role: "Inhaber, Wolff Invest", ava: "#5f6b78", photo: "https://randomuser.me/api/portraits/men/76.jpg" },

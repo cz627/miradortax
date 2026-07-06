@@ -450,10 +450,10 @@ const USP_DATA = [{
   },
   feature: {
     quote: "Die Offenlegung lief zum ersten Mal völlig stressfrei. Frist im Blick, ein Klick, erledigt – und bei Rückfragen antwortet immer ein freundlicher Mensch.",
-    name: "Dr. Katrin Bähr",
-    role: "Geschäftsführerin, Bähr Family Office",
+    name: "Alexander U.",
+    role: "Geschäftsführer, AU Holding GmbH",
     ava: "#9a7b66",
-    photo: "https://randomuser.me/api/portraits/women/12.jpg"
+    photo: "https://randomuser.me/api/portraits/men/34.jpg"
   },
   cards: [{
     quote: "Korrekt, pünktlich, kein böses Erwachen vom Finanzamt.",

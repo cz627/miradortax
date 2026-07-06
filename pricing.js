@@ -62,7 +62,7 @@ const ZUSATZ_OPTIONS = [{
   price: 250,
   once: true,
   priceLabel: "+250 € einmalig",
-  info: "Einmalige Onboarding-Gebühr für den Wechsel von Ihrer bisherigen Kanzlei zu uns. Sie deckt den manuellen Aufwand unserer Partnerkanzlei ab und wird ohne Aufschlag 1:1 weitergegeben – einmalig, als Start einer langfristigen Zusammenarbeit."
+  info: "Die einmalige Onboarding-Gebühr fällt bei erstmaliger Anmeldung an. Sie deckt den manuellen Aufwand unserer Partnerkanzlei ab und wird ohne Aufschlag 1:1 weitergegeben – einmalig, als Start einer langfristigen Zusammenarbeit."
 }, {
   key: "kest",
   t: "Kapitalertragsteuer-Anmeldung",
