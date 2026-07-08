@@ -1132,7 +1132,7 @@ td.ptable__feat { font-weight: 500; }
 
 .ref-reward {
   display: flex; align-items: center; gap: clamp(22px, 4vw, 48px); flex-wrap: wrap;
-  background: var(--ink); color: #fff; border-radius: var(--radius-l);
+  background: #1d3a2f; color: #fff; border-radius: var(--radius-l);
   padding: clamp(30px, 4vw, 48px);
 }
 .ref-reward__big { font-size: clamp(48px, 7vw, 76px); font-weight: 750; letter-spacing: -.04em; line-height: 1; font-variant-numeric: tabular-nums; }
