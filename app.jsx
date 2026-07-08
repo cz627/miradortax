@@ -24,11 +24,11 @@ function FloatingConsult() {
   ];
   const href = "https://calendar.notion.so/meet/christopher-vd1ezx1lps/cw4uci4o40";
   return (
-    <a className="fconsult" href={href} target="_blank" rel="noopener" aria-label="Expertengespräch buchen">
+    <a className="fconsult" href={href} target="_blank" rel="noopener" aria-label="Produkt-Demo buchen">
       <span className="fconsult__avatars">
         {avatars.map((a, i) => <img key={i} src={a} alt="" className="fconsult__ava" />)}
       </span>
-      <span className="fconsult__text">Expertengespräch buchen</span>
+      <span className="fconsult__text">Produkt-Demo buchen</span>
     </a>
   );
 }

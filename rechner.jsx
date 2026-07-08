@@ -92,7 +92,7 @@ function Rechner({ onSurvey }) {
                 <div className="calc__monthly">ab <b>{fmtEUR(Math.round(1499 / 12))} € / Monat</b> · individuell kalkuliert</div>
                 <div className="calc__save">
                   <b>≈ {fmtEUR(saveRange[0])}–{fmtEUR(saveRange[1])} €</b>
-                  <span>typische Ersparnis pro Jahr ggü.<br />klassischem Steuerberater</span>
+                  <span>typische Ersparnis pro Jahr ggü.<br />klassischer Steuerberatung*</span>
                 </div>
                 <div className="calc__bars">
                   <div className="calc__bar-row">
@@ -100,7 +100,7 @@ function Rechner({ onSurvey }) {
                     <div className="calc__bar"><i className="mira" style={{ width: rangePct + "%" }}></i></div>
                   </div>
                   <div className="calc__bar-row">
-                    <div><span>Klassischer Steuerberater</span><span>≈ {fmtEUR(compRange[0])}–{fmtEUR(compRange[1])} €</span></div>
+                    <div><span>Klassische Steuerberatung</span><span>≈ {fmtEUR(compRange[0])}–{fmtEUR(compRange[1])} €</span></div>
                     <div className="calc__bar"><i className="other" style={{ width: "100%" }}></i></div>
                   </div>
                 </div>
@@ -132,7 +132,7 @@ function Rechner({ onSurvey }) {
 
                 <div className="calc__save">
                   <b>≈ {fmtEUR(savings)} €</b>
-                  <span>Ersparnis pro Jahr ggü.<br />klassischem Steuerberater</span>
+                  <span>Ersparnis pro Jahr ggü.<br />klassischer Steuerberatung*</span>
                 </div>
                 <div className="calc__bars">
                   <div className="calc__bar-row">
@@ -140,7 +140,7 @@ function Rechner({ onSurvey }) {
                     <div className="calc__bar"><i className="mira" style={{ width: miraPct + "%" }}></i></div>
                   </div>
                   <div className="calc__bar-row">
-                    <div><span>Klassischer Steuerberater</span><span>≈ {fmtEUR(r.comparison)} €</span></div>
+                    <div><span>Klassische Steuerberatung</span><span>≈ {fmtEUR(r.comparison)} €</span></div>
                     <div className="calc__bar"><i className="other" style={{ width: "100%" }}></i></div>
                   </div>
                 </div>
@@ -159,6 +159,7 @@ function Rechner({ onSurvey }) {
             }
           </div>
         </div>
+        <p className="calc__footnote reveal">* Referenzwert auf Basis der Mittelgebühren nach StBVV für eine vergleichbare Holding. Mirador Tax ist eine Software zur Selbsterstellung und ersetzt keine individuelle Steuerberatung.</p>
       </div>
     </section>);
 

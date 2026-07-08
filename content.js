@@ -147,13 +147,13 @@ function PortalMockup({
     pct: "100%",
     done: true
   }, {
-    t: "Buchhaltung 2024",
-    d: "Vorkontiert & geprüft",
+    t: "Buchhaltung",
+    d: "Kategorisiert & bestätigt",
     pct: "100%",
     done: true
   }, {
     t: "Jahresabschluss",
-    d: "In Bearbeitung durch Mirador",
+    d: "In Erstellung",
     pct: "60%",
     active: true
   }, {
@@ -202,7 +202,7 @@ function PortalMockup({
     }
   }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
     className: "mock__h"
-  }, "Gesch\xE4ftsjahr 2024"), /*#__PURE__*/React.createElement("div", {
+  }, "Gesch\xE4ftsjahr 2025"), /*#__PURE__*/React.createElement("div", {
     className: "mock__sub"
   }, "Holding Beispiel GmbH \xB7 HRB 12345")), /*#__PURE__*/React.createElement("span", {
     className: "mock__badge"

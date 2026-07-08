@@ -152,7 +152,7 @@ function Survey({ open, onClose }) {
           <div>
               <div className="modal__step-label">Schritt 1 von 6</div>
               <h3 className="modal__q">Welche Rechtsform hat Ihre Holding?</h3>
-              <p className="modal__hint">So prüfen wir, ob wir Ihre Gesellschaft im Festpreis-Modell betreuen können.</p>
+              <p className="modal__hint">Prüfen Sie, ob Ihre Gesellschaft für das Festpreis-Modell geeignet ist.</p>
               <div className="opts">
                 {RECHTSFORMEN.map((o) =>
               <button key={o.v} className={"opt" + (a.rechtsform === o.v ? " sel" : "")} onClick={() => set("rechtsform", o.v)}>
@@ -277,7 +277,7 @@ function Survey({ open, onClose }) {
 
               <div className="result-save">
                 <b>{exact ? "≈ " + fmtEUR(priced.comparison - priced.yearly) : "≈ " + fmtEUR(saveRange[0]) + "–" + fmtEUR(saveRange[1])} €</b>
-                <span>Ersparnis pro Jahr gegenüber einem klassischen Steuerberater</span>
+                <span>Ersparnis pro Jahr ggü. klassischer Steuerberatung*</span>
               </div>
               <div className="calc__bars" style={{ margin: "0 0 6px" }}>
                 <div className="calc__bar-row">
@@ -285,10 +285,11 @@ function Survey({ open, onClose }) {
                   <div className="calc__bar"><i className="mira" style={{ width: (exact ? miraPct : rangePct) + "%" }}></i></div>
                 </div>
                 <div className="calc__bar-row">
-                  <div><span>Klassischer Steuerberater</span><span>≈ {exact ? fmtEUR(priced.comparison) + " €" : fmtEUR(compRange[0]) + "–" + fmtEUR(compRange[1]) + " €"}</span></div>
+                  <div><span>Klassische Steuerberatung</span><span>≈ {exact ? fmtEUR(priced.comparison) + " €" : fmtEUR(compRange[0]) + "–" + fmtEUR(compRange[1]) + " €"}</span></div>
                   <div className="calc__bar"><i className="other" style={{ width: "100%" }}></i></div>
                 </div>
               </div>
+              <p className="calc__footnote">* Referenzwert auf Basis der Mittelgebühren nach StBVV für eine vergleichbare Holding. Mirador Tax ist eine Software zur Selbsterstellung und ersetzt keine individuelle Steuerberatung.</p>
             </div>
           }
 

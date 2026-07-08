@@ -47,7 +47,7 @@ function LeistungenPage({ onSurvey, priceFrom }) {
     <>
       <PageHero eyebrow="Leistungen"
         title={<>Alle Pflichten Ihrer Holding.<br />In einem Portal.</>}
-        lede="Mirador Tax übernimmt den kompletten Jahreszyklus Ihrer Holding – transparent zum Festpreis, ohne Stundenabrechnung." />
+        lede="Mit Mirador Tax erledigen Sie den kompletten Jahreszyklus Ihrer Holding – strukturiert, geführt und zum Festpreis." />
       <Leistungen hideHead />
       <SecuritySection />
       <FAQ />
@@ -57,24 +57,15 @@ function LeistungenPage({ onSurvey, priceFrom }) {
 }
 
 /* ---------------- ABLAUF PAGE ---------------- */
-const WECHSEL_EMAIL = `Sehr geehrte [Name des bisherigen Steuerberaters / der Kanzlei],
+const WECHSEL_EMAIL = `Sehr geehrte/r [Name des bisherigen Steuerberaters / der Kanzlei],
 
-ich hoffe, es geht Ihnen gut.
+ich habe mich entschieden, Buchhaltung, Jahresabschluss und Steuererklärungen meiner Holding UG künftig selbst mit einer Software zu erstellen.
 
-Ich habe mich entschieden, die Zusammenarbeit in steuerlichen Angelegenheiten meiner Holding UG zukünftig über Mirador Tax zu organisieren.
+Ich bedanke mich für die bisherige Zusammenarbeit und bitte Sie im Zuge der Beendigung des Mandats um Übermittlung des DATEV-Datenexports der Gesellschaft für die Vorjahre.
 
-Für den elektronischen Mandantenübertrag bitte ich Sie daher, folgende Unterlagen bzw. Daten an Mirador Tax (in cc) zu übermitteln, um einen reibungslosen Übergang sicherzustellen:
-
-- den DATEV-Datenexport der Gesellschaft für die Vorjahre,
-- die Steuerbescheide des vorangegangenen Jahres.
-
-Sobald die Daten vorliegen, wird Mirador Tax die weitere Abstimmung und Datenaufbereitung übernehmen.
-
-Vielen Dank im Voraus für Ihre Unterstützung und die zeitnahe Übermittlung der Unterlagen.
-Bei Rückfragen können Sie sich jederzeit an das Team von Mirador Tax wenden.
+Bitte senden Sie die Unterlagen an [E-Mail-Adresse des Nutzers]. Für Ihre zeitnahe Unterstützung danke ich Ihnen im Voraus.
 
 Viele Grüße,
-
 [Ihr Name]`;
 
 function WechselSection() {
@@ -90,14 +81,14 @@ function WechselSection() {
         <div className="shead reveal">
           <div className="eyebrow">Wechsel leicht gemacht</div>
           <h2 className="h2">Zu Mirador Tax wechseln – so einfach geht's</h2>
-          <p className="lede">Mit unserem Umzugsservice ist der Wechsel ganz einfach. Unser Team unterstützt Sie persönlich beim Datentransfer und der Abstimmung – damit der Umstieg reibungslos erfolgt.</p>
+          <p className="lede">Der Wechsel ist unkompliziert: Sie fordern Ihre Unterlagen bei Ihrer bisherigen Kanzlei an und importieren sie in die Plattform – unser Support-Team unterstützt Sie bei allen technischen Fragen rund um die Datenübernahme.</p>
         </div>
         <div className="wechsel">
           <div className="wechsel__text reveal">
-            <p>Informieren Sie Ihre bisherige Steuerberatung darüber, dass Sie die Zusammenarbeit in steuerlichen Angelegenheiten künftig über Mirador Tax organisieren. Über unseren vorbereiteten E-Mail-Entwurf stoßen Sie den Wechsel mit wenigen Klicks an – wir begleiten Sie anschließend durch den gesamten Prozess und kümmern uns um die nächsten Schritte für einen reibungslosen Übergang.</p>
+            <p>Informieren Sie Ihre bisherige Steuerberatung darüber, dass Sie Buchhaltung, Jahresabschluss und Steuererklärungen Ihrer Holding künftig selbst mit Mirador Tax erstellen, und fordern Sie Ihre Unterlagen an. Unser vorbereiteter E-Mail-Entwurf macht das mit wenigen Klicks möglich – die geführte Datenübernahme in der Plattform übernimmt den Rest.</p>
             <div className="wechsel__highlight">
               <Icon name="doc" size={18} sw={2} />
-              <span>Wichtig: Wir benötigen den <b>DATEV-Datenexport der Gesellschaft für die Vorjahre</b> sowie die Steuerbescheide des Vorjahres.</span>
+              <span>Wichtig: Für die Datenübernahme benötigen Sie den <b>DATEV-Datenexport der Gesellschaft für die Vorjahre</b> sowie die Steuerbescheide des Vorjahres.</span>
             </div>
           </div>
           <div className="wechsel__mail reveal">
@@ -132,7 +123,7 @@ function KundenPage({ onSurvey, priceFrom }) {
     <>
       <PageHero eyebrow="Kundenstimmen"
         title={<>Was Holdings an<br />Mirador schätzen.</>}
-        lede="Über 500 Holdings vertrauen auf Mirador Tax – für einen einfachen, günstigen und zuverlässigen Jahresabschluss." />
+        lede="Über 200 Holdings vertrauen auf Mirador Tax – für einen einfachen, günstigen und zuverlässigen Jahresabschluss." />
       <TestimonialsAll />
       <CtaBanner onSurvey={onSurvey} priceFrom={priceFrom} />
     </>
@@ -140,16 +131,16 @@ function KundenPage({ onSurvey, priceFrom }) {
 }
 
 /* ---------------- PREISE PAGE ---------------- */
-const PKG = ["Start", "Wachstum", "Pro", "Unlimited"];
+const PKG = ["Holding S", "Holding M", "Holding L", "Unlimited"];
 const PKG_PRICE = ["499 €", "999 €", "1.499 €", "Individuell"];
 const FEATURES = [
   { f: "Zugang zu Ihrem digitalen Kundenportal", v: [true, true, true, true] },
-  { f: "Buchhaltung der Holding", v: [true, true, true, true] },
-  { f: "Erstellung des Jahresabschlusses", v: [true, true, true, true] },
-  { f: "Erstellung der E-Bilanz und Übermittlung an das Finanzamt", v: [true, true, true, true] },
+  { f: "Buchhaltung: automatischer Import & Kategorisierung", v: [true, true, true, true] },
+  { f: "Jahresabschluss: automatische Erstellung aus Ihren Daten", v: [true, true, true, true] },
+  { f: "E-Bilanz: automatische Erstellung, Übermittlung per ELSTER", v: [true, true, true, true] },
   { f: "Offenlegung im Bundesanzeiger", v: [true, true, true, true] },
   { f: "Erinnerungsservice für Fristen", v: [true, true, true, true] },
-  { f: "Körperschaftsteuer- und Gewerbesteuererklärungen", v: [false, true, true, true] },
+  { f: "Körperschaftsteuer- und Gewerbesteuererklärungen", v: [true, true, true, true] },
   { f: "Max. Anzahl an Beteiligungen", v: ["3", "10", "25", "Unlimitiert"] },
   { f: "Max. Anzahl an Buchungen pro Jahr", v: ["20", "40", "100", "Unlimitiert"] },
   { f: "Max. Bilanzsumme", v: ["100 TEUR", "300 TEUR", "5 Mio. €", "Unlimitiert"] },
@@ -160,15 +151,15 @@ function Cell({ val }) {
   return <span className="pt__val">{val}</span>;
 }
 
-const PV_FEATURES = ["Buchhaltung", "Jahresabschluss inkl. E-Bilanz", "Offenlegung im Bundesanzeiger", "Steuererklärung", "Persönlicher Ansprechpartner"];
+const PV_FEATURES = ["Buchhaltung", "Jahresabschluss inkl. E-Bilanz", "Offenlegung im Bundesanzeiger", "Steuererklärung", "Persönlicher Support"];
 const PRICE_OVERVIEW = [
-  { name: "Start", price: "499", sub: "Für Gründer, die ihre Holding schlank und kosteneffizient führen möchten. Über 500 Holdings vertrauen auf unseren Service und kommen mit dem Start Plan aus.",
+  { name: "Holding S", price: "499", sub: "Für Gründer, die ihre Holding schlank und kosteneffizient führen möchten. Über 200 Holdings vertrauen auf unser Produkt und kommen mit Holding S aus.",
     features: PV_FEATURES,
     limits: ["20 Transaktionen / Jahr", "Bis zu 3 Beteiligungen", "Bilanzsumme bis 100 TEUR"] },
-  { name: "Wachstum", price: "999", sub: "Für wachsende Holdings mit steigender Zahl an Investments.",
+  { name: "Holding M", price: "999", sub: "Für wachsende Holdings mit steigender Zahl an Investments.",
     features: PV_FEATURES,
     limits: ["40 Transaktionen / Jahr", "Bis zu 10 Beteiligungen", "Bilanzsumme bis 300 TEUR"] },
-  { name: "Pro", price: "1.499", sub: "Für komplexere Beteiligungsstrukturen.",
+  { name: "Holding L", price: "1.499", sub: "Für komplexere Beteiligungsstrukturen.",
     features: PV_FEATURES,
     limits: ["Bis zu 100 Buchungen / Jahr", "Bis zu 25 Beteiligungen", "Bilanzsumme bis 5 Mio. €"] },
 ];
@@ -185,7 +176,7 @@ function PovGroup({ label, items }) {
 }
 
 const PRICE_TESTIMONIALS = [
-  { quote: "Mein alter Steuerberater hat nach Stunden abgerechnet – nie wusste ich vorher, was es kostet. Mirador macht das zum halben Preis, mit festem Betrag.", name: "Michael Kowatschew", role: "Gründer, Kowatschew Ventures UG", photo: "images/michael-kowatschew.png" },
+  { quote: "Mein alter Steuerberater hat nach Stunden abgerechnet – nie wusste ich vorher, was es kostet. Mit Mirador erledige ich das zum halben Preis.", name: "Michael Kowatschew", role: "Gründer, Kowatschew Ventures UG", photo: "images/michael-kowatschew.png" },
   { quote: "Transparenter Festpreis statt Gebührenverordnung. Wir sparen jedes Jahr einen vierstelligen Betrag.", name: "Julia Vogt", role: "Geschäftsführerin, Vela Invest GmbH", photo: "https://randomuser.me/api/portraits/women/29.jpg" },
   { quote: "Das günstigste Angebot am Markt – und trotzdem fühlt sich der Prozess super an.", name: "Philipp Arndt", role: "Geschäftsführer, Arndt Holding", photo: "https://randomuser.me/api/portraits/men/52.jpg" },
 ];
@@ -222,7 +213,8 @@ function PreisePage({ onSurvey, priceFrom }) {
               </div>
             )}
           </div>
-          <p className="price-endpreis"><Icon name="check" size={15} sw={2.6} /> Unsere Preise sind Endpreise. Aufgrund unserer steuerlichen Stellung fällt derzeit keine zusätzliche Umsatzsteuer an. Zzgl. einmaliger Einrichtungsgebühr von 250 €.</p>
+          <p className="price-endpreis"><Icon name="check" size={15} sw={2.6} /> Umsatzsteuerbefreit nach § 19 UStG (Kleinunternehmerregelung).</p>
+          <p className="price-endpreis price-endpreis--note">Die Plattform wird von der Ruescher Invest UG (haftungsbeschränkt) betrieben. Auf Wunsch beauftragen Sie für Übermittlung oder fachliche Überprüfung direkt die unabhängige Bauer & Weigl Steuerberater PartG mbB.</p>
         </div>
       </section>
 
@@ -283,7 +275,8 @@ function PreisePage({ onSurvey, priceFrom }) {
             )}
           </div>
           <div className="price-operator reveal">
-            <p>Die Plattform wird von der <b>Ruescher Invest UG (haftungsbeschränkt)</b> betrieben. Vorbehaltsaufgaben werden von der <b>Bauer & Weigl Steuerberater PartG mbB</b> erbracht. Aktuell nicht im Leistungsumfang enthalten sind Immobilien und Kryptowährungen.</p>
+            <p>Betrieben von der <b>Ruescher Invest UG (haftungsbeschränkt)</b>. Mirador Tax ist eine Software zur Selbsterstellung. Optionale Zusatzleistungen mit Vorbehaltsaufgaben (Beratung, KapESt-Anmeldung, Übermittlung) erbringt die unabhängige <b>Bauer & Weigl Steuerberater PartG mbB</b> im direkten Mandat.</p>
+            <p style={{ marginTop: 14 }}>Aktuell nicht im Leistungsumfang enthalten sind Immobilien und Kryptowährungen.</p>
             <div className="price-excl">
               <span className="price-excl__chip"><Icon name="plus" size={13} sw={2.6} style={{ transform: "rotate(45deg)" }} /> Immobilien</span>
               <span className="price-excl__chip"><Icon name="plus" size={13} sw={2.6} style={{ transform: "rotate(45deg)" }} /> Kryptowährungen</span>

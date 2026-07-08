@@ -497,6 +497,16 @@ h1, h2, h3 { margin: 0; font-weight: 600; line-height: 1.04; letter-spacing: -.0
 .step__t { font-size: 19px; font-weight: 650; letter-spacing: -.02em; margin-bottom: 8px; }
 .step__d { font-size: 15px; color: var(--muted); line-height: 1.5; }
 @media (max-width: 820px) { .steps { grid-template-columns: 1fr; } }
+.ablauf__control {
+  margin-top: 18px; display: flex; align-items: flex-start; gap: 14px;
+  padding: 20px 24px; border-radius: var(--radius);
+  background: var(--cream-2); border: 1px solid var(--line-2);
+}
+.ablauf__control svg { flex: none; margin-top: 2px; color: var(--accent, currentColor); }
+.ablauf__control p { margin: 0; font-size: 15px; color: var(--muted); line-height: 1.55; }
+.ablauf__control b { color: var(--ink); font-weight: 650; }
+.calc__footnote { margin-top: 14px; font-size: 12.5px; color: var(--muted); line-height: 1.5; max-width: 720px; }
+.footer__legalnote { color: var(--muted); }
 
 /* ============================================================
    RECHNER (calculator)
@@ -850,6 +860,7 @@ h1, h2, h3 { margin: 0; font-weight: 600; line-height: 1.04; letter-spacing: -.0
 .pov--feat .pov__price { font-size: 44px; }
 .price-endpreis { display: flex; align-items: flex-start; gap: 9px; justify-content: center; text-align: center; font-size: 14.5px; color: var(--muted); margin: 28px auto 0; max-width: 70ch; line-height: 1.5; }
 .price-endpreis svg { color: var(--accent); flex: none; margin-top: 3px; }
+.price-endpreis--note { margin-top: 10px; font-size: 13.5px; }
 
 /* --- Preise: operator + excluded --- */
 .price-operator { text-align: center; margin: 36px auto 0; max-width: 72ch; }

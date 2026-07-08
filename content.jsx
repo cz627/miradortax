@@ -83,8 +83,8 @@ function PortalMockup({ accent }) {
   ];
   const steps = [
     { t: "Belege & Kontoauszüge", d: "Automatisch importiert", pct: "100%", done: true },
-    { t: "Buchhaltung 2024", d: "Vorkontiert & geprüft", pct: "100%", done: true },
-    { t: "Jahresabschluss", d: "In Bearbeitung durch Mirador", pct: "60%", active: true },
+    { t: "Buchhaltung", d: "Kategorisiert & bestätigt", pct: "100%", done: true },
+    { t: "Jahresabschluss", d: "In Erstellung", pct: "60%", active: true },
     { t: "Offenlegung Bundesanzeiger", d: "Wartet auf Freigabe", pct: "—" },
   ];
   return (
@@ -105,7 +105,7 @@ function PortalMockup({ accent }) {
         <div className="mock__main">
           <div style={{ display: "flex", alignItems: "center" }}>
             <div>
-              <div className="mock__h">Geschäftsjahr 2024</div>
+              <div className="mock__h">Geschäftsjahr 2025</div>
               <div className="mock__sub">Holding Beispiel GmbH · HRB 12345</div>
             </div>
             <span className="mock__badge"><Icon name="clock" size={12} sw={2.2} /> Frist 31.07.</span>

@@ -40,7 +40,7 @@ function FloatingConsult() {
     href: href,
     target: "_blank",
     rel: "noopener",
-    "aria-label": "Expertengespr\xE4ch buchen"
+    "aria-label": "Produkt-Demo buchen"
   }, /*#__PURE__*/React.createElement("span", {
     className: "fconsult__avatars"
   }, avatars.map((a, i) => /*#__PURE__*/React.createElement("img", {
@@ -50,7 +50,7 @@ function FloatingConsult() {
     className: "fconsult__ava"
   }))), /*#__PURE__*/React.createElement("span", {
     className: "fconsult__text"
-  }, "Expertengespr\xE4ch buchen"));
+  }, "Produkt-Demo buchen"));
 }
 function App() {
   const [t, setTweak] = useTweaks(TWEAK_DEFAULTS);

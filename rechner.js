@@ -158,7 +158,7 @@ function Rechner({
     className: "calc__monthly"
   }, "ab ", /*#__PURE__*/React.createElement("b", null, fmtEUR(Math.round(1499 / 12)), " \u20AC / Monat"), " \xB7 individuell kalkuliert"), /*#__PURE__*/React.createElement("div", {
     className: "calc__save"
-  }, /*#__PURE__*/React.createElement("b", null, "\u2248 ", fmtEUR(saveRange[0]), "\u2013", fmtEUR(saveRange[1]), " \u20AC"), /*#__PURE__*/React.createElement("span", null, "typische Ersparnis pro Jahr gg\xFC.", /*#__PURE__*/React.createElement("br", null), "klassischem Steuerberater")), /*#__PURE__*/React.createElement("div", {
+  }, /*#__PURE__*/React.createElement("b", null, "\u2248 ", fmtEUR(saveRange[0]), "\u2013", fmtEUR(saveRange[1]), " \u20AC"), /*#__PURE__*/React.createElement("span", null, "typische Ersparnis pro Jahr gg\xFC.", /*#__PURE__*/React.createElement("br", null), "klassischer Steuerberatung*")), /*#__PURE__*/React.createElement("div", {
     className: "calc__bars"
   }, /*#__PURE__*/React.createElement("div", {
     className: "calc__bar-row"
@@ -171,7 +171,7 @@ function Rechner({
     }
   }))), /*#__PURE__*/React.createElement("div", {
     className: "calc__bar-row"
-  }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("span", null, "Klassischer Steuerberater"), /*#__PURE__*/React.createElement("span", null, "\u2248 ", fmtEUR(compRange[0]), "\u2013", fmtEUR(compRange[1]), " \u20AC")), /*#__PURE__*/React.createElement("div", {
+  }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("span", null, "Klassische Steuerberatung"), /*#__PURE__*/React.createElement("span", null, "\u2248 ", fmtEUR(compRange[0]), "\u2013", fmtEUR(compRange[1]), " \u20AC")), /*#__PURE__*/React.createElement("div", {
     className: "calc__bar"
   }, /*#__PURE__*/React.createElement("i", {
     className: "other",
@@ -219,7 +219,7 @@ function Rechner({
     href: "Kontakt.html"
   }, "Sonderangebot"), ".")), /*#__PURE__*/React.createElement("div", {
     className: "calc__save"
-  }, /*#__PURE__*/React.createElement("b", null, "\u2248 ", fmtEUR(savings), " \u20AC"), /*#__PURE__*/React.createElement("span", null, "Ersparnis pro Jahr gg\xFC.", /*#__PURE__*/React.createElement("br", null), "klassischem Steuerberater")), /*#__PURE__*/React.createElement("div", {
+  }, /*#__PURE__*/React.createElement("b", null, "\u2248 ", fmtEUR(savings), " \u20AC"), /*#__PURE__*/React.createElement("span", null, "Ersparnis pro Jahr gg\xFC.", /*#__PURE__*/React.createElement("br", null), "klassischer Steuerberatung*")), /*#__PURE__*/React.createElement("div", {
     className: "calc__bars"
   }, /*#__PURE__*/React.createElement("div", {
     className: "calc__bar-row"
@@ -232,7 +232,7 @@ function Rechner({
     }
   }))), /*#__PURE__*/React.createElement("div", {
     className: "calc__bar-row"
-  }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("span", null, "Klassischer Steuerberater"), /*#__PURE__*/React.createElement("span", null, "\u2248 ", fmtEUR(r.comparison), " \u20AC")), /*#__PURE__*/React.createElement("div", {
+  }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("span", null, "Klassische Steuerberatung"), /*#__PURE__*/React.createElement("span", null, "\u2248 ", fmtEUR(r.comparison), " \u20AC")), /*#__PURE__*/React.createElement("div", {
     className: "calc__bar"
   }, /*#__PURE__*/React.createElement("i", {
     className: "other",
@@ -246,7 +246,9 @@ function Rechner({
     onClick: onSurvey
   }, "Unverbindliches Angebot anfordern ", /*#__PURE__*/React.createElement(Arrow, null)), /*#__PURE__*/React.createElement("p", {
     className: "calc__fineprint"
-  }, "Unverbindlich \xB7 keine Stundenabrechnung \xB7 keine versteckten Kosten"))))));
+  }, "Unverbindlich \xB7 keine Stundenabrechnung \xB7 keine versteckten Kosten")))), /*#__PURE__*/React.createElement("p", {
+    className: "calc__footnote reveal"
+  }, "* Referenzwert auf Basis der Mittelgeb\xFChren nach StBVV f\xFCr eine vergleichbare Holding. Mirador Tax ist eine Software zur Selbsterstellung und ersetzt keine individuelle Steuerberatung.")));
 }
 Object.assign(window, {
   Rechner

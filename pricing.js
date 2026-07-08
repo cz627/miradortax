@@ -1,8 +1,8 @@
 /* pricing.jsx — shared Festpreis model used by calculator + survey
    Pakete:
-     Start      €499   — max. 3 Beteiligungen · 20 Buchungen · Bilanzsumme ≤ 100 TEUR
-     Wachstum   €999   — bis 10 Beteiligungen  · 40 Buchungen · Bilanzsumme ≤ 300 TEUR
-     Pro        €1.499 — bis 25 Beteiligungen  · bis 100 Buchungen · Bilanzsumme ≤ 5 Mio. €
+     Holding S  €499   — max. 3 Beteiligungen · 20 Buchungen · Bilanzsumme ≤ 100 TEUR
+     Holding M  €999   — bis 10 Beteiligungen  · 40 Buchungen · Bilanzsumme ≤ 300 TEUR
+     Holding L  €1.499 — bis 25 Beteiligungen  · bis 100 Buchungen · Bilanzsumme ≤ 5 Mio. €
      Unlimited  — individuelles Angebot (kein garantierter Festpreis)
 
    Zusatzoptionen siehe ZUSATZ_OPTIONS (eine geordnete Quelle für Rechner + Survey).
@@ -62,7 +62,7 @@ const ZUSATZ_OPTIONS = [{
   price: 250,
   once: true,
   priceLabel: "+250 € einmalig",
-  info: "Die einmalige Onboarding-Gebühr fällt bei erstmaliger Anmeldung an. Sie deckt den manuellen Aufwand unserer Partnerkanzlei ab und wird ohne Aufschlag 1:1 weitergegeben – einmalig, als Start einer langfristigen Zusammenarbeit."
+  info: "Die einmalige Gebühr deckt die technische Ersteinrichtung Ihrer Gesellschaft auf der Plattform ab (Stammdaten, Kontenrahmen, Datenübernahme-Support)."
 }, {
   key: "kest",
   t: "Kapitalertragsteuer-Anmeldung",
@@ -71,7 +71,7 @@ const ZUSATZ_OPTIONS = [{
   once: false,
   unit: "pro Anmeldung",
   priceLabel: "+249 € pro Anmeldung",
-  info: "Nur relevant, wenn Ihre HoldCo Dividenden an ihre Gesellschafter ausschüttet. Erfordert zusätzliche Steuerformulare und aktuell noch manuelle Arbeit. Keine Gebühr bei Rückzahlung oder Vergabe von Gesellschafterdarlehen."
+  info: "Erstellung und Übermittlung der Kapitalertragsteuer-Anmeldung durch Bauer & Weigl im direkten Mandat. Nur relevant, wenn Ihre Holding Dividenden ausschüttet. Keine Gebühr bei Rückzahlung oder Vergabe von Gesellschafterdarlehen."
 }, {
   key: "beratung",
   t: "Beratungspaket",
@@ -79,7 +79,7 @@ const ZUSATZ_OPTIONS = [{
   price: 450,
   once: false,
   priceLabel: "+450 € / Jahr",
-  info: "Für eine Beratung mit unserer Partnerkanzlei zu steuerlichen Fragen. Bei komplexeren Fällen informiert die Kanzlei Sie vorab und rechnet zu marktüblichen Konditionen ab."
+  info: "Steuerliche Beratung durch die unabhängige Bauer & Weigl Steuerberater PartG mbB. Die Beauftragung erfolgt direkt zwischen Ihnen und der Kanzlei; bei komplexeren Fällen informiert Sie die Kanzlei vorab und rechnet direkt zu marktüblichen Konditionen ab."
 }];
 
 // Zusatzleistungen-Karten (Preise-Seite) — abgeleitet aus den Addon-Optionen
@@ -102,13 +102,13 @@ function computePrice({
     basePrice,
     eligible = true;
   if (beteiligungen <= 3 && transaktionen <= 20 && bilanzsumme <= 100000) {
-    plan = "Start";
+    plan = "Holding S";
     basePrice = 499;
   } else if (beteiligungen <= 10 && transaktionen <= 40 && bilanzsumme <= 300000) {
-    plan = "Wachstum";
+    plan = "Holding M";
     basePrice = 999;
   } else if (beteiligungen <= 25 && transaktionen <= 100 && bilanzsumme <= 5000000) {
-    plan = "Pro";
+    plan = "Holding L";
     basePrice = 1499;
   } else {
     plan = "Unlimited";

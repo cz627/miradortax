@@ -253,7 +253,7 @@ function Survey({
     className: "modal__q"
   }, "Welche Rechtsform hat Ihre Holding?"), /*#__PURE__*/React.createElement("p", {
     className: "modal__hint"
-  }, "So pr\xFCfen wir, ob wir Ihre Gesellschaft im Festpreis-Modell betreuen k\xF6nnen."), /*#__PURE__*/React.createElement("div", {
+  }, "Pr\xFCfen Sie, ob Ihre Gesellschaft f\xFCr das Festpreis-Modell geeignet ist."), /*#__PURE__*/React.createElement("div", {
     className: "opts"
   }, RECHTSFORMEN.map(o => /*#__PURE__*/React.createElement("button", {
     key: o.v,
@@ -445,7 +445,7 @@ function Survey({
     sw: 2
   }), /*#__PURE__*/React.createElement("span", null, /*#__PURE__*/React.createElement("b", null, "Immobilien noch nicht voll automatisiert."), " Sie k\xF6nnen Mirador Tax bereits nutzen, der Ablauf ist aber noch nicht durchg\xE4ngig und ggf. etwas teurer. Wir erstellen Ihnen gern ein Sonderangebot.")), /*#__PURE__*/React.createElement("div", {
     className: "result-save"
-  }, /*#__PURE__*/React.createElement("b", null, exact ? "≈ " + fmtEUR(priced.comparison - priced.yearly) : "≈ " + fmtEUR(saveRange[0]) + "–" + fmtEUR(saveRange[1]), " \u20AC"), /*#__PURE__*/React.createElement("span", null, "Ersparnis pro Jahr gegen\xFCber einem klassischen Steuerberater")), /*#__PURE__*/React.createElement("div", {
+  }, /*#__PURE__*/React.createElement("b", null, exact ? "≈ " + fmtEUR(priced.comparison - priced.yearly) : "≈ " + fmtEUR(saveRange[0]) + "–" + fmtEUR(saveRange[1]), " \u20AC"), /*#__PURE__*/React.createElement("span", null, "Ersparnis pro Jahr gg\xFC. klassischer Steuerberatung*")), /*#__PURE__*/React.createElement("div", {
     className: "calc__bars",
     style: {
       margin: "0 0 6px"
@@ -461,14 +461,16 @@ function Survey({
     }
   }))), /*#__PURE__*/React.createElement("div", {
     className: "calc__bar-row"
-  }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("span", null, "Klassischer Steuerberater"), /*#__PURE__*/React.createElement("span", null, "\u2248 ", exact ? fmtEUR(priced.comparison) + " €" : fmtEUR(compRange[0]) + "–" + fmtEUR(compRange[1]) + " €")), /*#__PURE__*/React.createElement("div", {
+  }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("span", null, "Klassische Steuerberatung"), /*#__PURE__*/React.createElement("span", null, "\u2248 ", exact ? fmtEUR(priced.comparison) + " €" : fmtEUR(compRange[0]) + "–" + fmtEUR(compRange[1]) + " €")), /*#__PURE__*/React.createElement("div", {
     className: "calc__bar"
   }, /*#__PURE__*/React.createElement("i", {
     className: "other",
     style: {
       width: "100%"
     }
-  }))))), step === 6 && mode === "form" && /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
+  })))), /*#__PURE__*/React.createElement("p", {
+    className: "calc__footnote"
+  }, "* Referenzwert auf Basis der Mittelgeb\xFChren nach StBVV f\xFCr eine vergleichbare Holding. Mirador Tax ist eine Software zur Selbsterstellung und ersetzt keine individuelle Steuerberatung.")), step === 6 && mode === "form" && /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
     className: "modal__step-label"
   }, intent === "register" ? "Konto erstellen" : "Angebot per E-Mail"), /*#__PURE__*/React.createElement("h3", {
     className: "modal__q"

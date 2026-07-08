@@ -72,7 +72,7 @@ function LeistungenPage({
   return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(PageHero, {
     eyebrow: "Leistungen",
     title: /*#__PURE__*/React.createElement(React.Fragment, null, "Alle Pflichten Ihrer Holding.", /*#__PURE__*/React.createElement("br", null), "In einem Portal."),
-    lede: "Mirador Tax \xFCbernimmt den kompletten Jahreszyklus Ihrer Holding \u2013 transparent zum Festpreis, ohne Stundenabrechnung."
+    lede: "Mit Mirador Tax erledigen Sie den kompletten Jahreszyklus Ihrer Holding \u2013 strukturiert, gef\xFChrt und zum Festpreis."
   }), /*#__PURE__*/React.createElement(Leistungen, {
     hideHead: true
   }), /*#__PURE__*/React.createElement(SecuritySection, null), /*#__PURE__*/React.createElement(FAQ, null), /*#__PURE__*/React.createElement(CtaBanner, {
@@ -82,24 +82,15 @@ function LeistungenPage({
 }
 
 /* ---------------- ABLAUF PAGE ---------------- */
-const WECHSEL_EMAIL = `Sehr geehrte [Name des bisherigen Steuerberaters / der Kanzlei],
+const WECHSEL_EMAIL = `Sehr geehrte/r [Name des bisherigen Steuerberaters / der Kanzlei],
 
-ich hoffe, es geht Ihnen gut.
+ich habe mich entschieden, Buchhaltung, Jahresabschluss und Steuererklärungen meiner Holding UG künftig selbst mit einer Software zu erstellen.
 
-Ich habe mich entschieden, die Zusammenarbeit in steuerlichen Angelegenheiten meiner Holding UG zukünftig über Mirador Tax zu organisieren.
+Ich bedanke mich für die bisherige Zusammenarbeit und bitte Sie im Zuge der Beendigung des Mandats um Übermittlung des DATEV-Datenexports der Gesellschaft für die Vorjahre.
 
-Für den elektronischen Mandantenübertrag bitte ich Sie daher, folgende Unterlagen bzw. Daten an Mirador Tax (in cc) zu übermitteln, um einen reibungslosen Übergang sicherzustellen:
-
-- den DATEV-Datenexport der Gesellschaft für die Vorjahre,
-- die Steuerbescheide des vorangegangenen Jahres.
-
-Sobald die Daten vorliegen, wird Mirador Tax die weitere Abstimmung und Datenaufbereitung übernehmen.
-
-Vielen Dank im Voraus für Ihre Unterstützung und die zeitnahe Übermittlung der Unterlagen.
-Bei Rückfragen können Sie sich jederzeit an das Team von Mirador Tax wenden.
+Bitte senden Sie die Unterlagen an [E-Mail-Adresse des Nutzers]. Für Ihre zeitnahe Unterstützung danke ich Ihnen im Voraus.
 
 Viele Grüße,
-
 [Ihr Name]`;
 function WechselSection() {
   const [copied, setCopied] = useStateP(false);
@@ -125,17 +116,17 @@ function WechselSection() {
     className: "h2"
   }, "Zu Mirador Tax wechseln \u2013 so einfach geht's"), /*#__PURE__*/React.createElement("p", {
     className: "lede"
-  }, "Mit unserem Umzugsservice ist der Wechsel ganz einfach. Unser Team unterst\xFCtzt Sie pers\xF6nlich beim Datentransfer und der Abstimmung \u2013 damit der Umstieg reibungslos erfolgt.")), /*#__PURE__*/React.createElement("div", {
+  }, "Der Wechsel ist unkompliziert: Sie fordern Ihre Unterlagen bei Ihrer bisherigen Kanzlei an und importieren sie in die Plattform \u2013 unser Support-Team unterst\xFCtzt Sie bei allen technischen Fragen rund um die Daten\xFCbernahme.")), /*#__PURE__*/React.createElement("div", {
     className: "wechsel"
   }, /*#__PURE__*/React.createElement("div", {
     className: "wechsel__text reveal"
-  }, /*#__PURE__*/React.createElement("p", null, "Informieren Sie Ihre bisherige Steuerberatung dar\xFCber, dass Sie die Zusammenarbeit in steuerlichen Angelegenheiten k\xFCnftig \xFCber Mirador Tax organisieren. \xDCber unseren vorbereiteten E-Mail-Entwurf sto\xDFen Sie den Wechsel mit wenigen Klicks an \u2013 wir begleiten Sie anschlie\xDFend durch den gesamten Prozess und k\xFCmmern uns um die n\xE4chsten Schritte f\xFCr einen reibungslosen \xDCbergang."), /*#__PURE__*/React.createElement("div", {
+  }, /*#__PURE__*/React.createElement("p", null, "Informieren Sie Ihre bisherige Steuerberatung dar\xFCber, dass Sie Buchhaltung, Jahresabschluss und Steuererkl\xE4rungen Ihrer Holding k\xFCnftig selbst mit Mirador Tax erstellen, und fordern Sie Ihre Unterlagen an. Unser vorbereiteter E-Mail-Entwurf macht das mit wenigen Klicks m\xF6glich \u2013 die gef\xFChrte Daten\xFCbernahme in der Plattform \xFCbernimmt den Rest."), /*#__PURE__*/React.createElement("div", {
     className: "wechsel__highlight"
   }, /*#__PURE__*/React.createElement(Icon, {
     name: "doc",
     size: 18,
     sw: 2
-  }), /*#__PURE__*/React.createElement("span", null, "Wichtig: Wir ben\xF6tigen den ", /*#__PURE__*/React.createElement("b", null, "DATEV-Datenexport der Gesellschaft f\xFCr die Vorjahre"), " sowie die Steuerbescheide des Vorjahres."))), /*#__PURE__*/React.createElement("div", {
+  }), /*#__PURE__*/React.createElement("span", null, "Wichtig: F\xFCr die Daten\xFCbernahme ben\xF6tigen Sie den ", /*#__PURE__*/React.createElement("b", null, "DATEV-Datenexport der Gesellschaft f\xFCr die Vorjahre"), " sowie die Steuerbescheide des Vorjahres."))), /*#__PURE__*/React.createElement("div", {
     className: "wechsel__mail reveal"
   }, /*#__PURE__*/React.createElement("div", {
     className: "wechsel__mail-head"
@@ -170,7 +161,7 @@ function KundenPage({
   return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(PageHero, {
     eyebrow: "Kundenstimmen",
     title: /*#__PURE__*/React.createElement(React.Fragment, null, "Was Holdings an", /*#__PURE__*/React.createElement("br", null), "Mirador sch\xE4tzen."),
-    lede: "\xDCber 500 Holdings vertrauen auf Mirador Tax \u2013 f\xFCr einen einfachen, g\xFCnstigen und zuverl\xE4ssigen Jahresabschluss."
+    lede: "\xDCber 200 Holdings vertrauen auf Mirador Tax \u2013 f\xFCr einen einfachen, g\xFCnstigen und zuverl\xE4ssigen Jahresabschluss."
   }), /*#__PURE__*/React.createElement(TestimonialsAll, null), /*#__PURE__*/React.createElement(CtaBanner, {
     onSurvey: onSurvey,
     priceFrom: priceFrom
@@ -178,19 +169,19 @@ function KundenPage({
 }
 
 /* ---------------- PREISE PAGE ---------------- */
-const PKG = ["Start", "Wachstum", "Pro", "Unlimited"];
+const PKG = ["Holding S", "Holding M", "Holding L", "Unlimited"];
 const PKG_PRICE = ["499 €", "999 €", "1.499 €", "Individuell"];
 const FEATURES = [{
   f: "Zugang zu Ihrem digitalen Kundenportal",
   v: [true, true, true, true]
 }, {
-  f: "Buchhaltung der Holding",
+  f: "Buchhaltung: automatischer Import & Kategorisierung",
   v: [true, true, true, true]
 }, {
-  f: "Erstellung des Jahresabschlusses",
+  f: "Jahresabschluss: automatische Erstellung aus Ihren Daten",
   v: [true, true, true, true]
 }, {
-  f: "Erstellung der E-Bilanz und Übermittlung an das Finanzamt",
+  f: "E-Bilanz: automatische Erstellung, Übermittlung per ELSTER",
   v: [true, true, true, true]
 }, {
   f: "Offenlegung im Bundesanzeiger",
@@ -200,7 +191,7 @@ const FEATURES = [{
   v: [true, true, true, true]
 }, {
   f: "Körperschaftsteuer- und Gewerbesteuererklärungen",
-  v: [false, true, true, true]
+  v: [true, true, true, true]
 }, {
   f: "Max. Anzahl an Beteiligungen",
   v: ["3", "10", "25", "Unlimitiert"]
@@ -228,21 +219,21 @@ function Cell({
     className: "pt__val"
   }, val);
 }
-const PV_FEATURES = ["Buchhaltung", "Jahresabschluss inkl. E-Bilanz", "Offenlegung im Bundesanzeiger", "Steuererklärung", "Persönlicher Ansprechpartner"];
+const PV_FEATURES = ["Buchhaltung", "Jahresabschluss inkl. E-Bilanz", "Offenlegung im Bundesanzeiger", "Steuererklärung", "Persönlicher Support"];
 const PRICE_OVERVIEW = [{
-  name: "Start",
+  name: "Holding S",
   price: "499",
-  sub: "Für Gründer, die ihre Holding schlank und kosteneffizient führen möchten. Über 500 Holdings vertrauen auf unseren Service und kommen mit dem Start Plan aus.",
+  sub: "Für Gründer, die ihre Holding schlank und kosteneffizient führen möchten. Über 200 Holdings vertrauen auf unser Produkt und kommen mit Holding S aus.",
   features: PV_FEATURES,
   limits: ["20 Transaktionen / Jahr", "Bis zu 3 Beteiligungen", "Bilanzsumme bis 100 TEUR"]
 }, {
-  name: "Wachstum",
+  name: "Holding M",
   price: "999",
   sub: "Für wachsende Holdings mit steigender Zahl an Investments.",
   features: PV_FEATURES,
   limits: ["40 Transaktionen / Jahr", "Bis zu 10 Beteiligungen", "Bilanzsumme bis 300 TEUR"]
 }, {
-  name: "Pro",
+  name: "Holding L",
   price: "1.499",
   sub: "Für komplexere Beteiligungsstrukturen.",
   features: PV_FEATURES,
@@ -267,7 +258,7 @@ function PovGroup({
   }), " ", x))));
 }
 const PRICE_TESTIMONIALS = [{
-  quote: "Mein alter Steuerberater hat nach Stunden abgerechnet – nie wusste ich vorher, was es kostet. Mirador macht das zum halben Preis, mit festem Betrag.",
+  quote: "Mein alter Steuerberater hat nach Stunden abgerechnet – nie wusste ich vorher, was es kostet. Mit Mirador erledige ich das zum halben Preis.",
   name: "Michael Kowatschew",
   role: "Gründer, Kowatschew Ventures UG",
   photo: "images/michael-kowatschew.png"
@@ -329,7 +320,9 @@ function PreisePage({
     name: "check",
     size: 15,
     sw: 2.6
-  }), " Unsere Preise sind Endpreise. Aufgrund unserer steuerlichen Stellung f\xE4llt derzeit keine zus\xE4tzliche Umsatzsteuer an. Zzgl. einmaliger Einrichtungsgeb\xFChr von 250 \u20AC."))), /*#__PURE__*/React.createElement("section", {
+  }), " Umsatzsteuerbefreit nach \xA7 19 UStG (Kleinunternehmerregelung)."), /*#__PURE__*/React.createElement("p", {
+    className: "price-endpreis price-endpreis--note"
+  }, "Die Plattform wird von der Ruescher Invest UG (haftungsbeschr\xE4nkt) betrieben. Auf Wunsch beauftragen Sie f\xFCr \xDCbermittlung oder fachliche \xDCberpr\xFCfung direkt die unabh\xE4ngige Bauer & Weigl Steuerberater PartG mbB."))), /*#__PURE__*/React.createElement("section", {
     className: "section section--tight",
     style: {
       background: "var(--cream-2)"
@@ -403,7 +396,11 @@ function PreisePage({
     className: "addon-card__d"
   }, a.d)))), /*#__PURE__*/React.createElement("div", {
     className: "price-operator reveal"
-  }, /*#__PURE__*/React.createElement("p", null, "Die Plattform wird von der ", /*#__PURE__*/React.createElement("b", null, "Ruescher Invest UG (haftungsbeschr\xE4nkt)"), " betrieben. Vorbehaltsaufgaben werden von der ", /*#__PURE__*/React.createElement("b", null, "Bauer & Weigl Steuerberater PartG mbB"), " erbracht. Aktuell nicht im Leistungsumfang enthalten sind Immobilien und Kryptow\xE4hrungen."), /*#__PURE__*/React.createElement("div", {
+  }, /*#__PURE__*/React.createElement("p", null, "Betrieben von der ", /*#__PURE__*/React.createElement("b", null, "Ruescher Invest UG (haftungsbeschr\xE4nkt)"), ". Mirador Tax ist eine Software zur Selbsterstellung. Optionale Zusatzleistungen mit Vorbehaltsaufgaben (Beratung, KapESt-Anmeldung, \xDCbermittlung) erbringt die unabh\xE4ngige ", /*#__PURE__*/React.createElement("b", null, "Bauer & Weigl Steuerberater PartG mbB"), " im direkten Mandat."), /*#__PURE__*/React.createElement("p", {
+    style: {
+      marginTop: 14
+    }
+  }, "Aktuell nicht im Leistungsumfang enthalten sind Immobilien und Kryptow\xE4hrungen."), /*#__PURE__*/React.createElement("div", {
     className: "price-excl"
   }, /*#__PURE__*/React.createElement("span", {
     className: "price-excl__chip"

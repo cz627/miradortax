@@ -31,9 +31,9 @@ function Nav({ onSurvey }) {
         </nav>
         <div className="nav__spacer"></div>
         <div className="nav__right">
-          <a className="nav__switch" href="Ablauf.html#wechsel">Zu Mirador wechseln</a>
           <a className="nav__login" href="https://app.miradortax.com" target="_blank" rel="noopener">Login</a>
-          <button className="btn btn--accent nav__cta" onClick={onSurvey}>Angebot anfordern</button>
+          <button className="btn btn--ghost nav__cta" onClick={onSurvey}>Angebot anfordern</button>
+          <a className="btn btn--accent nav__cta" href="https://app.miradortax.com/register" target="_blank" rel="noopener">Registrieren</a>
           <button className="nav__burger" aria-label={menuOpen ? "Menü schließen" : "Menü öffnen"} aria-expanded={menuOpen} onClick={() => setMenuOpen((o) => !o)}>
             <Icon name={menuOpen ? "close" : "menu"} size={22} sw={2} />
           </button>
@@ -46,8 +46,8 @@ function Nav({ onSurvey }) {
           <a className="nav__mlink" href="Empfehlung.html" onClick={closeMenu}>Empfehlung<Icon name="arrow" size={16} sw={2} /></a>
           <a className="nav__mlink" href="Blog.html" onClick={closeMenu}>Blog<Icon name="arrow" size={16} sw={2} /></a>
           <div className="nav__mobile-actions">
-            <a className="btn btn--ghost btn--block" href="Ablauf.html#wechsel" onClick={closeMenu}>Zu Mirador wechseln</a>
-            <button className="btn btn--accent btn--block" onClick={() => { closeMenu(); onSurvey(); }}>Angebot anfordern <Arrow /></button>
+            <button className="btn btn--ghost btn--block" onClick={() => { closeMenu(); onSurvey(); }}>Angebot anfordern</button>
+            <a className="btn btn--accent btn--block" href="https://app.miradortax.com/register" target="_blank" rel="noopener" onClick={closeMenu}>Registrieren <Arrow /></a>
             <a className="nav__mobile-login" href="https://app.miradortax.com" target="_blank" rel="noopener" onClick={closeMenu}>Zum Login →</a>
           </div>
         </div>
@@ -66,12 +66,12 @@ function Hero({ onSurvey, priceFrom }) {
           <div className="eyebrow hero__eyebrow">FÜR HOLDINGGESELLSCHAFTEN</div>
           <h1 className="display hero__title">Holding-Steuern,<br /><em>endlich</em> erledigt.</h1>
           <p className="lede hero__lede">
-            Buchhaltung, Jahresabschluss, Offenlegung und Steuererklärung – strukturiert
-            in einem Portal. Digital und zum günstigsten Festpreis Deutschlands.
+            Buchhaltung, Jahresabschluss, Offenlegung und Steuererklärung – von Ihnen erstellt,
+            in einem geführten Portal. Digital und zum Festpreis ab 499 €.
           </p>
           <div className="hero__actions">
             <button className="btn btn--accent btn--lg" onClick={onSurvey}>Angebot anfordern <Arrow /></button>
-            <a className="btn btn--ghost btn--lg" href="https://calendar.notion.so/meet/christopher-vd1ezx1lps/cw4uci4o40" target="_blank" rel="noopener">Erstgespräch buchen</a>
+            <a className="btn btn--ghost btn--lg" href="https://calendar.notion.so/meet/christopher-vd1ezx1lps/cw4uci4o40" target="_blank" rel="noopener">Produkt-Demo buchen</a>
           </div>
           <div className="hero__proof">
             <div className="hero__proof-people">
@@ -81,7 +81,7 @@ function Hero({ onSurvey, priceFrom }) {
               </div>
               <div className="hero__proof-text">
                 <div className="stars">★★★★★</div>
-                <span><b>500+ Holdings</b> vertrauen auf Mirador Tax</span>
+                <span><b>200+ Holdings</b> vertrauen auf Mirador Tax</span>
               </div>
             </div>
             <ul className="hero__checks">
@@ -113,20 +113,16 @@ function Logos() {
     <section className="trust wrap">
       <div className="trust__row">
         <div className="trust__item">
-          <Icon name="sealcheck" size={30} sw={1.6} />
-          <span className="trust__label">Mit Zufriedenheits-<br />garantie</span>
-        </div>
-        <div className="trust__item">
           <Icon name="star" size={28} sw={1.6} />
           <span className="trust__label trust__label--brand">ELSTER</span>
         </div>
         <div className="trust__item">
           <Icon name="usercheck" size={30} sw={1.6} />
-          <span className="trust__label">Geprüfte<br />Steuerberater:innen</span>
+          <span className="trust__label">Entwickelt mit<br />Steuerberater:innen</span>
         </div>
         <div className="trust__item trust__google">
           <span className="trust__gtext">
-            <small>Google Rating 5/5</small>
+            <small>Google Rating 4.9/5</small>
             <span className="trust__stars">★★★★★</span>
           </span>
         </div>
@@ -142,9 +138,9 @@ function Logos() {
 /* ---------------- LEISTUNGEN ---------------- */
 function Leistungen({ hideHead }) {
   const cards = [
-  { ic: "book", n: "01", t: "Buchhaltung", d: "Laufende Finanzbuchhaltung für Ihre Holding – Kontoauszüge werden automatisch importiert; Transaktionen werden automatisch kategorisiert.", list: ["Bank- & Depot-Upload", "Beteiligungen & Darlehen", "Alle Beteiligungen in einer Übersicht"] },
+  { ic: "book", n: "01", t: "Buchhaltung", d: "Kontoauszüge werden automatisch importiert; Transaktionen werden automatisch kategorisiert. Sie prüfen und bestätigen.", list: ["Bank- & Depot-Upload", "Beteiligungen & Darlehen", "Alle Beteiligungen in einer Übersicht"] },
   { ic: "doc", n: "02", t: "Jahresabschluss", d: "Bilanz, GuV und Anhang nach HGB – Software wurde von Steuerexpert:innen entwickelt, geprüft und gewartet.", list: ["Bilanz & GuV nach HGB", "E-Bilanz ans Finanzamt", "Anlageverzeichnis"] },
-  { ic: "upload", n: "03", t: "Offenlegung", d: "Elektronische Einreichung beim Bundesanzeiger – pünktlich und ohne Bußgeldrisiko.", list: ["Bundesanzeiger-Einreichung", "Größenklassen-Prüfung", "Fristenerinnerungen"] },
+  { ic: "upload", n: "03", t: "Offenlegung", d: "Elektronische Einreichung beim Bundesanzeiger – mit Fristenerinnerungen, damit Sie pünktlich einreichen.", list: ["Bundesanzeiger-Einreichung", "Fristenerinnerungen"] },
   { ic: "receipt", n: "04", t: "Steuererklärung", d: "Körperschaft-, Gewerbe- und Umsatzsteuer – vollständig erstellt und elektronisch übermittelt.", list: ["KSt, GewSt & USt", "ELSTER-Übermittlung", "Ablage für Steuererklärungen"] }];
 
   return (
@@ -157,7 +153,7 @@ function Leistungen({ hideHead }) {
             <h2 className="h2" style={{ marginTop: 16 }}>Alle Pflichten Ihrer Holding.<br />In einem Portal.</h2>
           </div>
           <p className="lede" style={{ marginBottom: 4 }}>
-            Mirador Tax übernimmt den kompletten Jahreszyklus Ihrer Holding – transparent zum Festpreis.
+            Mit Mirador Tax erledigen Sie den kompletten Jahreszyklus Ihrer Holding – strukturiert, geführt und zum Festpreis.
           </p>
         </div>
         }
@@ -182,9 +178,9 @@ function Leistungen({ hideHead }) {
 /* ---------------- ABLAUF ---------------- */
 function Ablauf({ hideHead }) {
   const steps = [
-  { t: "Daten hochladen", d: "Laden Sie Ihre Kontoauszüge sicher auf unsere Plattform hoch. Mirador Tax führt Sie Schritt für Schritt durch die Datenerfassung und prüft die Vollständigkeit der Angaben." },
-  { t: "Erstellung der Jahresabschlüsse", d: "Auf Basis Ihrer Daten erstellt Mirador Tax automatisch Ihren Jahresabschluss – inklusive Bilanz, GuV und Anlagenverzeichnis. Sie sehen jederzeit den aktuellen Status & Fortschritt." },
-  { t: "Freigeben & einreichen", d: "Nach Ihrer Freigabe übermittelt Mirador Tax die fertigen Jahresabschlüsse direkt an den Bundesanzeiger und die Steuererklärung an das Finanzamt – rechtssicher und fristgerecht." }];
+  { t: "Daten hochladen", d: "Laden Sie Ihre Kontoauszüge sicher auf die Plattform hoch. Die Software führt Sie Schritt für Schritt durch die Datenerfassung und prüft Ihre Angaben automatisch auf technische Vollständigkeit." },
+  { t: "Erstellung der Jahresabschlüsse", d: "Auf Basis Ihrer eingegebenen Daten erstellt die Software automatisch Ihren Jahresabschluss – inklusive Bilanz, GuV und Anlagenverzeichnis. Alle Ansätze und Wahlrechte beruhen auf Ihren Angaben; Sie sehen jederzeit Status und Fortschritt." },
+  { t: "Freigeben & einreichen", d: "Nach Ihrer Durchsicht & Freigabe übermitteln Sie die fertigen Jahresabschlüsse direkt an den Bundesanzeiger und die Steuererklärung an das Finanzamt – rechtssicher und fristgerecht." }];
 
   return (
     <section className="section section--tight" id="ablauf" style={{ background: "var(--cream-2)", backgroundColor: "rgb(255, 255, 255)" }}>
@@ -204,6 +200,10 @@ function Ablauf({ hideHead }) {
               <div className="step__d">{s.d}</div>
             </div>
           )}
+        </div>
+        <div className="ablauf__control reveal">
+          <Icon name="shieldcheck" size={26} sw={1.7} />
+          <p><b>Volle Kontrolle:</b> Sie bestätigen jede Kategorisierung, beantworten alle Abschlussfragen selbst und geben jedes Dokument vor Einreichung frei. Nichts verlässt die Plattform ohne Ihre Freigabe.</p>
         </div>
       </div>
     </section>);
@@ -228,7 +228,7 @@ const USP_DATA = [
   key: "guenstig", label: "Günstig", icon: "shieldcheck",
   stat: { b: "− 58 %", s: "günstiger als der vorherige Steuerberater" },
   feature: {
-    quote: "Mein alter Steuerberater hat nach Stunden abgerechnet – nie wusste ich vorher, was es kostet. Mirador macht das zum halben Preis, mit festem Betrag.",
+    quote: "Mein alter Steuerberater hat nach Stunden abgerechnet – nie wusste ich vorher, was es kostet. Mit Mirador erledige ich das zum halben Preis.",
     name: "Michael Kowatschew", role: "Gründer, Kowatschew Ventures UG", ava: "#9a7b66", photo: "images/michael-kowatschew.png"
   },
   cards: [
@@ -238,7 +238,7 @@ const USP_DATA = [
 },
 {
   key: "zuverlaessig", label: "Zuverlässig", icon: "sealcheck",
-  stat: { b: "100 %", s: "Fristen eingehalten – jeden Jahresabschluss" },
+  stat: { b: "Alle Fristen", s: "im Blick – bei jedem Jahresabschluss" },
   feature: {
     quote: "Die Offenlegung lief zum ersten Mal völlig stressfrei. Frist im Blick, ein Klick, erledigt – und bei Rückfragen antwortet immer ein freundlicher Mensch.",
     name: "Alexander U.", role: "Geschäftsführer, AU Holding GmbH", ava: "#9a7b66", photo: "https://randomuser.me/api/portraits/men/34.jpg"
@@ -339,11 +339,10 @@ function TestimonialsAll() {
 function FAQ() {
   const [open, setOpen] = useStateS(0);
   const qs = [
-  { q: "Für welche Holdings ist Mirador Tax geeignet?", a: "Wir betreuen vermögensverwaltende und geschäftsleitende Holdings in der Rechtsform GmbH oder UG (haftungsbeschränkt). Ob klassische Beteiligungsholding, Family Office oder Investment-Holding mit Wertpapierdepots – wir prüfen Ihre Eignung in der kostenlosen Angebotsanfrage." },
+  { q: "Für welche Holdings ist Mirador Tax geeignet?", a: "Mirador Tax ist geeignet für vermögensverwaltende und geschäftsleitende Holdings in der Rechtsform GmbH oder UG (haftungsbeschränkt) – von der klassischen Beteiligungsholding bis zur Investment-Holding mit Wertpapierdepots. Ob Ihre Gesellschaft ins Festpreis-Modell passt, erfahren Sie in der kostenlosen Angebotsanfrage." },
   { q: "Was kostet der Festpreis genau?", a: "Der Preis richtet sich nach Anzahl der Beteiligungen, dem Transaktionsvolumen und der Bilanzsumme. Über die Angebotsanfrage erhalten Sie in 2 Minuten einen Festpreis – ohne Stundenabrechnung und ohne versteckte Kosten." },
-  { q: "Übernehmen Sie meine bestehende Buchhaltung?", a: "Ja. Wir übernehmen Ihre laufende Buchhaltung nahtlos, importieren historische Daten und stellen den Wechsel von Ihrem bisherigen Steuerberater für Sie sicher." },
-  { q: "Ist Mirador Tax eine Steuerkanzlei?", a: "Nein, wir selbst sind keine Steuerkanzlei. Wir arbeiten jedoch eng mit erfahrenen Steuerberatern und Partnerkanzleien zusammen, um sicherzustellen, dass dein Jahresabschluss nach geltendem Recht professionell erstellt und eingereicht wird. Wir geben keine individuelle steuerliche Beratung." },
-  { q: "Wie ist das Angebot zu solchen Preisen möglich?", a: "Wir kombinieren spezialisierte Expertise mit moderner Technologie. Durch den gezielten Einsatz digitaler Lösungen optimieren wir jeden Schritt – von der Sortierung und Verbuchung deiner Geschäftsvorfälle (z.B. Kontoauszüge) über die Vorbereitung der Buchhaltungsunterlagen bis hin zur Erstellung von Bilanz und Gewinn- und Verlustrechnung (GuV) sowie der Übermittlung der E-Bilanz an das Finanzamt. Diese Automatisierung ermöglicht es uns, Prozesse effizienter zu gestalten, Fehler zu minimieren und dir einen reibungslosen, kostengünstigen Jahresabschluss anzubieten – ohne Abstriche bei Qualität oder Rechtssicherheit." }];
+  { q: "Ist Mirador Tax eine Steuerkanzlei?", a: "Nein. Mirador Tax ist eine Software, mit der Sie Buchhaltung, Jahresabschluss und Steuererklärungen Ihrer Holding selbst erstellen. Alle Werte, Ansätze und Wahlrechte beruhen auf Ihren eigenen Angaben und Bestätigungen; die Software verarbeitet diese automatisiert nach festen Regeln – eine individuelle steuerliche Bewertung, Empfehlung oder Beratung durch Mirador Tax findet nicht statt. Ersteller Ihrer Abschlüsse und Erklärungen sind Sie selbst. Auf Wunsch können Sie für die Übermittlung an das Finanzamt oder eine fachliche Überprüfung direkt eine unabhängige Steuerkanzlei beauftragen." },
+  { q: "Wie ist das Angebot zu solchen Preisen möglich?", a: "Mirador Tax ist eine Software, keine Kanzlei: Kontoauszüge werden automatisch importiert, Transaktionen automatisch kategorisiert, und Bilanz, GuV und E-Bilanz werden nach festen Regeln aus Ihren bestätigten Angaben erzeugt. Weil keine individuelle Bearbeitung durch Berufsträger anfällt, entfällt die Abrechnung nach Stunden oder StBVV – der Festpreis deckt die Nutzung der Plattform für den kompletten Jahreszyklus ab." }];
 
   return (
     <section className="section" id="faq">
@@ -379,7 +378,7 @@ function CtaBanner({ onSurvey, priceFrom }) {
           <p>Beantworten Sie fünf kurze Fragen und erhalten Sie sofort einen unverbindlichen Festpreis für das komplette Steuerjahr Ihrer Holding.</p>
           <div className="cta__actions">
             <button className="btn btn--accent btn--lg" onClick={onSurvey}>Angebot anfordern <Arrow /></button>
-            <a className="btn btn--ghost btn--lg" href="https://calendar.notion.so/meet/christopher-vd1ezx1lps/cw4uci4o40" target="_blank" rel="noopener">Erstgespräch buchen</a>
+            <a className="btn btn--ghost btn--lg" href="https://calendar.notion.so/meet/christopher-vd1ezx1lps/cw4uci4o40" target="_blank" rel="noopener">Produkt-Demo buchen</a>
           </div>
         </div>
       </div>
@@ -398,7 +397,7 @@ function Footer() {
       <div className="wrap footer__grid">
         <div className="footer__brand">
           <img src="assets/logo-dark.png" alt="Mirador Tax" style={{ height: "53px", objectFit: "contain", width: "197px" }} />
-          <p>Buchhaltung, Jahresabschluss, Offenlegung und Steuererklärung für Holdinggesellschaften in Deutschland – digital und zum Festpreis.</p>
+          <p>Die Software für Buchhaltung, Jahresabschluss, Offenlegung und Steuererklärung Ihrer Holding – digital und zum Festpreis.</p>
         </div>
         {cols.map((c) =>
         <div key={c.h} className="footer__col">
@@ -409,7 +408,7 @@ function Footer() {
       </div>
       <div className="wrap footer__bottom">
         <span>© 2026 Mirador Tax. Alle Rechte vorbehalten.</span>
-        <span>Made in Germany · Daten gehostet in der EU</span>
+        <span className="footer__legalnote">Mirador Tax ist ein Softwareprodukt zur Selbsterstellung und erbringt keine Steuerberatung im Sinne des StBerG.</span>
       </div>
     </footer>);
 
