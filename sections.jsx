@@ -120,6 +120,10 @@ function Logos() {
           <Icon name="usercheck" size={30} sw={1.6} />
           <span className="trust__label">Entwickelt mit<br />Steuerberater:innen</span>
         </div>
+        <div className="trust__item">
+          <Icon name="star" size={28} sw={1.6} />
+          <span className="trust__label">Über 200<br />zufriedene Nutzer</span>
+        </div>
         <div className="trust__item trust__google">
           <span className="trust__gtext">
             <small>Google Rating 4.9/5</small>

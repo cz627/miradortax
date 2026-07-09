@@ -238,6 +238,14 @@ function Logos() {
   }), /*#__PURE__*/React.createElement("span", {
     className: "trust__label"
   }, "Entwickelt mit", /*#__PURE__*/React.createElement("br", null), "Steuerberater:innen")), /*#__PURE__*/React.createElement("div", {
+    className: "trust__item"
+  }, /*#__PURE__*/React.createElement(Icon, {
+    name: "star",
+    size: 28,
+    sw: 1.6
+  }), /*#__PURE__*/React.createElement("span", {
+    className: "trust__label"
+  }, "\xDCber 200", /*#__PURE__*/React.createElement("br", null), "zufriedene Nutzer")), /*#__PURE__*/React.createElement("div", {
     className: "trust__item trust__google"
   }, /*#__PURE__*/React.createElement("span", {
     className: "trust__gtext"
