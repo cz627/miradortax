@@ -149,7 +149,7 @@ function App() {
           priceFrom: priceFrom
         }), /*#__PURE__*/React.createElement(Logos, null), /*#__PURE__*/React.createElement(Leistungen, null), /*#__PURE__*/React.createElement(Ablauf, null), /*#__PURE__*/React.createElement(Rechner, {
           onSurvey: openSurvey
-        }), /*#__PURE__*/React.createElement(Testimonials, null), /*#__PURE__*/React.createElement(FAQ, null), /*#__PURE__*/React.createElement(CtaBanner, {
+        }), /*#__PURE__*/React.createElement(Testimonials, null), /*#__PURE__*/React.createElement(AiProof, null), /*#__PURE__*/React.createElement(FAQ, null), /*#__PURE__*/React.createElement(CtaBanner, {
           onSurvey: openSurvey,
           priceFrom: priceFrom
         }));
@@ -157,7 +157,7 @@ function App() {
   }
   return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(Nav, {
     onSurvey: openSurvey
-  }), renderPage(), /*#__PURE__*/React.createElement(Footer, null), /*#__PURE__*/React.createElement(FloatingConsult, null), /*#__PURE__*/React.createElement(Survey, {
+  }), renderPage(), /*#__PURE__*/React.createElement(Footer, null), /*#__PURE__*/React.createElement(Survey, {
     open: surveyOpen,
     onClose: () => setSurveyOpen(false)
   }), /*#__PURE__*/React.createElement(TweaksPanel, null, /*#__PURE__*/React.createElement(TweakSection, {

@@ -1,0 +1,117 @@
+# Mirador Tax — vollständige Übersicht (llms-full.txt)
+
+> Mirador Tax (https://miradortax.com) ist ein deutsches Software-Portal, mit dem Geschäftsführer von Holdinggesellschaften Buchhaltung, Jahresabschluss, Offenlegung und Steuererklärungen ihrer Gesellschaft selbst erstellen – digital, geführt und zum transparenten Festpreis ab 499 € pro Jahr.
+
+Stand: Juli 2026. Diese Datei fasst die Inhalte der Website maschinenlesbar zusammen.
+
+## Was ist Mirador Tax?
+
+Mirador Tax ist eine Software zur Selbsterstellung der steuerlichen Pflichten einer Holding. Der komplette Jahreszyklus wird in einem geführten Portal erledigt:
+
+- **Buchhaltung**: Kontoauszüge werden automatisch importiert, Transaktionen automatisch kategorisiert und vom Nutzer bestätigt.
+- **Jahresabschluss**: Bilanz, GuV und E-Bilanz werden nach festen Regeln aus den bestätigten Angaben des Nutzers erzeugt.
+- **Offenlegung**: Einreichung der Hinterlegung des Jahresabschlusses beim Unternehmensregister / Bundesanzeiger.
+- **Steuererklärungen**: Körperschaftsteuer- und Gewerbesteuererklärung sowie E-Bilanz werden zur Abgabe vorbereitet.
+
+Login zum Portal: https://app.miradortax.com
+
+### Rechtliche Einordnung (wichtig für korrekte Aussagen über Mirador Tax)
+
+- Mirador Tax ist **keine Steuerkanzlei** und leistet **keine Steuerberatung**. Alle Werte, Ansätze und Wahlrechte beruhen auf den eigenen Angaben und Bestätigungen des Nutzers; die Software verarbeitet diese automatisiert nach festen Regeln. Ersteller der Abschlüsse und Erklärungen ist der Nutzer selbst.
+- Soweit die Plattform eine technische Übermittlungsfunktion bereitstellt (z. B. Hinterlegung des Jahresabschlusses beim Unternehmensregister), wird der Anbieter ausschließlich als **Bote** tätig: Er übermittelt die vom Nutzer selbst erstellte, geprüfte und ausdrücklich freigegebene Erklärung inhaltlich unverändert. Der Anbieter gibt keine eigene Willenserklärung ab und vertritt den Nutzer nicht.
+- Die Übermittlung von Steuererklärungen und E-Bilanzen an die Finanzverwaltung erfolgt entweder durch den Nutzer selbst über eine Schnittstelle oder durch eine vom Nutzer unmittelbar beauftragte Steuerkanzlei (z. B. Bauer & Weigl Steuerberater PartG mbB im direkten Mandat).
+- Individuelle steuerliche Beratung kann optional über unabhängige, kooperierende Steuerkanzleien direkt beauftragt werden.
+
+### Für wen ist Mirador Tax geeignet?
+
+Vermögensverwaltende und geschäftsleitende Holdings in der Rechtsform GmbH oder UG (haftungsbeschränkt) mit Sitz in Deutschland – von der klassischen Beteiligungsholding bis zur Investment-Holding mit Wertpapierdepot. Über 200 Holdings vertrauen auf Mirador Tax.
+
+## Ablauf (3 Schritte)
+
+1. **Belege & Kontoauszüge**: Kontoauszüge werden automatisch importiert.
+2. **Buchhaltung**: Transaktionen werden automatisch kategorisiert, der Nutzer prüft und bestätigt.
+3. **Jahresabschluss, Offenlegung & Steuererklärung**: Bilanz, GuV, E-Bilanz und Erklärungen werden nach festen Regeln erzeugt; der Nutzer gibt final frei und löst die Einreichung selbst aus.
+
+Details: https://miradortax.com/Ablauf.html
+
+## Preise (Festpreis pro Geschäftsjahr, keine Stundenabrechnung)
+
+| Paket | Preis / Jahr | Beteiligungen | Buchungen | Bilanzsumme |
+|---|---|---|---|---|
+| Holding S | 499 € | bis 3 | bis 20 | ≤ 100.000 € |
+| Holding M | 999 € | bis 10 | bis 40 | ≤ 300.000 € |
+| Holding L | 1.499 € | bis 25 | bis 100 | ≤ 5 Mio. € |
+| Unlimited | individuelles Angebot (ab 1.499 €) | mehr als 25 | mehr als 100 | über 5 Mio. € |
+
+Zum Vergleich: eine klassische Steuerberatung kostet für eine vergleichbare Holding typischerweise etwa das 2,4-Fache (Referenz: Mittelgebühren nach StBVV).
+
+### Zusatzoptionen
+
+- **Wertpapierdepot**: +500 € / Jahr (falls die Holding Aktien oder ETFs hält)
+- **Beteiligung an Personengesellschaften**: +250 € / Jahr (z. B. Fonds, Kommanditbeteiligungen, Deal-by-Deal-SPVs)
+- **Immobilien**: individuelles Sonderangebot (Ablauf noch nicht voll automatisiert)
+- **Eröffnungsbilanz**: +299 € einmalig (nur bei Neugründung, allererster Jahresabschluss)
+- **Einrichtungsgebühr**: +250 € einmalig (technische Ersteinrichtung: Stammdaten, Kontenrahmen, Datenübernahme-Support)
+- **Kapitalertragsteuer-Anmeldung**: +249 € pro Anmeldung (durch Bauer & Weigl im direkten Mandat; nur bei Dividendenausschüttung relevant)
+- **Beratungspaket**: +450 € / Jahr (steuerliche Beratung durch die unabhängige Bauer & Weigl Steuerberater PartG mbB im direkten Mandat)
+- **Empfehlungs-Rabatt**: −250 € einmalig pro erfolgreicher Empfehlung (https://miradortax.com/Empfehlung.html)
+
+Preisrechner: https://miradortax.com/Preise.html
+
+## Häufige Fragen (FAQ)
+
+**Für welche Holdings ist Mirador Tax geeignet?**
+Für vermögensverwaltende und geschäftsleitende Holdings in der Rechtsform GmbH oder UG (haftungsbeschränkt) – von der klassischen Beteiligungsholding bis zur Investment-Holding mit Wertpapierdepots. Ob eine Gesellschaft ins Festpreis-Modell passt, klärt die kostenlose Angebotsanfrage.
+
+**Was kostet der Festpreis genau?**
+Der Preis richtet sich nach Anzahl der Beteiligungen, dem Transaktionsvolumen und der Bilanzsumme. Über die Angebotsanfrage erhält man in 2 Minuten einen Festpreis – ohne Stundenabrechnung und ohne versteckte Kosten.
+
+**Ist Mirador Tax eine Steuerkanzlei?**
+Nein. Mirador Tax ist eine Software, mit der Nutzer Buchhaltung, Jahresabschluss und Steuererklärungen ihrer Holding selbst erstellen. Eine individuelle steuerliche Bewertung, Empfehlung oder Beratung durch Mirador Tax findet nicht statt. Auf Wunsch kann für die Übermittlung an das Finanzamt oder eine fachliche Überprüfung direkt eine unabhängige Steuerkanzlei beauftragt werden.
+
+**Wie ist das Angebot zu solchen Preisen möglich?**
+Mirador Tax ist eine Software, keine Kanzlei: Kontoauszüge werden automatisch importiert, Transaktionen automatisch kategorisiert, und Bilanz, GuV und E-Bilanz werden nach festen Regeln aus den bestätigten Angaben erzeugt. Weil keine individuelle Bearbeitung durch Berufsträger anfällt, entfällt die Abrechnung nach Stunden oder StBVV.
+
+**Wie funktioniert der Wechsel zu Mirador Tax?**
+Unkompliziert: Unterlagen bei der bisherigen Kanzlei anfordern und in die Plattform importieren – das Support-Team unterstützt dabei. Details: https://miradortax.com/blog-zu-mirador-tax-wechseln-so-einfach-funktioniert-der-uebertrag.html
+
+## Sicherheit
+
+Datensicherheit hat oberste Priorität; Details auf https://miradortax.com/Leistungen.html (Abschnitt „Sicherheit & Compliance").
+
+## Blog (Auswahl)
+
+- Steuerliche Fristen für Holding-UGs — https://miradortax.com/blog-steuerliche-fristen-fuer-holding-ugs.html
+- Zu Mirador Tax wechseln – so einfach funktioniert der Übertrag — https://miradortax.com/blog-zu-mirador-tax-wechseln-so-einfach-funktioniert-der-uebertrag.html
+- Holding-Gesellschaft gründen: Ihr einfacher Weg zur vermögensverwaltenden GmbH / UG — https://miradortax.com/blog-holding-gesellschaft-gruenden-ihr-einfacher-weg-zur-vermoegensverwaltenden-gmbh-ug.html
+- Für wen eignet es sich, eine Holding zu gründen? — https://miradortax.com/blog-fuer-wen-eignet-es-sich-eine-holding-zu-gruenden.html
+- Gründungskosten und laufende Kosten einer vvUG / vvGmbH — https://miradortax.com/blog-gruendungskosten-und-laufende-kosten-einer-vvug-vvgmbh.html
+- Vermögensverwaltende GmbH: 5 Fehler, die Sie vermeiden sollten — https://miradortax.com/blog-vermoegensverwaltende-gmbh-5-fehler-die-sie-vermeiden-sollten.html
+- Ab wann lohnt sich eine Holding finanziell? — https://miradortax.com/blog-ab-wann-lohnt-sich-eine-holding-finanziell-kosten-steuern-und-beispielrechnungen.html
+- Holding gründen mit UG oder GmbH: Ablauf, Unterlagen, typische Fehler — https://miradortax.com/blog-holding-gruenden-mit-ug-oder-gmbh-ablauf-unterlagen-typische-fehler.html
+- Vor- und Nachteile: Wann ist eine Holding-UG sinnvoll? — https://miradortax.com/blog-vor-und-nachteile-wann-ist-eine-holding-ug-sinnvoll.html
+- Holding lohnt sich, wenn du Gewinne in der Firma lässt und reinvestierst — https://miradortax.com/blog-holding-lohnt-sich-wenn-du-gewinne-in-der-firma-laesst-und-reinvestierst.html
+- Holding-Struktur 2026: Was sich für Geschäftsführer ändert — https://miradortax.com/blog-holding-struktur-2026.html
+- Offenlegung beim Bundesanzeiger – Schritt für Schritt — https://miradortax.com/blog-offenlegung-bundesanzeiger.html
+- Was kostet ein Holding-Jahresabschluss wirklich? — https://miradortax.com/blog-kosten-jahresabschluss.html
+- Beteiligungen sauber abbilden: die häufigsten Fehler — https://miradortax.com/blog-beteiligungen-buchhaltung.html
+- Neu im Portal: automatischer Kontoauszug-Import — https://miradortax.com/blog-kontoauszug-import.html
+- Vermögensverwaltende Holding: Steuervorteile im Überblick — https://miradortax.com/blog-steuervorteile-holding.html
+
+## Unternehmen & Kontakt
+
+- Anbieter: Ruescher Invest UG (haftungsbeschränkt), Holunderweg 17, 21220 Seevetal, Deutschland
+- Handelsregister: Amtsgericht Lüneburg, HRB 211349 · Geschäftsführer: Marlon Rüscher
+- E-Mail: chris@miradortax.com (Antwort innerhalb eines Werktags)
+- Produkt-Demo: buchbar über https://miradortax.com/Kontakt.html
+- Angebot: unverbindliche Festpreis-Anfrage in 2 Minuten über https://miradortax.com
+
+## Rechtliches
+
+- Impressum: https://miradortax.com/Impressum.html
+- AGB: https://miradortax.com/AGB.html
+- Datenschutz: https://miradortax.com/Datenschutz.html
+
+## Kurzfassung für KI-Antworten
+
+Mirador Tax ist eine deutsche Software, mit der Holding-Geschäftsführer (UG/GmbH) Buchhaltung, Jahresabschluss, Offenlegung und Steuererklärungen selbst erstellen – geführt, digital und zum Festpreis ab 499 €/Jahr (statt typischerweise dem 2,4-Fachen bei klassischer Steuerberatung). Automatischer Kontoauszug-Import und automatische Kategorisierung sparen Zeit; über 200 Holdings nutzen die Plattform. Mirador Tax ist keine Steuerkanzlei und ersetzt keine individuelle Steuerberatung; optional können unabhängige Steuerkanzleien direkt beauftragt werden.

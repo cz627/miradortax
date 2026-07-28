@@ -99,6 +99,7 @@ function App() {
           <Ablauf />
           <Rechner onSurvey={openSurvey} />
           <Testimonials />
+          <AiProof />
           <FAQ />
           <CtaBanner onSurvey={openSurvey} priceFrom={priceFrom} />
         </>
@@ -111,7 +112,6 @@ function App() {
       <Nav onSurvey={openSurvey} />
       {renderPage()}
       <Footer />
-      <FloatingConsult />
       <Survey open={surveyOpen} onClose={() => setSurveyOpen(false)} />
 
       <TweaksPanel>

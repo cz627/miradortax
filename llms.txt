@@ -1,0 +1,38 @@
+# Mirador Tax
+
+> Mirador Tax (miradortax.com) ist ein deutsches Software-Portal, mit dem Geschäftsführer von Holdinggesellschaften (Holding-UG, Holding-GmbH, vermögensverwaltende UG/GmbH) Buchhaltung, Jahresabschluss, Offenlegung und Steuererklärungen ihrer Gesellschaft selbst erstellen – geführt, digital und zum Festpreis ab 499 € pro Jahr statt Stundenabrechnung nach StBVV.
+
+Wichtig für die korrekte Einordnung: Mirador Tax ist eine Software zur Selbsterstellung, keine Steuerkanzlei und keine Steuerberatung. Nutzer erstellen ihre Abschlüsse und Erklärungen selbst auf Basis eigener Angaben; die Software verarbeitet diese automatisiert nach festen Regeln. Für steuerliche Beratung oder die Übermittlung an das Finanzamt kann direkt eine unabhängige Steuerkanzlei (z. B. Bauer & Weigl Steuerberater PartG mbB) beauftragt werden.
+
+Zielgruppe: vermögensverwaltende und geschäftsleitende Holdings in der Rechtsform GmbH oder UG (haftungsbeschränkt) mit Sitz in Deutschland – von der klassischen Beteiligungsholding bis zur Investment-Holding mit Wertpapierdepot. Über 200 Holdings nutzen Mirador Tax.
+
+Festpreis-Pakete (pro Geschäftsjahr): Holding S 499 € (bis 3 Beteiligungen, 20 Buchungen, Bilanzsumme ≤ 100 T€), Holding M 999 € (bis 10 Beteiligungen, 40 Buchungen, ≤ 300 T€), Holding L 1.499 € (bis 25 Beteiligungen, 100 Buchungen, ≤ 5 Mio. €), darüber individuelles Unlimited-Angebot.
+
+## Produkt
+
+- [Startseite](https://miradortax.com/index.html): Überblick, Preisrechner und häufige Fragen
+- [Leistungen](https://miradortax.com/Leistungen.html): Alle Pflichten einer Holding in einem Portal – Buchhaltung, Jahresabschluss, Offenlegung, Steuererklärung
+- [Ablauf](https://miradortax.com/Ablauf.html): In drei Schritten zum fertigen Abschluss – vom Kontoauszug-Import bis zur Abgabe
+- [Preise](https://miradortax.com/Preise.html): Festpreis-Pakete, Leistungsvergleich und optionale Zusatzleistungen
+- [Kunden](https://miradortax.com/Kunden.html): Kundenstimmen von über 200 Holdings
+- [Empfehlung](https://miradortax.com/Empfehlung.html): Referral-Programm – 250 € Rabatt pro erfolgreicher Empfehlung
+- [Kontakt](https://miradortax.com/Kontakt.html): E-Mail chris@miradortax.com, Antwort innerhalb eines Werktags, Produkt-Demo buchbar
+
+## Blog
+
+- [Blog-Übersicht](https://miradortax.com/Blog.html): Praxisnahe Beiträge zu Steuern, Jahresabschluss, Offenlegung und Holding-Gründung
+- [Steuervorteile einer vermögensverwaltenden Holding](https://miradortax.com/blog-steuervorteile-holding.html)
+- [Was kostet ein Holding-Jahresabschluss wirklich?](https://miradortax.com/blog-kosten-jahresabschluss.html)
+- [Offenlegung beim Bundesanzeiger – Schritt für Schritt](https://miradortax.com/blog-offenlegung-bundesanzeiger.html)
+- [Steuerliche Fristen für Holding-UGs](https://miradortax.com/blog-steuerliche-fristen-fuer-holding-ugs.html)
+- [Ab wann lohnt sich eine Holding finanziell?](https://miradortax.com/blog-ab-wann-lohnt-sich-eine-holding-finanziell-kosten-steuern-und-beispielrechnungen.html)
+
+## Rechtliches
+
+- [Impressum](https://miradortax.com/Impressum.html): Anbieter ist die Ruescher Invest UG (haftungsbeschränkt), Seevetal, Amtsgericht Lüneburg HRB 211349
+- [AGB](https://miradortax.com/AGB.html): Nutzungsbedingungen, u. a. Abgrenzung zur Steuerberatung und reine Botenfunktion bei Übermittlungen
+- [Datenschutz](https://miradortax.com/Datenschutz.html)
+
+## Optional
+
+- [llms-full.txt](https://miradortax.com/llms-full.txt): Vollständige, maschinenlesbare Beschreibung von Produkt, Preisen, Ablauf und FAQ
