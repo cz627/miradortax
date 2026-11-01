@@ -33,6 +33,64 @@ function FloatingConsult() {
   );
 }
 
+// mailto has no success/failure callback. Only offer help if the page stays active.
+function MailtoFallback() {
+  const [visible, setVisible] = useStateA(false);
+  const [copyStatus, setCopyStatus] = useStateA("");
+
+  useEffectA(() => {
+    let timer;
+    function cancel() {
+      window.clearTimeout(timer);
+      setVisible(false);
+    }
+    function onVisibilityChange() {
+      if (document.visibilityState === "hidden") cancel();
+    }
+    function onClick(event) {
+      const link = event.target.closest && event.target.closest('a[href^="mailto:"]');
+      if (!link || event.defaultPrevented || event.button !== 0 ||
+          event.metaKey || event.ctrlKey || event.shiftKey || event.altKey ||
+          link.getAttribute("href").split("?")[0] !== "mailto:chris@miradortax.com") return;
+      cancel();
+      setCopyStatus("");
+      // Keep native navigation; blur/tab switching cancels this best-effort fallback.
+      timer = window.setTimeout(() => {
+        if (document.visibilityState === "visible" && document.hasFocus()) setVisible(true);
+      }, 1800);
+    }
+    document.addEventListener("click", onClick);
+    window.addEventListener("blur", cancel);
+    document.addEventListener("visibilitychange", onVisibilityChange);
+    return () => {
+      window.clearTimeout(timer);
+      document.removeEventListener("click", onClick);
+      window.removeEventListener("blur", cancel);
+      document.removeEventListener("visibilitychange", onVisibilityChange);
+    };
+  }, []);
+
+  async function copyEmail() {
+    try {
+      await navigator.clipboard.writeText("chris@miradortax.com");
+      setCopyStatus("E-Mail-Adresse kopiert.");
+    } catch {
+      setCopyStatus("Bitte kopieren Sie die Adresse manuell: chris@miradortax.com");
+    }
+  }
+
+  if (!visible) return null;
+  return (
+    <aside className="email-fallback" aria-label="Hilfe zum E-Mail-Link">
+      <button type="button" className="email-fallback__close" onClick={() => setVisible(false)} aria-label="Schließen">×</button>
+      <p role="status">Hat sich kein E-Mail-Programm geöffnet? Kopieren Sie die Adresse und fügen Sie sie in Ihrem E-Mail-Dienst ein.</p>
+      <p className="email-fallback__address">chris@miradortax.com</p>
+      <button type="button" className="btn btn--ghost" onClick={copyEmail}>E-Mail-Adresse kopieren</button>
+      <p role="status" aria-live="polite">{copyStatus}</p>
+    </aside>
+  );
+}
+
 function App() {
   const [t, setTweak] = useTweaks(TWEAK_DEFAULTS);
   const [surveyOpen, setSurveyOpen] = useStateA(false);
@@ -112,6 +170,7 @@ function App() {
       <Nav onSurvey={openSurvey} />
       {renderPage()}
       <Footer />
+      <MailtoFallback />
       <Survey open={surveyOpen} onClose={() => setSurveyOpen(false)} />
 
       <TweaksPanel>

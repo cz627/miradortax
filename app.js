@@ -52,6 +52,70 @@ function FloatingConsult() {
     className: "fconsult__text"
   }, "Produkt-Demo buchen"));
 }
+
+// mailto has no success/failure callback. Only offer help if the page stays active.
+function MailtoFallback() {
+  const [visible, setVisible] = useStateA(false);
+  const [copyStatus, setCopyStatus] = useStateA("");
+  useEffectA(() => {
+    let timer;
+    function cancel() {
+      window.clearTimeout(timer);
+      setVisible(false);
+    }
+    function onVisibilityChange() {
+      if (document.visibilityState === "hidden") cancel();
+    }
+    function onClick(event) {
+      const link = event.target.closest && event.target.closest('a[href^="mailto:"]');
+      if (!link || event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey || link.getAttribute("href").split("?")[0] !== "mailto:chris@miradortax.com") return;
+      cancel();
+      setCopyStatus("");
+      // Keep native navigation; blur/tab switching cancels this best-effort fallback.
+      timer = window.setTimeout(() => {
+        if (document.visibilityState === "visible" && document.hasFocus()) setVisible(true);
+      }, 1800);
+    }
+    document.addEventListener("click", onClick);
+    window.addEventListener("blur", cancel);
+    document.addEventListener("visibilitychange", onVisibilityChange);
+    return () => {
+      window.clearTimeout(timer);
+      document.removeEventListener("click", onClick);
+      window.removeEventListener("blur", cancel);
+      document.removeEventListener("visibilitychange", onVisibilityChange);
+    };
+  }, []);
+  async function copyEmail() {
+    try {
+      await navigator.clipboard.writeText("chris@miradortax.com");
+      setCopyStatus("E-Mail-Adresse kopiert.");
+    } catch {
+      setCopyStatus("Bitte kopieren Sie die Adresse manuell: chris@miradortax.com");
+    }
+  }
+  if (!visible) return null;
+  return /*#__PURE__*/React.createElement("aside", {
+    className: "email-fallback",
+    "aria-label": "Hilfe zum E-Mail-Link"
+  }, /*#__PURE__*/React.createElement("button", {
+    type: "button",
+    className: "email-fallback__close",
+    onClick: () => setVisible(false),
+    "aria-label": "Schlie\xDFen"
+  }, "\xD7"), /*#__PURE__*/React.createElement("p", {
+    role: "status"
+  }, "Hat sich kein E-Mail-Programm ge\xF6ffnet? Kopieren Sie die Adresse und f\xFCgen Sie sie in Ihrem E-Mail-Dienst ein."), /*#__PURE__*/React.createElement("p", {
+    className: "email-fallback__address"
+  }, "chris@miradortax.com"), /*#__PURE__*/React.createElement("button", {
+    type: "button",
+    className: "btn btn--ghost",
+    onClick: copyEmail
+  }, "E-Mail-Adresse kopieren"), /*#__PURE__*/React.createElement("p", {
+    role: "status",
+    "aria-live": "polite"
+  }, copyStatus));
+}
 function App() {
   const [t, setTweak] = useTweaks(TWEAK_DEFAULTS);
   const [surveyOpen, setSurveyOpen] = useStateA(false);
@@ -157,7 +221,7 @@ function App() {
   }
   return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(Nav, {
     onSurvey: openSurvey
-  }), renderPage(), /*#__PURE__*/React.createElement(Footer, null), /*#__PURE__*/React.createElement(Survey, {
+  }), renderPage(), /*#__PURE__*/React.createElement(Footer, null), /*#__PURE__*/React.createElement(MailtoFallback, null), /*#__PURE__*/React.createElement(Survey, {
     open: surveyOpen,
     onClose: () => setSurveyOpen(false)
   }), /*#__PURE__*/React.createElement(TweaksPanel, null, /*#__PURE__*/React.createElement(TweakSection, {
