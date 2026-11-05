@@ -143,11 +143,21 @@ function AblaufPage({
 }) {
   return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(PageHero, {
     eyebrow: "So funktioniert's",
-    title: /*#__PURE__*/React.createElement(React.Fragment, null, "In drei Schritten zum", /*#__PURE__*/React.createElement("br", null), "fertigen Abschluss."),
-    lede: "Kein Papierkram, keine R\xFCckfragen-Schleifen. Ein klarer, gef\xFChrter Prozess vom ersten Beleg bis zur Abgabe."
-  }), /*#__PURE__*/React.createElement(Ablauf, {
-    hideHead: true
-  }), /*#__PURE__*/React.createElement(WechselSection, null), /*#__PURE__*/React.createElement(CtaBanner, {
+    title: /*#__PURE__*/React.createElement(React.Fragment, null, "Den Jahresabschluss Ihrer", /*#__PURE__*/React.createElement("br", null), "Holding-UG vorbereiten."),
+    lede: "Halten Sie vorhandene Unterlagen und offene Angaben fest. Mirador Tax unterst\xFCtzt Sie als gef\xFChrte Self-Service-Software."
+  }), /*#__PURE__*/React.createElement("section", {
+    id: "abschlussvorbereitung",
+    className: "section",
+    "aria-labelledby": "abschlussvorbereitung-title"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "wrap"
+  }, /*#__PURE__*/React.createElement("h2", {
+    id: "abschlussvorbereitung-title"
+  }, "Ihre Holding-UG: Abschlussvorbereitung in drei Schritten"), /*#__PURE__*/React.createElement("p", null, "Ordnen Sie vor der Dateneingabe Gesellschaft, Er\xF6ffnungswerte und Bankunterlagen dem betreffenden Gesch\xE4ftsjahr zu. Mit dieser kurzen Liste halten Sie vorhandene Angaben und offene Punkte fest."), /*#__PURE__*/React.createElement("ol", null, /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("h3", null, "Gesellschaft und Gesch\xE4ftsjahr festhalten"), /*#__PURE__*/React.createElement("p", null, "Notieren Sie den Namen Ihrer Holding und das Gesch\xE4ftsjahr, f\xFCr das Sie den Abschluss vorbereiten. So ist klar, zu welcher Gesellschaft und welchem Zeitraum Ihre Angaben geh\xF6ren.")), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("h3", null, "Er\xF6ffnungswerte bereitlegen"), /*#__PURE__*/React.createElement("p", null, "Legen Sie vorhandene Unterlagen mit den Er\xF6ffnungswerten f\xFCr dieses Gesch\xE4ftsjahr bereit. Vermerken Sie gesondert, welche Angaben noch fehlen.")), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("h3", null, "Bankunterlagen zeitlich zuordnen"), /*#__PURE__*/React.createElement("p", null, "Ordnen Sie vorhandene Kontoausz\xFCge und Belege dem Gesch\xE4ftsjahr zu. Notieren Sie erkennbare L\xFCcken, damit Sie diese vor der Freigabe Ihrer Angaben kl\xE4ren k\xF6nnen."))), /*#__PURE__*/React.createElement("p", null, "Die Liste dient zur ersten Orientierung und ist kein abschlie\xDFender Pflichtkatalog. Mirador Tax ist gef\xFChrte Self-Service-Software. Sie pr\xFCfen und best\xE4tigen Ihre Angaben und geben die Ergebnisse frei. Professionelle Leistungen erbringt auf Wunsch die unabh\xE4ngige Bauer & Weigl Steuerberater PartG mbB auf Grundlage eines separaten Mandats."), /*#__PURE__*/React.createElement("p", null, "F\xFCr eine Anfrage k\xF6nnen Sie Gesch\xE4ftsjahr, Beteiligungsstruktur und ungef\xE4hre Zahl der Bankbewegungen beschreiben. Bitte senden Sie \xFCber \xF6ffentliche Kan\xE4le keine vertraulichen Belege."), /*#__PURE__*/React.createElement("p", null, /*#__PURE__*/React.createElement("a", {
+    href: "/Kontakt.html"
+  }, "Eignung Ihrer Holding anfragen")), /*#__PURE__*/React.createElement("p", null, /*#__PURE__*/React.createElement("a", {
+    href: "/"
+  }, "Self-Service f\xFCr Ihre Holding-UG kennenlernen")))), /*#__PURE__*/React.createElement(WechselSection, null), /*#__PURE__*/React.createElement(CtaBanner, {
     onSurvey: onSurvey,
     priceFrom: priceFrom
   }));
