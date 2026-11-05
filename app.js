@@ -116,6 +116,22 @@ function MailtoFallback() {
     "aria-live": "polite"
   }, copyStatus));
 }
+
+// W1-17: shared plain-JS component, valid in both JSX source and delivered JS.
+function HoldingAnnualClose() {
+  return React.createElement("section", {
+    className: "section section--tight holding-close",
+    "aria-labelledby": "holding-close-title"
+  }, React.createElement("div", {
+    className: "wrap"
+  }, React.createElement("h2", {
+    id: "holding-close-title",
+    className: "h2"
+  }, "Jahresabschluss für Ihre Holding-UG"), React.createElement("p", null, "Hält Ihre UG Anteile an einem operativen Unternehmen und hat sie wenige Bankbewegungen? So läuft die Vorbereitung des Jahresabschlusses mit Mirador Tax am Beispiel einer solchen Holding ab."), React.createElement("ol", null, React.createElement("li", null, "Sie geben die Daten Ihrer Holding in Mirador Tax ein."), React.createElement("li", null, "Die Software strukturiert Ihre Angaben und unterstützt Sie bei der Vorbereitung des Jahresabschlusses."), React.createElement("li", null, "Sie prüfen die Ergebnisse, bestätigen Ihre Angaben und geben den Abschluss frei.")), React.createElement("p", null, "Für professionelle Leistungen, die ein eigenes Mandat erfordern, können Sie die unabhängige Partnerkanzlei Bauer & Weigl Steuerberater PartG mbB separat beauftragen."), React.createElement("a", {
+    className: "btn btn--accent",
+    href: "/Kontakt.html"
+  }, "Kontakt zur Eignung Ihrer Holding-UG")));
+}
 function App() {
   const [t, setTweak] = useTweaks(TWEAK_DEFAULTS);
   const [surveyOpen, setSurveyOpen] = useStateA(false);
@@ -211,7 +227,7 @@ function App() {
         return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(Hero, {
           onSurvey: openSurvey,
           priceFrom: priceFrom
-        }), /*#__PURE__*/React.createElement(Logos, null), /*#__PURE__*/React.createElement(Leistungen, null), /*#__PURE__*/React.createElement(Ablauf, null), /*#__PURE__*/React.createElement(Rechner, {
+        }), /*#__PURE__*/React.createElement(HoldingAnnualClose, null), /*#__PURE__*/React.createElement(Logos, null), /*#__PURE__*/React.createElement(Leistungen, null), /*#__PURE__*/React.createElement(Ablauf, null), /*#__PURE__*/React.createElement(Rechner, {
           onSurvey: openSurvey
         }), /*#__PURE__*/React.createElement(Testimonials, null), /*#__PURE__*/React.createElement(AiProof, null), /*#__PURE__*/React.createElement(FAQ, null), /*#__PURE__*/React.createElement(CtaBanner, {
           onSurvey: openSurvey,

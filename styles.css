@@ -1267,3 +1267,9 @@ td.ptable__feat { font-weight: 500; }
   cursor: pointer;
   font-size: 24px;
 }
+
+/* W1-17: scoped annual-close block; no global CTA changes. */
+.holding-close p, .holding-close ol { max-width: 70ch; line-height: 1.6; }
+.holding-close li { margin-block: .65rem; }
+.holding-close .btn { min-height: 44px; white-space: normal; text-align: center; max-width: 100%; box-sizing: border-box; overflow-wrap: anywhere; }
+.holding-close .btn:focus-visible { outline: 3px solid #111318; outline-offset: 4px; }
