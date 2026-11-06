@@ -56,26 +56,23 @@ const POST_BODIES = {
   },
 
   "kosten-jahresabschluss": {
-    lede: "Steuerberater rechnen klassisch nach Gebührenverordnung und Stunden ab – das macht Kosten schwer planbar. Wir rechnen ein typisches Beispiel durch und vergleichen es mit dem Festpreis-Modell.",
+    lede: "Welche Angaben braucht ein Angebot für Ihre Holding? Mit einer klaren Beschreibung Ihrer Struktur können Sie Preise und Leistungsumfang nachvollziehbar vergleichen.",
     body: [
-      "„Was kostet mich der Jahresabschluss?“ ist eine der häufigsten Fragen von Holding-Geschäftsführern – und gleichzeitig die, auf die es selten eine klare Antwort gibt. Der Grund liegt im klassischen Abrechnungsmodell.",
-      { h: "Die Gebührenverordnung als Black Box" },
-      "Steuerberater rechnen in der Regel nach der Steuerberatervergütungsverordnung (StBVV) ab. Die Gebühr richtet sich nach einem „Gegenstandswert“ – häufig der Bilanzsumme – und einem Gebührensatz innerhalb eines Rahmens. Das Ergebnis: Zwei Holdings mit identischem Aufwand können sehr unterschiedliche Rechnungen erhalten, allein weil die Bilanzsumme höher ist.",
-      { h: "Ein typisches Beispiel" },
-      "Nehmen wir eine vermögensverwaltende Holding mit drei Beteiligungen, rund 20 Buchungen im Jahr und einer Bilanzsumme von 300.000 €. Bei klassischer Abrechnung kommen schnell folgende Posten zusammen:",
+      "Für ein Angebot zum Jahresabschluss Ihrer Holding sollten Sie zunächst festhalten, welche Arbeiten Sie selbst erledigen und welche Leistungen Sie zusätzlich beauftragen möchten.",
+      { h: "Diese Angaben helfen bei der Preisermittlung" },
       { ul: [
-        "Buchführung: laufende Gebühr nach Tabelle.",
-        "Jahresabschluss (Bilanz + Anhang): Gebühr nach Bilanzsumme.",
-        "Steuererklärungen (KSt, GewSt): jeweils eigener Gegenstandswert.",
-        "Auslagen, Nebenkosten, ggf. Beratungsgespräche nach Zeit.",
+        "Anzahl der Beteiligungen und Art der Geschäftsvorfälle.",
+        "Anzahl der Transaktionen und Bilanzsumme.",
+        "Betroffenes Geschäftsjahr und Stand Ihrer Unterlagen.",
+        "Besondere Vorgänge, die vor einem Angebot geklärt werden müssen.",
       ] },
-      { callout: "In der Praxis landen vergleichbare Holdings bei klassischer Abrechnung häufig im Bereich von 2.000 – 3.500 € pro Jahr – ohne dass im Vorfeld feststand, wo genau die Rechnung landet." },
-      { h: "Festpreis: dieselbe Leistung, planbar kalkuliert" },
-      "Im Festpreis-Modell wird nicht die Bilanzsumme „bestraft“, sondern die tatsächliche Komplexität bepreist: Anzahl der Beteiligungen, Transaktionen und die Bilanzsumme bestimmen das passende Paket. Für das obige Beispiel liegt der Festpreis deutlich darunter – und steht vor Beauftragung fest.",
-      { quote: "Der größte Unterschied ist nicht nur der Preis, sondern die Planbarkeit. Sie wissen vorher, was es kostet." },
-      { h: "Warum ist das günstiger möglich?" },
-      "Der Hebel ist Automatisierung. Kontoauszüge werden automatisch eingelesen und kategorisiert, Belege digital archiviert, Standardprozesse software-gestützt abgewickelt. Die fachliche Prüfung und Erstellung erfolgt weiterhin durch erfahrene Steuerberater – nur der manuelle Aufwand drumherum entfällt.",
-      "Unterm Strich gilt: Bei klar strukturierten Holdings ist der Festpreis fast immer die günstigere und transparentere Wahl. Den genauen Betrag für Ihre Struktur ermitteln Sie in zwei Minuten über unsere Angebotsanfrage.",
+      { h: "Leistungsumfang vor dem Preisvergleich klären" },
+      "Halten Sie bei jedem Angebot fest, welche Leistungen enthalten sind, welche Angaben Sie bereitstellen müssen und welche zusätzlichen Kosten entstehen können. Ein Preisvergleich ist erst mit einem klar beschriebenen Umfang aussagekräftig.",
+      { h: "Ihre Rolle bei Mirador Tax" },
+      "Sie erstellen Ihren Jahresabschluss selbst. Mirador Tax führt Sie Schritt für Schritt durch den Prozess. Sie prüfen und bestätigen Ihre Angaben und geben diese frei.",
+      "Vorbehaltsaufgaben übernimmt auf Wunsch die unabhängige Partnerkanzlei Bauer & Weigl Steuerberater PartG mbB auf Grundlage eines separaten Mandats.",
+      { h: "Preise für Ihre Holding ansehen" },
+      "Auf unserer Preisseite finden Sie den Angebotsrechner. Halten Sie dafür die Anzahl Ihrer Beteiligungen, die Transaktionen und die Bilanzsumme bereit. Klären Sie offene Fragen zum Umfang vor einer Beauftragung.",
     ],
   },
 
@@ -184,6 +181,10 @@ function BlogPostPage({ onSurvey, priceFrom }) {
           {typeof data.body === "string"
             ? <div className="article__body" dangerouslySetInnerHTML={{ __html: data.body }}></div>
             : <div className="article__body">{data.body.map((b, i) => <ArticleBlock key={i} b={b} />)}</div>}
+
+          {slug === "kosten-jahresabschluss" && (
+            <p><a className="textlink" href="Preise.html">Preise und Angebotsrechner für Ihre Holding</a></p>
+          )}
 
           <div className="article__disclaimer">
             Dieser Beitrag dient der allgemeinen Information und stellt keine individuelle steuerliche Beratung dar.
