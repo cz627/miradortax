@@ -130,11 +130,6 @@ function Survey({
   const maxedOut = a.beteiligungen >= 26 || a.transaktionen >= 100 || a.bilanzsumme >= 5000000;
   // exakter Festpreis bei zulässiger Rechtsform und im Tarifrahmen – Zusatzpakete fließen als Aufschlag ein
   const exact = standardEligible && priced.eligible && !maxedOut;
-  const hasImmo = a.extras.includes("immo");
-  const compRange = [Math.round(priced.low * 2.4 / 50) * 50, Math.round(priced.high * 2.4 / 50) * 50];
-  const saveRange = [Math.round((compRange[0] - priced.low) / 100) * 100, Math.round((compRange[1] - priced.high) / 100) * 100];
-  const rangePct = Math.round((priced.low + priced.high) / 2 / ((compRange[0] + compRange[1]) / 2) * 100);
-  const miraPct = priced.yearly ? Math.round(priced.yearly / priced.comparison * 100) : rangePct;
   const priceLabel = exact ? fmtEUR(priced.yearly) + " € / Jahr" : "ab 1.499 € / Jahr";
   const bilLabel = a.bilanzsumme >= 5000000 ? "5,0 Mio. €+" : a.bilanzsumme >= 1000000 ? (a.bilanzsumme / 1000000).toFixed(1).replace(".", ",") + " Mio. €" : fmtEUR(a.bilanzsumme) + " €";
   const progress = Math.round(Math.min(step, TOTAL) / TOTAL * 100);
@@ -228,7 +223,7 @@ function Survey({
       color: "var(--muted)",
       fontWeight: 600
     }
-  }, "Angebot anfordern"), /*#__PURE__*/React.createElement("button", {
+  }, "Preisrechner"), /*#__PURE__*/React.createElement("button", {
     className: "modal__close",
     onClick: onClose,
     "aria-label": "Schlie\xDFen"
@@ -398,27 +393,17 @@ function Survey({
       color: "var(--muted)",
       marginBottom: 4
     }
-  }, "Ihr gesch\xE4tzter Festpreis"), /*#__PURE__*/React.createElement("div", {
+  }, "Ihre Preissch\xE4tzung"), /*#__PURE__*/React.createElement("div", {
     className: "result-price"
   }, fmtEUR(priced.yearly), " \u20AC", /*#__PURE__*/React.createElement("span", null, " / Jahr")), /*#__PURE__*/React.createElement("div", {
     className: "result-range"
-  }, "entspricht ca. ", fmtEUR(priced.monthly), " \u20AC / Monat", priced.onceTotal > 0 ? " · zzgl. " + fmtEUR(priced.onceTotal) + " € einmalig" : " · alles inklusive")) : /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("div", {
+  }, "entspricht ca. ", fmtEUR(priced.monthly), " \u20AC / Monat", priced.onceTotal > 0 ? " · zzgl. " + fmtEUR(priced.onceTotal) + " € einmalig" : "")) : /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("div", {
     className: "result-badge"
   }, /*#__PURE__*/React.createElement(Icon, {
     name: "spark",
     size: 14,
     sw: 2
-  }), " Individuelles Angebot"), /*#__PURE__*/React.createElement("div", {
-    style: {
-      fontSize: 14,
-      color: "var(--muted)",
-      marginBottom: 4
-    }
-  }, "Ihr gesch\xE4tzter Festpreis"), /*#__PURE__*/React.createElement("div", {
-    className: "result-price"
-  }, "ab 1.499 \u20AC", /*#__PURE__*/React.createElement("span", null, " / Jahr")), /*#__PURE__*/React.createElement("div", {
-    className: "result-range"
-  }, "F\xFCr Ihre Struktur kalkulieren wir den Festpreis individuell.")), exact && (priced.surchargeItems.length > 0 || priced.addonItems.length > 0 || priced.discountItems.length > 0) && /*#__PURE__*/React.createElement("div", {
+  }), " Individuelle Anfrage"), /*#__PURE__*/React.createElement("p", null, "F\xFCr Ihre Angaben zeigt der Rechner keine konkrete Preissch\xE4tzung an.")), exact && (priced.surchargeItems.length > 0 || priced.addonItems.length > 0 || priced.discountItems.length > 0) && /*#__PURE__*/React.createElement("div", {
     className: "result-list"
   }, /*#__PURE__*/React.createElement("div", {
     className: "ri"
@@ -434,43 +419,14 @@ function Survey({
   }, /*#__PURE__*/React.createElement("span", null, x.t, " (einmalig)"), /*#__PURE__*/React.createElement("b", null, "+", fmtEUR(x.price), " \u20AC"))), priced.discountItems.map(x => /*#__PURE__*/React.createElement("div", {
     key: x.t,
     className: "ri ri--discount"
-  }, /*#__PURE__*/React.createElement("span", null, x.t, " (einmalig)"), /*#__PURE__*/React.createElement("b", null, "\u2212", fmtEUR(x.v), " \u20AC")))), hasImmo && /*#__PURE__*/React.createElement("div", {
-    className: "calc__notice",
-    style: {
-      textAlign: "left"
-    }
-  }, /*#__PURE__*/React.createElement(Icon, {
-    name: "building",
-    size: 17,
-    sw: 2
-  }), /*#__PURE__*/React.createElement("span", null, /*#__PURE__*/React.createElement("b", null, "Immobilien noch nicht voll automatisiert."), " Sie k\xF6nnen Mirador Tax bereits nutzen, der Ablauf ist aber noch nicht durchg\xE4ngig und ggf. etwas teurer. Wir erstellen Ihnen gern ein Sonderangebot.")), /*#__PURE__*/React.createElement("div", {
-    className: "result-save"
-  }, /*#__PURE__*/React.createElement("b", null, exact ? "≈ " + fmtEUR(priced.comparison - priced.yearly) : "≈ " + fmtEUR(saveRange[0]) + "–" + fmtEUR(saveRange[1]), " \u20AC"), /*#__PURE__*/React.createElement("span", null, "Ersparnis pro Jahr gg\xFC. klassischer Steuerberatung*")), /*#__PURE__*/React.createElement("div", {
-    className: "calc__bars",
-    style: {
-      margin: "0 0 6px"
-    }
-  }, /*#__PURE__*/React.createElement("div", {
-    className: "calc__bar-row"
-  }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("span", null, "Mirador Tax"), /*#__PURE__*/React.createElement("span", null, exact ? fmtEUR(priced.yearly) + " €" : fmtEUR(priced.low) + "–" + fmtEUR(priced.high) + " €")), /*#__PURE__*/React.createElement("div", {
-    className: "calc__bar"
-  }, /*#__PURE__*/React.createElement("i", {
-    className: "mira",
-    style: {
-      width: (exact ? miraPct : rangePct) + "%"
-    }
-  }))), /*#__PURE__*/React.createElement("div", {
-    className: "calc__bar-row"
-  }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("span", null, "Klassische Steuerberatung"), /*#__PURE__*/React.createElement("span", null, "\u2248 ", exact ? fmtEUR(priced.comparison) + " €" : fmtEUR(compRange[0]) + "–" + fmtEUR(compRange[1]) + " €")), /*#__PURE__*/React.createElement("div", {
-    className: "calc__bar"
-  }, /*#__PURE__*/React.createElement("i", {
-    className: "other",
-    style: {
-      width: "100%"
-    }
-  })))), /*#__PURE__*/React.createElement("p", {
-    className: "calc__footnote"
-  }, "* Referenzwert auf Basis der Mittelgeb\xFChren nach StBVV f\xFCr eine vergleichbare Holding. Mirador Tax ist eine Software zur Selbsterstellung und ersetzt keine individuelle Steuerberatung.")), step === 6 && mode === "form" && /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
+  }, /*#__PURE__*/React.createElement("span", null, x.t, " (einmalig)"), /*#__PURE__*/React.createElement("b", null, "\u2212", fmtEUR(x.v), " \u20AC")))), exact && /*#__PURE__*/React.createElement("p", {
+    className: "modal__hint"
+  }, "Die Sch\xE4tzung basiert auf Ihren Angaben und ist unverbindlich."), /*#__PURE__*/React.createElement("p", {
+    className: "modal__hint"
+  }, "\xDCber \u201EZur Registrierung\u201C gelangen Sie zur Kontoerstellung f\xFCr die Mirador-Tax-Software. Ein Angebot k\xF6nnen Sie separat \xFCber die ", /*#__PURE__*/React.createElement("a", {
+    className: "textlink",
+    href: "Kontakt.html"
+  }, "Kontaktseite"), " anfragen.")), step === 6 && mode === "form" && /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
     className: "modal__step-label"
   }, intent === "register" ? "Konto erstellen" : "Angebot per E-Mail"), /*#__PURE__*/React.createElement("h3", {
     className: "modal__q"
@@ -553,7 +509,7 @@ function Survey({
   }, "Weiter ", /*#__PURE__*/React.createElement(Arrow, null)), step === 5 && /*#__PURE__*/React.createElement("button", {
     className: "btn btn--accent",
     onClick: next
-  }, "Angebot anzeigen ", /*#__PURE__*/React.createElement(Arrow, null))), step === 6 && mode === "offer" && /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("button", {
+  }, "Preissch\xE4tzung anzeigen ", /*#__PURE__*/React.createElement(Arrow, null))), step === 6 && mode === "offer" && /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("button", {
     className: "modal__back",
     onClick: () => setStep(0)
   }, "\u21BA Neu starten"), /*#__PURE__*/React.createElement("div", {
@@ -563,7 +519,7 @@ function Survey({
   }), /*#__PURE__*/React.createElement("button", {
     className: "btn btn--accent",
     onClick: goRegister
-  }, "Registrieren ", /*#__PURE__*/React.createElement(Arrow, null))), step === 6 && mode === "form" && /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("button", {
+  }, "Zur Registrierung ", /*#__PURE__*/React.createElement(Arrow, null))), step === 6 && mode === "form" && /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("button", {
     className: "modal__back",
     onClick: () => setMode("offer")
   }, "\u2190 Zur\xFCck"), /*#__PURE__*/React.createElement("div", {

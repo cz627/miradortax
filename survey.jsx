@@ -70,13 +70,6 @@ function Survey({ open, onClose }) {
   const maxedOut = a.beteiligungen >= 26 || a.transaktionen >= 100 || a.bilanzsumme >= 5000000;
   // exakter Festpreis bei zulässiger Rechtsform und im Tarifrahmen – Zusatzpakete fließen als Aufschlag ein
   const exact = standardEligible && priced.eligible && !maxedOut;
-  const hasImmo = a.extras.includes("immo");
-
-  const compRange = [Math.round(priced.low * 2.4 / 50) * 50, Math.round(priced.high * 2.4 / 50) * 50];
-  const saveRange = [Math.round((compRange[0] - priced.low) / 100) * 100, Math.round((compRange[1] - priced.high) / 100) * 100];
-  const rangePct = Math.round((priced.low + priced.high) / 2 / ((compRange[0] + compRange[1]) / 2) * 100);
-  const miraPct = priced.yearly ? Math.round(priced.yearly / priced.comparison * 100) : rangePct;
-
   const priceLabel = exact ? fmtEUR(priced.yearly) + " € / Jahr" : "ab 1.499 € / Jahr";
 
   const bilLabel = a.bilanzsumme >= 5000000 ?
@@ -141,7 +134,7 @@ function Survey({ open, onClose }) {
       <div className="modal" role="dialog" aria-modal="true">
         <div className="modal__head">
           <img src="assets/logo-dark.png" alt="Mirador Tax" style={{ objectFit: "contain", height: "37px", width: "125px" }} />
-          <span style={{ fontSize: 14, color: "var(--muted)", fontWeight: 600 }}>Angebot anfordern</span>
+          <span style={{ fontSize: 14, color: "var(--muted)", fontWeight: 600 }}>Preisrechner</span>
           <button className="modal__close" onClick={onClose} aria-label="Schließen"><Icon name="plus" size={18} sw={2} style={{ transform: "rotate(45deg)" }} /></button>
         </div>
         <div className="modal__progress"><i style={{ width: progress + "%" }}></i></div>
@@ -245,16 +238,14 @@ function Survey({ open, onClose }) {
               {exact ?
             <>
                   <div className="result-badge"><Icon name="check" size={14} sw={3} /> {priced.plan}</div>
-                  <div style={{ fontSize: 14, color: "var(--muted)", marginBottom: 4 }}>Ihr geschätzter Festpreis</div>
+                  <div style={{ fontSize: 14, color: "var(--muted)", marginBottom: 4 }}>Ihre Preisschätzung</div>
                   <div className="result-price">{fmtEUR(priced.yearly)} €<span> / Jahr</span></div>
-                  <div className="result-range">entspricht ca. {fmtEUR(priced.monthly)} € / Monat{priced.onceTotal > 0 ? " · zzgl. " + fmtEUR(priced.onceTotal) + " € einmalig" : " · alles inklusive"}</div>
+                  <div className="result-range">entspricht ca. {fmtEUR(priced.monthly)} € / Monat{priced.onceTotal > 0 ? " · zzgl. " + fmtEUR(priced.onceTotal) + " € einmalig" : ""}</div>
                 </> :
 
             <>
-                  <div className="result-badge"><Icon name="spark" size={14} sw={2} /> Individuelles Angebot</div>
-                  <div style={{ fontSize: 14, color: "var(--muted)", marginBottom: 4 }}>Ihr geschätzter Festpreis</div>
-                  <div className="result-price">ab 1.499 €<span> / Jahr</span></div>
-                  <div className="result-range">Für Ihre Struktur kalkulieren wir den Festpreis individuell.</div>
+                  <div className="result-badge"><Icon name="spark" size={14} sw={2} /> Individuelle Anfrage</div>
+                  <p>Für Ihre Angaben zeigt der Rechner keine konkrete Preisschätzung an.</p>
                 </>
             }
 
@@ -268,28 +259,11 @@ function Survey({ open, onClose }) {
                 </div>
             }
 
-              {hasImmo &&
-            <div className="calc__notice" style={{ textAlign: "left" }}>
-                  <Icon name="building" size={17} sw={2} />
-                  <span><b>Immobilien noch nicht voll automatisiert.</b> Sie können Mirador Tax bereits nutzen, der Ablauf ist aber noch nicht durchgängig und ggf. etwas teurer. Wir erstellen Ihnen gern ein Sonderangebot.</span>
-                </div>
-            }
-
-              <div className="result-save">
-                <b>{exact ? "≈ " + fmtEUR(priced.comparison - priced.yearly) : "≈ " + fmtEUR(saveRange[0]) + "–" + fmtEUR(saveRange[1])} €</b>
-                <span>Ersparnis pro Jahr ggü. klassischer Steuerberatung*</span>
-              </div>
-              <div className="calc__bars" style={{ margin: "0 0 6px" }}>
-                <div className="calc__bar-row">
-                  <div><span>Mirador Tax</span><span>{exact ? fmtEUR(priced.yearly) + " €" : fmtEUR(priced.low) + "–" + fmtEUR(priced.high) + " €"}</span></div>
-                  <div className="calc__bar"><i className="mira" style={{ width: (exact ? miraPct : rangePct) + "%" }}></i></div>
-                </div>
-                <div className="calc__bar-row">
-                  <div><span>Klassische Steuerberatung</span><span>≈ {exact ? fmtEUR(priced.comparison) + " €" : fmtEUR(compRange[0]) + "–" + fmtEUR(compRange[1]) + " €"}</span></div>
-                  <div className="calc__bar"><i className="other" style={{ width: "100%" }}></i></div>
-                </div>
-              </div>
-              <p className="calc__footnote">* Referenzwert auf Basis der Mittelgebühren nach StBVV für eine vergleichbare Holding. Mirador Tax ist eine Software zur Selbsterstellung und ersetzt keine individuelle Steuerberatung.</p>
+              {exact && <p className="modal__hint">Die Schätzung basiert auf Ihren Angaben und ist unverbindlich.</p>}
+              <p className="modal__hint">
+                Über „Zur Registrierung“ gelangen Sie zur Kontoerstellung für die Mirador-Tax-Software.
+                Ein Angebot können Sie separat über die <a className="textlink" href="Kontakt.html">Kontaktseite</a> anfragen.
+              </p>
             </div>
           }
 
@@ -346,7 +320,7 @@ function Survey({ open, onClose }) {
             <button className="btn btn--accent" disabled={step === 0 && !a.rechtsform}
             style={{ opacity: step === 0 && !a.rechtsform ? .45 : 1 }} onClick={next}>Weiter <Arrow /></button>
             }
-              {step === 5 && <button className="btn btn--accent" onClick={next}>Angebot anzeigen <Arrow /></button>}
+              {step === 5 && <button className="btn btn--accent" onClick={next}>Preisschätzung anzeigen <Arrow /></button>}
             </>
           }
 
@@ -354,7 +328,7 @@ function Survey({ open, onClose }) {
           <>
               <button className="modal__back" onClick={() => setStep(0)}>↺ Neu starten</button>
               <div style={{ flex: 1 }}></div>
-              <button className="btn btn--accent" onClick={goRegister}>Registrieren <Arrow /></button>
+              <button className="btn btn--accent" onClick={goRegister}>Zur Registrierung <Arrow /></button>
             </>
           }
           {step === 6 && mode === "form" &&
