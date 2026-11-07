@@ -267,22 +267,6 @@ function PovGroup({
     sw: 2.6
   }), " ", x))));
 }
-const PRICE_TESTIMONIALS = [{
-  quote: "Mein alter Steuerberater hat nach Stunden abgerechnet – nie wusste ich vorher, was es kostet. Mit Mirador erledige ich das zum halben Preis.",
-  name: "Michael Kowatschew",
-  role: "Gründer, Kowatschew Ventures UG",
-  photo: "images/michael-kowatschew.png"
-}, {
-  quote: "Transparenter Festpreis statt Gebührenverordnung. Wir sparen jedes Jahr einen vierstelligen Betrag.",
-  name: "Julia Vogt",
-  role: "Geschäftsführerin, Vela Invest GmbH",
-  photo: "https://randomuser.me/api/portraits/women/29.jpg"
-}, {
-  quote: "Das günstigste Angebot am Markt – und trotzdem fühlt sich der Prozess super an.",
-  name: "Philipp Arndt",
-  role: "Geschäftsführer, Arndt Holding",
-  photo: "https://randomuser.me/api/portraits/men/52.jpg"
-}];
 function PreisePage({
   onSurvey,
   priceFrom
@@ -432,44 +416,7 @@ function PreisePage({
     }
   }), " Kryptow\xE4hrungen"))))), /*#__PURE__*/React.createElement(Rechner, {
     onSurvey: onSurvey
-  }), /*#__PURE__*/React.createElement("section", {
-    className: "section section--tight",
-    style: {
-      background: "var(--cream-2)"
-    }
-  }, /*#__PURE__*/React.createElement("div", {
-    className: "wrap"
-  }, /*#__PURE__*/React.createElement("div", {
-    className: "shead shead--center reveal"
-  }, /*#__PURE__*/React.createElement("div", {
-    className: "eyebrow",
-    style: {
-      justifyContent: "center",
-      display: "flex"
-    }
-  }, "G\xFCnstiger als gedacht"), /*#__PURE__*/React.createElement("h2", {
-    className: "h2"
-  }, "Holdings, die sp\xFCrbar sparen")), /*#__PURE__*/React.createElement("div", {
-    className: "tgrid"
-  }, PRICE_TESTIMONIALS.map((c, i) => /*#__PURE__*/React.createElement("div", {
-    key: i,
-    className: "tquote reveal"
-  }, /*#__PURE__*/React.createElement("div", {
-    className: "tquote__mark"
-  }, "\u201D"), /*#__PURE__*/React.createElement("p", {
-    className: "tquote__text"
-  }, "„" + c.quote + "“"), /*#__PURE__*/React.createElement("div", {
-    className: "tcard__by"
-  }, /*#__PURE__*/React.createElement("div", {
-    className: "tcard__ava",
-    style: {
-      backgroundImage: "url(" + c.photo + ")"
-    }
-  }), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
-    className: "tcard__name"
-  }, c.name), /*#__PURE__*/React.createElement("div", {
-    className: "tcard__role"
-  }, c.role)))))))), /*#__PURE__*/React.createElement(FAQ, null), /*#__PURE__*/React.createElement(CtaBanner, {
+  }), /*#__PURE__*/React.createElement(FAQ, null), /*#__PURE__*/React.createElement(CtaBanner, {
     onSurvey: onSurvey,
     priceFrom: priceFrom
   }));

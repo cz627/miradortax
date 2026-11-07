@@ -192,12 +192,6 @@ function PovGroup({ label, items }) {
   );
 }
 
-const PRICE_TESTIMONIALS = [
-  { quote: "Mein alter Steuerberater hat nach Stunden abgerechnet – nie wusste ich vorher, was es kostet. Mit Mirador erledige ich das zum halben Preis.", name: "Michael Kowatschew", role: "Gründer, Kowatschew Ventures UG", photo: "images/michael-kowatschew.png" },
-  { quote: "Transparenter Festpreis statt Gebührenverordnung. Wir sparen jedes Jahr einen vierstelligen Betrag.", name: "Julia Vogt", role: "Geschäftsführerin, Vela Invest GmbH", photo: "https://randomuser.me/api/portraits/women/29.jpg" },
-  { quote: "Das günstigste Angebot am Markt – und trotzdem fühlt sich der Prozess super an.", name: "Philipp Arndt", role: "Geschäftsführer, Arndt Holding", photo: "https://randomuser.me/api/portraits/men/52.jpg" },
-];
-
 function PreisePage({ onSurvey, priceFrom }) {
   return (
     <>
@@ -305,27 +299,6 @@ function PreisePage({ onSurvey, priceFrom }) {
       <Rechner onSurvey={onSurvey} />
 
       {/* Preis-Testimonials */}
-      <section className="section section--tight" style={{ background: "var(--cream-2)" }}>
-        <div className="wrap">
-          <div className="shead shead--center reveal">
-            <div className="eyebrow" style={{ justifyContent: "center", display: "flex" }}>Günstiger als gedacht</div>
-            <h2 className="h2">Holdings, die spürbar sparen</h2>
-          </div>
-          <div className="tgrid">
-            {PRICE_TESTIMONIALS.map((c, i) =>
-              <div key={i} className="tquote reveal">
-                <div className="tquote__mark">”</div>
-                <p className="tquote__text">{"„" + c.quote + "“"}</p>
-                <div className="tcard__by">
-                  <div className="tcard__ava" style={{ backgroundImage: "url(" + c.photo + ")" }}></div>
-                  <div><div className="tcard__name">{c.name}</div><div className="tcard__role">{c.role}</div></div>
-                </div>
-              </div>
-            )}
-          </div>
-        </div>
-      </section>
-
       <FAQ />
       <CtaBanner onSurvey={onSurvey} priceFrom={priceFrom} />
     </>
