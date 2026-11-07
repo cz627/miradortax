@@ -28,20 +28,12 @@ const POST_BODIES = {
     }, "Wer diese Punkte berücksichtigt, kommt entspannt durch das Jahr 2026 – unabhängig davon, ob die Holding aktiv investiert oder nur Beteiligungen hält."]
   },
   "offenlegung-bundesanzeiger": {
-    lede: "Die Offenlegung des Jahresabschlusses ist Pflicht – und mit der richtigen Vorbereitung in wenigen Schritten erledigt. So vermeiden Sie Bußgelder und unnötigen Stress.",
-    body: ["Jede Kapitalgesellschaft – also auch jede Holding in der Rechtsform GmbH oder UG (haftungsbeschränkt) – muss ihren Jahresabschluss offenlegen. Seit der Umstellung läuft die Einreichung über das Unternehmensregister, die Veröffentlichung erfolgt im Bundesanzeiger. Klingt bürokratisch, ist aber gut planbar.", {
-      h: "Schritt 1: Den richtigen Umfang bestimmen"
-    }, "Wie viel offengelegt werden muss, hängt von der Größenklasse ab. Die meisten Holdings gelten als „klein“ oder sogar „Kleinst“-Kapitalgesellschaft und profitieren von erheblichen Erleichterungen: Häufig genügt eine verkürzte Bilanz, eine Gewinn- und Verlustrechnung ist nicht erforderlich.", {
-      ul: ["Kleinstkapitalgesellschaft: hinterlegte Bilanz, keine Veröffentlichungspflicht der GuV.", "Kleine Kapitalgesellschaft: verkürzte Bilanz und Anhang, keine GuV-Offenlegung.", "Mittelgroß / groß: deutlich umfangreichere Pflichten."]
-    }, {
-      h: "Schritt 2: Daten vorbereiten"
-    }, "Für die Offenlegung benötigen Sie den festgestellten Jahresabschluss im richtigen Format. Wichtig ist, dass die Zahlen mit der eingereichten E-Bilanz übereinstimmen. Abweichungen führen zu Rückfragen und verzögern die Veröffentlichung.", {
-      h: "Schritt 3: Frist im Blick behalten"
-    }, {
-      callout: "Die Offenlegung muss spätestens zwölf Monate nach dem Abschlussstichtag erfolgen. Versäumnisse werden vom Bundesamt für Justiz mit Ordnungsgeld geahndet – beginnend bei 2.500 € und bei wiederholter Säumnis steigend."
-    }, "Genau hier entstehen die meisten vermeidbaren Kosten. Ein einfacher Erinnerungsservice oder ein Dienstleister, der die Frist automatisch überwacht, ist die günstigste Versicherung gegen Bußgelder.", {
-      h: "Schritt 4: Einreichen und archivieren"
-    }, "Nach der Übermittlung erhalten Sie eine Bestätigung. Bewahren Sie diese zusammen mit dem offengelegten Abschluss auf – sie ist Ihr Nachweis, dass die Pflicht fristgerecht erfüllt wurde.", "Bei Mirador Tax ist die Offenlegung im Bundesanzeiger fester Bestandteil jedes Pakets. Sie müssen sich um Format, Frist und Übermittlung nicht selbst kümmern."]
+    lede: "Wenn Sie die Offenlegung für Ihre Holding-UG vorbereiten, halten Sie zuerst das Geschäftsjahr und den Stand Ihres Abschlusses fest. Die Hinweise des Unternehmensregisters helfen Ihnen beim nächsten Schritt.",
+    body: [{
+      h: "Gesellschaft, Geschäftsjahr und Unterlagen zuordnen"
+    }, "Halten Sie fest, zu welcher Gesellschaft und welchem Geschäftsjahr der Abschluss gehört. Ordnen Sie vorhandene Unterlagen zu und notieren Sie, welche Angaben noch fehlen. So können Sie bei der Vorbereitung gezielt klären, was noch offen ist.", {
+      h: "Übermittlungsweg klären"
+    }, "Halten Sie fest, wer die Übermittlung übernimmt und wo Sie den zugehörigen Beleg ablegen. Für Fragen zum Umfang, zum zuständigen Offenlegungsmedium und zur Übermittlung nutzen Sie die Hinweise des Unternehmensregisters."]
   },
   "kosten-jahresabschluss": {
     lede: "Welche Angaben braucht ein Angebot für Ihre Holding? Mit einer klaren Beschreibung Ihrer Struktur können Sie Preise und Leistungsumfang nachvollziehbar vergleichen.",
@@ -192,7 +184,13 @@ function BlogPostPage({
   }, data.body.map((b, i) => /*#__PURE__*/React.createElement(ArticleBlock, {
     key: i,
     b: b
-  }))), slug === "kosten-jahresabschluss" && /*#__PURE__*/React.createElement("p", null, /*#__PURE__*/React.createElement("a", {
+  }))), slug === "offenlegung-bundesanzeiger" && /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("p", null, /*#__PURE__*/React.createElement("a", {
+    className: "textlink",
+    href: "https://www.unternehmensregister.de/de/so-gehts/uebermitteln"
+  }, "\xDCbermittlungshinweise des Unternehmensregisters")), /*#__PURE__*/React.createElement("p", null, "Wenn Ihr Abschluss noch in Vorbereitung ist, hilft Ihnen die Checkliste beim Sortieren Ihrer Unterlagen. Mit Mirador Tax erstellen Sie Ihren Abschluss selbst. F\xFCr professionelle Leistungen k\xF6nnen Sie die unabh\xE4ngige Partnerkanzlei separat beauftragen."), /*#__PURE__*/React.createElement("p", null, /*#__PURE__*/React.createElement("a", {
+    className: "textlink",
+    href: "Ablauf.html#abschlussvorbereitung"
+  }, "Checkliste zur Abschlussvorbereitung f\xFCr Ihre Holding-UG"))), slug === "kosten-jahresabschluss" && /*#__PURE__*/React.createElement("p", null, /*#__PURE__*/React.createElement("a", {
     className: "textlink",
     href: "Preise.html"
   }, "Preise und Angebotsrechner f\xFCr Ihre Holding")), /*#__PURE__*/React.createElement("div", {

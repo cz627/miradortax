@@ -517,10 +517,10 @@ const POSTS = [{
 }, {
   slug: "offenlegung-bundesanzeiger",
   tag: "Ratgeber",
-  t: "Offenlegung beim Bundesanzeiger – Schritt für Schritt",
-  d: "So reichen Sie Ihren Jahresabschluss fristgerecht und ohne Bußgeldrisiko ein.",
-  date: "28. Apr. 2026",
-  read: "5 Min.",
+  t: "Offenlegung für Ihre Holding-UG vorbereiten",
+  d: "Welche Unterlagen Sie vorab ordnen können und wo Sie die Hinweise des Unternehmensregisters zur Übermittlung finden.",
+  date: "Aktualisiert am 7. Nov. 2026",
+  read: "2 Min.",
   img: "https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=1600&q=70"
 }, {
   slug: "kosten-jahresabschluss",
