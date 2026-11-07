@@ -143,9 +143,9 @@ function Logos() {
 function Leistungen({ hideHead }) {
   const cards = [
   { ic: "book", n: "01", t: "Buchhaltung", d: "Kontoauszüge werden automatisch importiert; Transaktionen werden automatisch kategorisiert. Sie prüfen und bestätigen.", list: ["Bank- & Depot-Upload", "Beteiligungen & Darlehen", "Alle Beteiligungen in einer Übersicht"] },
-  { ic: "doc", n: "02", t: "Jahresabschluss", d: "Bilanz, GuV und Anhang nach HGB – Software wurde von Steuerexpert:innen entwickelt, geprüft und gewartet.", list: ["Bilanz & GuV nach HGB", "E-Bilanz ans Finanzamt", "Anlageverzeichnis"] },
-  { ic: "upload", n: "03", t: "Offenlegung", d: "Elektronische Einreichung beim Bundesanzeiger – mit Fristenerinnerungen, damit Sie pünktlich einreichen.", list: ["Bundesanzeiger-Einreichung", "Fristenerinnerungen"] },
-  { ic: "receipt", n: "04", t: "Steuererklärung", d: "Körperschaft-, Gewerbe- und Umsatzsteuer – vollständig erstellt und elektronisch übermittelt.", list: ["KSt, GewSt & USt", "ELSTER-Übermittlung", "Ablage für Steuererklärungen"] }];
+  { ic: "doc", n: "02", t: "Jahresabschluss", d: "Sie erstellen Ihren Jahresabschluss selbst. Die Software bereitet Bilanz und GuV aus Ihren bestätigten Angaben vor.", list: ["Bilanz & GuV", "Anlageverzeichnis"] },
+  { ic: "upload", n: "03", t: "Offenlegung", d: "Klären Sie vorab, wie Sie die Offenlegung im Unternehmensregister organisieren." },
+  { ic: "receipt", n: "04", t: "Steuererklärung", d: "Für fachliche Unterstützung bei Ihren Steuererklärungen können Sie die unabhängige Partnerkanzlei separat beauftragen." }];
 
   return (
     <section className="section" id="leistungen">
@@ -168,9 +168,9 @@ function Leistungen({ hideHead }) {
               <div className="card__ic"><Icon name={c.ic} size={22} sw={1.9} /></div>
               <div className="card__t">{c.t}</div>
               <div className="card__d">{c.d}</div>
-              <ul className="card__list">
+              {c.list && <ul className="card__list">
                 {c.list.map((l) => <li key={l}><Icon name="check" size={15} sw={2.4} /> {l}</li>)}
-              </ul>
+              </ul>}
             </div>
           )}
         </div>

@@ -71,8 +71,11 @@ function LeistungenPage({
 }) {
   return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(PageHero, {
     eyebrow: "Leistungen",
-    title: /*#__PURE__*/React.createElement(React.Fragment, null, "Alle Pflichten Ihrer Holding.", /*#__PURE__*/React.createElement("br", null), "In einem Portal."),
-    lede: "Mit Mirador Tax erledigen Sie den kompletten Jahreszyklus Ihrer Holding \u2013 strukturiert, gef\xFChrt und zum Festpreis."
+    title: "Den Jahresabschluss Ihrer Holding selbst erstellen",
+    lede: /*#__PURE__*/React.createElement(React.Fragment, null, "Mirador Tax f\xFChrt Sie Schritt f\xFCr Schritt durch die Selbsterstellung. Sie pr\xFCfen und best\xE4tigen Ihre Angaben. F\xFCr fachliche Leistungen k\xF6nnen Sie die unabh\xE4ngige Partnerkanzlei Bauer & Weigl Steuerberater PartG mbB separat beauftragen. ", /*#__PURE__*/React.createElement("a", {
+      className: "textlink",
+      href: "Kontakt.html"
+    }, "Fragen zum Leistungsumfang stellen"))
   }), /*#__PURE__*/React.createElement(Leistungen, {
     hideHead: true
   }), /*#__PURE__*/React.createElement(SecuritySection, null), /*#__PURE__*/React.createElement(FAQ, null), /*#__PURE__*/React.createElement(CtaBanner, {

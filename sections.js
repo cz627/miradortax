@@ -274,20 +274,18 @@ function Leistungen({
     ic: "doc",
     n: "02",
     t: "Jahresabschluss",
-    d: "Bilanz, GuV und Anhang nach HGB – Software wurde von Steuerexpert:innen entwickelt, geprüft und gewartet.",
-    list: ["Bilanz & GuV nach HGB", "E-Bilanz ans Finanzamt", "Anlageverzeichnis"]
+    d: "Sie erstellen Ihren Jahresabschluss selbst. Die Software bereitet Bilanz und GuV aus Ihren bestätigten Angaben vor.",
+    list: ["Bilanz & GuV", "Anlageverzeichnis"]
   }, {
     ic: "upload",
     n: "03",
     t: "Offenlegung",
-    d: "Elektronische Einreichung beim Bundesanzeiger – mit Fristenerinnerungen, damit Sie pünktlich einreichen.",
-    list: ["Bundesanzeiger-Einreichung", "Fristenerinnerungen"]
+    d: "Klären Sie vorab, wie Sie die Offenlegung im Unternehmensregister organisieren."
   }, {
     ic: "receipt",
     n: "04",
     t: "Steuererklärung",
-    d: "Körperschaft-, Gewerbe- und Umsatzsteuer – vollständig erstellt und elektronisch übermittelt.",
-    list: ["KSt, GewSt & USt", "ELSTER-Übermittlung", "Ablage für Steuererklärungen"]
+    d: "Für fachliche Unterstützung bei Ihren Steuererklärungen können Sie die unabhängige Partnerkanzlei separat beauftragen."
   }];
   return /*#__PURE__*/React.createElement("section", {
     className: "section",
@@ -325,7 +323,7 @@ function Leistungen({
     className: "card__t"
   }, c.t), /*#__PURE__*/React.createElement("div", {
     className: "card__d"
-  }, c.d), /*#__PURE__*/React.createElement("ul", {
+  }, c.d), c.list && /*#__PURE__*/React.createElement("ul", {
     className: "card__list"
   }, c.list.map(l => /*#__PURE__*/React.createElement("li", {
     key: l

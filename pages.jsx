@@ -46,8 +46,8 @@ function LeistungenPage({ onSurvey, priceFrom }) {
   return (
     <>
       <PageHero eyebrow="Leistungen"
-        title={<>Alle Pflichten Ihrer Holding.<br />In einem Portal.</>}
-        lede="Mit Mirador Tax erledigen Sie den kompletten Jahreszyklus Ihrer Holding – strukturiert, geführt und zum Festpreis." />
+        title="Den Jahresabschluss Ihrer Holding selbst erstellen"
+        lede={<>Mirador Tax führt Sie Schritt für Schritt durch die Selbsterstellung. Sie prüfen und bestätigen Ihre Angaben. Für fachliche Leistungen können Sie die unabhängige Partnerkanzlei Bauer &amp; Weigl Steuerberater PartG mbB separat beauftragen. <a className="textlink" href="Kontakt.html">Fragen zum Leistungsumfang stellen</a></>} />
       <Leistungen hideHead />
       <SecuritySection />
       <FAQ />
