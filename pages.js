@@ -599,7 +599,7 @@ function KontaktPage() {
   return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(PageHero, {
     eyebrow: "Kontakt",
     title: "Sprechen Sie mit uns.",
-    lede: "Ob Erstgespr\xE4ch, individuelles Angebot oder Frage zur Plattform \u2013 wir melden uns innerhalb eines Werktags."
+    lede: "Haben Sie eine Frage zu Mirador Tax oder m\xF6chten Sie ein Angebot f\xFCr Ihre Holding anfragen? Schreiben Sie uns eine E-Mail."
   }), /*#__PURE__*/React.createElement("section", {
     className: "section section--tight"
   }, /*#__PURE__*/React.createElement("div", {
@@ -616,9 +616,9 @@ function KontaktPage() {
     sw: 1.9
   })), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
     className: "kontakt__h"
-  }, "Angebot anfordern"), /*#__PURE__*/React.createElement("div", {
+  }, "Preis einsch\xE4tzen"), /*#__PURE__*/React.createElement("div", {
     className: "kontakt__d"
-  }, "In 2 Minuten zum unverbindlichen Festpreis \u2013 direkt \xFCber unseren Rechner."), /*#__PURE__*/React.createElement("a", {
+  }, "Der Rechner zeigt Ihnen eine Preissch\xE4tzung anhand Ihrer Angaben."), /*#__PURE__*/React.createElement("a", {
     className: "textlink",
     href: "Preise.html"
   }, "Zum Preisrechner ", /*#__PURE__*/React.createElement(Arrow, {
@@ -659,10 +659,14 @@ function KontaktPage() {
     style: {
       marginBottom: 22
     }
-  }, "Senden Sie uns eine E-Mail mit Ihrem Anliegen \u2013 wir antworten innerhalb eines Werktags. F\xFCr ein unverbindliches Festpreis-Angebot nutzen Sie am schnellsten unseren Rechner."), /*#__PURE__*/React.createElement("a", {
+  }, "Wenn Sie ein Angebot anfragen m\xF6chten, nennen Sie uns in Ihrer E-Mail die Rechtsform Ihrer Holding und das Gesch\xE4ftsjahr."), /*#__PURE__*/React.createElement("a", {
     className: "btn btn--accent btn--lg btn--block",
-    href: "mailto:chris@miradortax.com?subject=Anfrage%20Mirador%20Tax"
-  }, "E-Mail schreiben ", /*#__PURE__*/React.createElement(Arrow, null)), /*#__PURE__*/React.createElement("a", {
+    href: "mailto:chris@miradortax.com?subject=Anfrage%20Mirador%20Tax",
+    style: {
+      whiteSpace: "normal",
+      textAlign: "center"
+    }
+  }, "Angebot per E-Mail anfragen ", /*#__PURE__*/React.createElement(Arrow, null)), /*#__PURE__*/React.createElement("a", {
     className: "btn btn--ghost btn--lg btn--block",
     href: "Preise.html",
     style: {

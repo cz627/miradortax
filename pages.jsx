@@ -361,13 +361,13 @@ function KontaktPage() {
     <>
       <PageHero eyebrow="Kontakt"
         title="Sprechen Sie mit uns."
-        lede="Ob Erstgespräch, individuelles Angebot oder Frage zur Plattform – wir melden uns innerhalb eines Werktags." />
+        lede="Haben Sie eine Frage zu Mirador Tax oder möchten Sie ein Angebot für Ihre Holding anfragen? Schreiben Sie uns eine E-Mail." />
       <section className="section section--tight">
         <div className="wrap kontakt">
           <div className="kontakt__info">
             <div className="kontakt__row">
               <div className="kontakt__ic"><Icon name="euro" size={20} sw={1.9} /></div>
-              <div><div className="kontakt__h">Angebot anfordern</div><div className="kontakt__d">In 2 Minuten zum unverbindlichen Festpreis – direkt über unseren Rechner.</div><a className="textlink" href="Preise.html">Zum Preisrechner <Arrow size={14} /></a></div>
+              <div><div className="kontakt__h">Preis einschätzen</div><div className="kontakt__d">Der Rechner zeigt Ihnen eine Preisschätzung anhand Ihrer Angaben.</div><a className="textlink" href="Preise.html">Zum Preisrechner <Arrow size={14} /></a></div>
             </div>
             <div className="kontakt__row">
               <div className="kontakt__ic"><Icon name="doc" size={20} sw={1.9} /></div>
@@ -380,8 +380,8 @@ function KontaktPage() {
           </div>
           <div className="kontakt__form">
             <h3 className="kontakt__form-h">Schreiben Sie uns direkt</h3>
-            <p className="kontakt__d" style={{ marginBottom: 22 }}>Senden Sie uns eine E-Mail mit Ihrem Anliegen – wir antworten innerhalb eines Werktags. Für ein unverbindliches Festpreis-Angebot nutzen Sie am schnellsten unseren Rechner.</p>
-            <a className="btn btn--accent btn--lg btn--block" href="mailto:chris@miradortax.com?subject=Anfrage%20Mirador%20Tax">E-Mail schreiben <Arrow /></a>
+            <p className="kontakt__d" style={{ marginBottom: 22 }}>Wenn Sie ein Angebot anfragen möchten, nennen Sie uns in Ihrer E-Mail die Rechtsform Ihrer Holding und das Geschäftsjahr.</p>
+            <a className="btn btn--accent btn--lg btn--block" href="mailto:chris@miradortax.com?subject=Anfrage%20Mirador%20Tax" style={{ whiteSpace: "normal", textAlign: "center" }}>Angebot per E-Mail anfragen <Arrow /></a>
             <a className="btn btn--ghost btn--lg btn--block" href="Preise.html" style={{ marginTop: 12 }}>Zum Preisrechner <Arrow /></a>
           </div>
         </div>
