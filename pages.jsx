@@ -155,8 +155,7 @@ function KundenPage({ onSurvey, priceFrom }) {
   return (
     <>
       <PageHero eyebrow="Kundenstimmen"
-        title={<>Was Holdings an<br />Mirador schätzen.</>}
-        lede="Über 200 Holdings vertrauen auf Mirador Tax – für einen einfachen, günstigen und zuverlässigen Jahresabschluss." />
+        title={<>Was Holdings an<br />Mirador schätzen.</>} />
       <TestimonialsAll />
       <CtaBanner onSurvey={onSurvey} priceFrom={priceFrom} />
     </>

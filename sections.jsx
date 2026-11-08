@@ -74,16 +74,6 @@ function Hero({ onSurvey, priceFrom }) {
             <a className="btn btn--ghost btn--lg" href="mailto:chris@miradortax.com">Kontakt aufnehmen</a>
           </div>
           <div className="hero__proof">
-            <div className="hero__proof-people">
-              <div className="hero__avatars">
-                {["https://randomuser.me/api/portraits/women/45.jpg", "https://randomuser.me/api/portraits/men/32.jpg", "https://randomuser.me/api/portraits/women/68.jpg", "https://randomuser.me/api/portraits/men/52.jpg", "images/alexander-valtingojer.jpg"].
-                map((p, i) => <span key={i} style={{ backgroundImage: "url(" + p + ")" }} />)}
-              </div>
-              <div className="hero__proof-text">
-                <div className="stars">★★★★★</div>
-                <span><b>200+ Holdings</b> vertrauen auf Mirador Tax</span>
-              </div>
-            </div>
             <ul className="hero__checks">
               <li><span className="hero__check-ic"><Icon name="check" size={12} sw={3} /></span> Festpreis – keine Stundenabrechnung</li>
               <li><span className="hero__check-ic"><Icon name="check" size={12} sw={3} /></span> Unverbindliches Angebot in 2 Minuten</li>
@@ -119,10 +109,6 @@ function Logos() {
         <div className="trust__item">
           <Icon name="usercheck" size={30} sw={1.6} />
           <span className="trust__label">Entwickelt mit<br />Steuerberater:innen</span>
-        </div>
-        <div className="trust__item">
-          <Icon name="star" size={28} sw={1.6} />
-          <span className="trust__label">Über 200<br />zufriedene Nutzer</span>
         </div>
         <div className="trust__item trust__google">
           <span className="trust__gtext">

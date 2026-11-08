@@ -171,20 +171,7 @@ function Hero({
     href: "mailto:chris@miradortax.com"
   }, "Kontakt aufnehmen")), /*#__PURE__*/React.createElement("div", {
     className: "hero__proof"
-  }, /*#__PURE__*/React.createElement("div", {
-    className: "hero__proof-people"
-  }, /*#__PURE__*/React.createElement("div", {
-    className: "hero__avatars"
-  }, ["https://randomuser.me/api/portraits/women/45.jpg", "https://randomuser.me/api/portraits/men/32.jpg", "https://randomuser.me/api/portraits/women/68.jpg", "https://randomuser.me/api/portraits/men/52.jpg", "images/alexander-valtingojer.jpg"].map((p, i) => /*#__PURE__*/React.createElement("span", {
-    key: i,
-    style: {
-      backgroundImage: "url(" + p + ")"
-    }
-  }))), /*#__PURE__*/React.createElement("div", {
-    className: "hero__proof-text"
-  }, /*#__PURE__*/React.createElement("div", {
-    className: "stars"
-  }, "\u2605\u2605\u2605\u2605\u2605"), /*#__PURE__*/React.createElement("span", null, /*#__PURE__*/React.createElement("b", null, "200+ Holdings"), " vertrauen auf Mirador Tax"))), /*#__PURE__*/React.createElement("ul", {
+  }, /*#__PURE__*/React.createElement("ul", {
     className: "hero__checks"
   }, /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("span", {
     className: "hero__check-ic"
@@ -236,14 +223,6 @@ function Logos() {
   }), /*#__PURE__*/React.createElement("span", {
     className: "trust__label"
   }, "Entwickelt mit", /*#__PURE__*/React.createElement("br", null), "Steuerberater:innen")), /*#__PURE__*/React.createElement("div", {
-    className: "trust__item"
-  }, /*#__PURE__*/React.createElement(Icon, {
-    name: "star",
-    size: 28,
-    sw: 1.6
-  }), /*#__PURE__*/React.createElement("span", {
-    className: "trust__label"
-  }, "\xDCber 200", /*#__PURE__*/React.createElement("br", null), "zufriedene Nutzer")), /*#__PURE__*/React.createElement("div", {
     className: "trust__item trust__google"
   }, /*#__PURE__*/React.createElement("span", {
     className: "trust__gtext"

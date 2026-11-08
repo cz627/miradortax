@@ -220,8 +220,7 @@ function KundenPage({
 }) {
   return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(PageHero, {
     eyebrow: "Kundenstimmen",
-    title: /*#__PURE__*/React.createElement(React.Fragment, null, "Was Holdings an", /*#__PURE__*/React.createElement("br", null), "Mirador sch\xE4tzen."),
-    lede: "\xDCber 200 Holdings vertrauen auf Mirador Tax \u2013 f\xFCr einen einfachen, g\xFCnstigen und zuverl\xE4ssigen Jahresabschluss."
+    title: /*#__PURE__*/React.createElement(React.Fragment, null, "Was Holdings an", /*#__PURE__*/React.createElement("br", null), "Mirador sch\xE4tzen.")
   }), /*#__PURE__*/React.createElement(TestimonialsAll, null), /*#__PURE__*/React.createElement(CtaBanner, {
     onSurvey: onSurvey,
     priceFrom: priceFrom
