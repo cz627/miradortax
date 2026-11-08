@@ -662,7 +662,7 @@ function FAQ() {
   const [open, setOpen] = useStateS(0);
   const qs = [{
     q: "Für welche Holdings ist Mirador Tax geeignet?",
-    a: "Mirador Tax ist geeignet für vermögensverwaltende und geschäftsleitende Holdings in der Rechtsform GmbH oder UG (haftungsbeschränkt) – von der klassischen Beteiligungsholding bis zur Investment-Holding mit Wertpapierdepots. Ob Ihre Gesellschaft ins Festpreis-Modell passt, erfahren Sie in der kostenlosen Angebotsanfrage."
+    a: "Mirador Tax ist auf einfache Beteiligungsholdings in der Rechtsform UG (haftungsbeschränkt) oder GmbH ausgerichtet. Ein typischer Fall: Ihre Holding hält Anteile an einem operativen Unternehmen und hat wenige Bankbewegungen. Mit der Software erstellen Sie den Jahresabschluss Ihrer Holding selbst."
   }, {
     q: "Was kostet der Festpreis genau?",
     a: "Der Preis richtet sich nach Anzahl der Beteiligungen, dem Transaktionsvolumen und der Bilanzsumme. Über die Angebotsanfrage erhalten Sie in 2 Minuten einen Festpreis – ohne Stundenabrechnung und ohne versteckte Kosten."
