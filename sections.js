@@ -74,7 +74,7 @@ function Nav({
   }, "Login"), /*#__PURE__*/React.createElement("button", {
     className: "btn btn--ghost nav__cta",
     onClick: onSurvey
-  }, "Angebot anfordern"), /*#__PURE__*/React.createElement("a", {
+  }, "Zur Preissch\xE4tzung"), /*#__PURE__*/React.createElement("a", {
     className: "btn btn--accent nav__cta",
     href: "https://app.miradortax.com/register",
     target: "_blank",
@@ -125,7 +125,7 @@ function Nav({
       closeMenu();
       onSurvey();
     }
-  }, "Angebot anfordern"), /*#__PURE__*/React.createElement("a", {
+  }, "Zur Preissch\xE4tzung"), /*#__PURE__*/React.createElement("a", {
     className: "btn btn--accent btn--block",
     href: "https://app.miradortax.com/register",
     target: "_blank",
@@ -166,10 +166,10 @@ function Hero({
   }, /*#__PURE__*/React.createElement("button", {
     className: "btn btn--accent btn--lg",
     onClick: onSurvey
-  }, "Angebot anfordern ", /*#__PURE__*/React.createElement(Arrow, null)), /*#__PURE__*/React.createElement("a", {
+  }, "Zur Preissch\xE4tzung ", /*#__PURE__*/React.createElement(Arrow, null)), /*#__PURE__*/React.createElement("a", {
     className: "btn btn--ghost btn--lg",
-    href: "mailto:chris@miradortax.com"
-  }, "Kontakt aufnehmen")), /*#__PURE__*/React.createElement("div", {
+    href: "Kontakt.html"
+  }, "Angebot anfragen")), /*#__PURE__*/React.createElement("div", {
     className: "hero__proof"
   }, /*#__PURE__*/React.createElement("ul", {
     className: "hero__checks"
@@ -185,7 +185,7 @@ function Hero({
     name: "check",
     size: 12,
     sw: 3
-  })), " Unverbindliches Angebot in 2 Minuten"))))), /*#__PURE__*/React.createElement("div", {
+  })), " Unverbindliche Preissch\xE4tzung"))))), /*#__PURE__*/React.createElement("div", {
     className: "hero__visual"
   }, /*#__PURE__*/React.createElement("div", {
     className: "hero__panel"
@@ -373,10 +373,6 @@ const USP_DATA = [{
   key: "einfach",
   label: "Einfach",
   icon: "spark",
-  stat: {
-    b: "2 Min.",
-    s: "bis zum verbindlichen Festpreis-Angebot"
-  },
   feature: {
     quote: "Vorher ewige Rückfragen-Schleifen und ständiges E-Mail-Ping-Pong. Jetzt läuft alles in einem Portal – ich lade die Daten hoch, der Rest passiert von selbst.",
     name: "Alexander Valtingojer",
@@ -491,7 +487,7 @@ function Testimonials({
     key: d.key
   }, /*#__PURE__*/React.createElement("div", {
     className: "tcard tcard--feature usp-fade"
-  }, /*#__PURE__*/React.createElement("div", {
+  }, d.stat && /*#__PURE__*/React.createElement("div", {
     className: "tcard__stat tcard__stat--feature"
   }, /*#__PURE__*/React.createElement("b", null, d.stat.b), /*#__PURE__*/React.createElement("span", null, d.stat.s)), /*#__PURE__*/React.createElement("div", {
     className: "tcard__quote"
@@ -608,7 +604,7 @@ function TestimonialsAll() {
       className: "tgroup__meta"
     }, /*#__PURE__*/React.createElement("div", {
       className: "tgroup__label"
-    }, u.label), /*#__PURE__*/React.createElement("div", {
+    }, u.label), u.stat && /*#__PURE__*/React.createElement("div", {
       className: "tgroup__stat"
     }, /*#__PURE__*/React.createElement("b", null, u.stat.b), " ", u.stat.s))), /*#__PURE__*/React.createElement("div", {
       className: "tgrid"
@@ -643,8 +639,8 @@ function FAQ() {
     q: "Für welche Holdings ist Mirador Tax geeignet?",
     a: "Mirador Tax ist auf einfache Beteiligungsholdings in der Rechtsform UG (haftungsbeschränkt) oder GmbH ausgerichtet. Ein typischer Fall: Ihre Holding hält Anteile an einem operativen Unternehmen und hat wenige Bankbewegungen. Mit der Software erstellen Sie den Jahresabschluss Ihrer Holding selbst."
   }, {
-    q: "Was kostet der Festpreis genau?",
-    a: "Der Preis richtet sich nach Anzahl der Beteiligungen, dem Transaktionsvolumen und der Bilanzsumme. Über die Angebotsanfrage erhalten Sie in 2 Minuten einen Festpreis – ohne Stundenabrechnung und ohne versteckte Kosten."
+    q: "Wie erfahre ich, was die Software für meine Holding kostet?",
+    a: "Der Preis richtet sich nach Anzahl der Beteiligungen, dem Transaktionsvolumen und der Bilanzsumme. Der Rechner zeigt Ihnen eine unverbindliche Preisschätzung. Ein persönliches Angebot können Sie separat anfragen."
   }, {
     q: "Ist Mirador Tax eine Steuerkanzlei?",
     a: "Nein. Mirador Tax ist eine Software, mit der Sie Buchhaltung, Jahresabschluss und Steuererklärungen Ihrer Holding selbst erstellen. Alle Werte, Ansätze und Wahlrechte beruhen auf Ihren eigenen Angaben und Bestätigungen; die Software verarbeitet diese automatisiert nach festen Regeln – eine individuelle steuerliche Bewertung, Empfehlung oder Beratung durch Mirador Tax findet nicht statt. Ersteller Ihrer Abschlüsse und Erklärungen sind Sie selbst. Auf Wunsch können Sie für die Übermittlung an das Finanzamt oder eine fachliche Überprüfung direkt eine unabhängige Steuerkanzlei beauftragen."
@@ -723,15 +719,15 @@ function CtaBanner({
     }
   }, "Festpreis ab 499 \u20AC"), /*#__PURE__*/React.createElement("h2", {
     className: "h2"
-  }, "Erfahren Sie in 2 Minuten,", /*#__PURE__*/React.createElement("br", null), "was Ihre Holding kostet."), /*#__PURE__*/React.createElement("p", null, "Beantworten Sie f\xFCnf kurze Fragen und erhalten Sie sofort einen unverbindlichen Festpreis f\xFCr das komplette Steuerjahr Ihrer Holding."), /*#__PURE__*/React.createElement("div", {
+  }, "Was kostet die Software f\xFCr Ihre Holding?"), /*#__PURE__*/React.createElement("p", null, "Nutzen Sie den Rechner f\xFCr eine unverbindliche Preissch\xE4tzung oder fragen Sie ein pers\xF6nliches Angebot an."), /*#__PURE__*/React.createElement("div", {
     className: "cta__actions"
   }, /*#__PURE__*/React.createElement("button", {
     className: "btn btn--accent btn--lg",
     onClick: onSurvey
-  }, "Angebot anfordern ", /*#__PURE__*/React.createElement(Arrow, null)), /*#__PURE__*/React.createElement("a", {
+  }, "Zur Preissch\xE4tzung ", /*#__PURE__*/React.createElement(Arrow, null)), /*#__PURE__*/React.createElement("a", {
     className: "btn btn--ghost btn--lg",
-    href: "mailto:chris@miradortax.com"
-  }, "Kontakt aufnehmen")))));
+    href: "Kontakt.html"
+  }, "Angebot anfragen")))));
 }
 function Footer() {
   const cols = [{

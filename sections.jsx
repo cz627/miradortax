@@ -32,7 +32,7 @@ function Nav({ onSurvey }) {
         <div className="nav__spacer"></div>
         <div className="nav__right">
           <a className="nav__login" href="https://app.miradortax.com" target="_blank" rel="noopener">Login</a>
-          <button className="btn btn--ghost nav__cta" onClick={onSurvey}>Angebot anfordern</button>
+          <button className="btn btn--ghost nav__cta" onClick={onSurvey}>Zur Preisschätzung</button>
           <a className="btn btn--accent nav__cta" href="https://app.miradortax.com/register" target="_blank" rel="noopener">Registrieren</a>
           <button className="nav__burger" aria-label={menuOpen ? "Menü schließen" : "Menü öffnen"} aria-expanded={menuOpen} onClick={() => setMenuOpen((o) => !o)}>
             <Icon name={menuOpen ? "close" : "menu"} size={22} sw={2} />
@@ -46,7 +46,7 @@ function Nav({ onSurvey }) {
           <a className="nav__mlink" href="Empfehlung.html" onClick={closeMenu}>Empfehlung<Icon name="arrow" size={16} sw={2} /></a>
           <a className="nav__mlink" href="Blog.html" onClick={closeMenu}>Blog<Icon name="arrow" size={16} sw={2} /></a>
           <div className="nav__mobile-actions">
-            <button className="btn btn--ghost btn--block" onClick={() => { closeMenu(); onSurvey(); }}>Angebot anfordern</button>
+            <button className="btn btn--ghost btn--block" onClick={() => { closeMenu(); onSurvey(); }}>Zur Preisschätzung</button>
             <a className="btn btn--accent btn--block" href="https://app.miradortax.com/register" target="_blank" rel="noopener" onClick={closeMenu}>Registrieren <Arrow /></a>
             <a className="nav__mobile-login" href="https://app.miradortax.com" target="_blank" rel="noopener" onClick={closeMenu}>Zum Login →</a>
           </div>
@@ -70,13 +70,13 @@ function Hero({ onSurvey, priceFrom }) {
             in einem geführten Portal. Digital und zum Festpreis ab 499 €.
           </p>
           <div className="hero__actions">
-            <button className="btn btn--accent btn--lg" onClick={onSurvey}>Angebot anfordern <Arrow /></button>
-            <a className="btn btn--ghost btn--lg" href="mailto:chris@miradortax.com">Kontakt aufnehmen</a>
+            <button className="btn btn--accent btn--lg" onClick={onSurvey}>Zur Preisschätzung <Arrow /></button>
+            <a className="btn btn--ghost btn--lg" href="Kontakt.html">Angebot anfragen</a>
           </div>
           <div className="hero__proof">
             <ul className="hero__checks">
               <li><span className="hero__check-ic"><Icon name="check" size={12} sw={3} /></span> Festpreis – keine Stundenabrechnung</li>
-              <li><span className="hero__check-ic"><Icon name="check" size={12} sw={3} /></span> Unverbindliches Angebot in 2 Minuten</li>
+              <li><span className="hero__check-ic"><Icon name="check" size={12} sw={3} /></span> Unverbindliche Preisschätzung</li>
             </ul>
           </div>
         </div>
@@ -204,7 +204,6 @@ function Ablauf({ hideHead }) {
 const USP_DATA = [
 {
   key: "einfach", label: "Einfach", icon: "spark",
-  stat: { b: "2 Min.", s: "bis zum verbindlichen Festpreis-Angebot" },
   feature: {
     quote: "Vorher ewige Rückfragen-Schleifen und ständiges E-Mail-Ping-Pong. Jetzt läuft alles in einem Portal – ich lade die Daten hoch, der Rest passiert von selbst.",
     name: "Alexander Valtingojer", role: "Gründer, Valtingojer UG (haftungsbeschränkt)", ava: "#9a7b66", photo: "images/alexander-valtingojer.jpg"
@@ -265,7 +264,7 @@ function Testimonials({ hideHead }) {
 
         <div className="tcards" key={d.key}>
           <div className="tcard tcard--feature usp-fade">
-            <div className="tcard__stat tcard__stat--feature"><b>{d.stat.b}</b><span>{d.stat.s}</span></div>
+            {d.stat && <div className="tcard__stat tcard__stat--feature"><b>{d.stat.b}</b><span>{d.stat.s}</span></div>}
             <div className="tcard__quote">{"„" + d.feature.quote + "“"}</div>
             <div className="tcard__by">
               <div className="tcard__ava" style={{ backgroundImage: "url(" + d.feature.photo + ")" }}></div>
@@ -333,7 +332,7 @@ function TestimonialsAll() {
                 <span className="tgroup__index">{String(g + 1).padStart(2, "0")}</span>
                 <div className="tgroup__meta">
                   <div className="tgroup__label">{u.label}</div>
-                  <div className="tgroup__stat"><b>{u.stat.b}</b> {u.stat.s}</div>
+                  {u.stat && <div className="tgroup__stat"><b>{u.stat.b}</b> {u.stat.s}</div>}
                 </div>
               </div>
               <div className="tgrid">
@@ -363,7 +362,7 @@ function FAQ() {
   const [open, setOpen] = useStateS(0);
   const qs = [
   { q: "Für welche Holdings ist Mirador Tax geeignet?", a: "Mirador Tax ist auf einfache Beteiligungsholdings in der Rechtsform UG (haftungsbeschränkt) oder GmbH ausgerichtet. Ein typischer Fall: Ihre Holding hält Anteile an einem operativen Unternehmen und hat wenige Bankbewegungen. Mit der Software erstellen Sie den Jahresabschluss Ihrer Holding selbst." },
-  { q: "Was kostet der Festpreis genau?", a: "Der Preis richtet sich nach Anzahl der Beteiligungen, dem Transaktionsvolumen und der Bilanzsumme. Über die Angebotsanfrage erhalten Sie in 2 Minuten einen Festpreis – ohne Stundenabrechnung und ohne versteckte Kosten." },
+  { q: "Wie erfahre ich, was die Software für meine Holding kostet?", a: "Der Preis richtet sich nach Anzahl der Beteiligungen, dem Transaktionsvolumen und der Bilanzsumme. Der Rechner zeigt Ihnen eine unverbindliche Preisschätzung. Ein persönliches Angebot können Sie separat anfragen." },
   { q: "Ist Mirador Tax eine Steuerkanzlei?", a: "Nein. Mirador Tax ist eine Software, mit der Sie Buchhaltung, Jahresabschluss und Steuererklärungen Ihrer Holding selbst erstellen. Alle Werte, Ansätze und Wahlrechte beruhen auf Ihren eigenen Angaben und Bestätigungen; die Software verarbeitet diese automatisiert nach festen Regeln – eine individuelle steuerliche Bewertung, Empfehlung oder Beratung durch Mirador Tax findet nicht statt. Ersteller Ihrer Abschlüsse und Erklärungen sind Sie selbst. Auf Wunsch können Sie für die Übermittlung an das Finanzamt oder eine fachliche Überprüfung direkt eine unabhängige Steuerkanzlei beauftragen." },
   { q: "Wie ist das Angebot zu solchen Preisen möglich?", a: "Mirador Tax ist eine Software, keine Kanzlei: Kontoauszüge werden automatisch importiert, Transaktionen automatisch kategorisiert, und Bilanz, GuV und E-Bilanz werden nach festen Regeln aus Ihren bestätigten Angaben erzeugt. Weil keine individuelle Bearbeitung durch Berufsträger anfällt, entfällt die Abrechnung nach Stunden oder StBVV – der Festpreis deckt die Nutzung der Plattform für den kompletten Jahreszyklus ab." }];
 
@@ -397,11 +396,11 @@ function CtaBanner({ onSurvey, priceFrom }) {
       <div className="wrap">
         <div className="cta reveal" style={{ backgroundColor: "rgb(242, 240, 237)" }}>
           <div className="eyebrow" style={{ color: "var(--accent)", justifyContent: "center", display: "flex", marginBottom: 18 }}>Festpreis ab 499 €</div>
-          <h2 className="h2">Erfahren Sie in 2 Minuten,<br />was Ihre Holding kostet.</h2>
-          <p>Beantworten Sie fünf kurze Fragen und erhalten Sie sofort einen unverbindlichen Festpreis für das komplette Steuerjahr Ihrer Holding.</p>
+          <h2 className="h2">Was kostet die Software für Ihre Holding?</h2>
+          <p>Nutzen Sie den Rechner für eine unverbindliche Preisschätzung oder fragen Sie ein persönliches Angebot an.</p>
           <div className="cta__actions">
-            <button className="btn btn--accent btn--lg" onClick={onSurvey}>Angebot anfordern <Arrow /></button>
-            <a className="btn btn--ghost btn--lg" href="mailto:chris@miradortax.com">Kontakt aufnehmen</a>
+            <button className="btn btn--accent btn--lg" onClick={onSurvey}>Zur Preisschätzung <Arrow /></button>
+            <a className="btn btn--ghost btn--lg" href="Kontakt.html">Angebot anfragen</a>
           </div>
         </div>
       </div>
