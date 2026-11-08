@@ -283,7 +283,7 @@ const PV_FEATURES = ["Buchhaltung", "Jahresabschluss inkl. E-Bilanz", "Offenlegu
 const PRICE_OVERVIEW = [{
   name: "Holding S",
   price: "499",
-  sub: "Für Gründer, die ihre Holding schlank und kosteneffizient führen möchten. Über 200 Holdings vertrauen auf unser Produkt und kommen mit Holding S aus.",
+  sub: "Für Gründer, die ihre Holding schlank und kosteneffizient führen möchten.",
   features: PV_FEATURES,
   limits: ["20 Transaktionen / Jahr", "Bis zu 3 Beteiligungen", "Bilanzsumme bis 100 TEUR"]
 }, {

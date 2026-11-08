@@ -186,7 +186,7 @@ function Cell({ val }) {
 
 const PV_FEATURES = ["Buchhaltung", "Jahresabschluss inkl. E-Bilanz", "Offenlegung im Bundesanzeiger", "Steuererklärung", "Persönlicher Support"];
 const PRICE_OVERVIEW = [
-  { name: "Holding S", price: "499", sub: "Für Gründer, die ihre Holding schlank und kosteneffizient führen möchten. Über 200 Holdings vertrauen auf unser Produkt und kommen mit Holding S aus.",
+  { name: "Holding S", price: "499", sub: "Für Gründer, die ihre Holding schlank und kosteneffizient führen möchten.",
     features: PV_FEATURES,
     limits: ["20 Transaktionen / Jahr", "Bis zu 3 Beteiligungen", "Bilanzsumme bis 100 TEUR"] },
   { name: "Holding M", price: "999", sub: "Für wachsende Holdings mit steigender Zahl an Investments.",
