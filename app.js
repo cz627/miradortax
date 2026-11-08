@@ -116,61 +116,6 @@ function MailtoFallback() {
     "aria-live": "polite"
   }, copyStatus));
 }
-
-// Example workflow for a holding UG: same step-card pattern as the Ablauf section.
-function HoldingAnnualClose() {
-  const steps = [{
-    t: "Daten eingeben",
-    d: "Sie geben die Daten Ihrer Holding in Mirador Tax ein."
-  }, {
-    t: "Abschluss vorbereiten",
-    d: "Die Software strukturiert Ihre Angaben und unterstützt Sie bei der Vorbereitung des Jahresabschlusses."
-  }, {
-    t: "Prüfen & freigeben",
-    d: "Sie prüfen die Ergebnisse, bestätigen Ihre Angaben und geben den Abschluss frei."
-  }];
-  return /*#__PURE__*/React.createElement("section", {
-    className: "section section--tight holding-close",
-    "aria-labelledby": "holding-close-title"
-  }, /*#__PURE__*/React.createElement("div", {
-    className: "wrap"
-  }, /*#__PURE__*/React.createElement("div", {
-    className: "shead reveal"
-  }, /*#__PURE__*/React.createElement("div", {
-    className: "eyebrow"
-  }, "Beispiel Holding-UG"), /*#__PURE__*/React.createElement("h2", {
-    id: "holding-close-title",
-    className: "h2"
-  }, "Jahresabschluss f\xFCr Ihre Holding-UG"), /*#__PURE__*/React.createElement("p", {
-    className: "lede"
-  }, "H\xE4lt Ihre UG Anteile an einem operativen Unternehmen und hat sie wenige Bankbewegungen? So l\xE4uft die Vorbereitung des Jahresabschlusses mit Mirador Tax am Beispiel einer solchen Holding ab.")), /*#__PURE__*/React.createElement("ol", {
-    className: "steps holding-close__steps"
-  }, steps.map((s, i) => /*#__PURE__*/React.createElement("li", {
-    key: s.t,
-    className: "step reveal",
-    style: {
-      transitionDelay: i * 80 + "ms"
-    }
-  }, /*#__PURE__*/React.createElement("div", {
-    className: "step__n",
-    "aria-hidden": "true"
-  }, i + 1), /*#__PURE__*/React.createElement("div", {
-    className: "step__t"
-  }, s.t), /*#__PURE__*/React.createElement("div", {
-    className: "step__d"
-  }, s.d)))), /*#__PURE__*/React.createElement("div", {
-    className: "ablauf__control reveal"
-  }, /*#__PURE__*/React.createElement(Icon, {
-    name: "usercheck",
-    size: 26,
-    sw: 1.7
-  }), /*#__PURE__*/React.createElement("p", null, /*#__PURE__*/React.createElement("b", null, "Partnerkanzlei:"), " F\xFCr professionelle Leistungen, die ein eigenes Mandat erfordern, k\xF6nnen Sie die unabh\xE4ngige Partnerkanzlei Bauer & Weigl Steuerberater PartG mbB separat beauftragen.")), /*#__PURE__*/React.createElement("div", {
-    className: "holding-close__cta reveal"
-  }, /*#__PURE__*/React.createElement("a", {
-    className: "btn btn--accent",
-    href: "/Kontakt.html"
-  }, "Kontakt zur Eignung Ihrer Holding-UG"))));
-}
 function App() {
   const [t, setTweak] = useTweaks(TWEAK_DEFAULTS);
   const [surveyOpen, setSurveyOpen] = useStateA(false);
@@ -266,7 +211,7 @@ function App() {
         return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(Hero, {
           onSurvey: openSurvey,
           priceFrom: priceFrom
-        }), /*#__PURE__*/React.createElement(HoldingAnnualClose, null), /*#__PURE__*/React.createElement(Logos, null), /*#__PURE__*/React.createElement(Leistungen, null), /*#__PURE__*/React.createElement(Ablauf, null), /*#__PURE__*/React.createElement(Rechner, {
+        }), /*#__PURE__*/React.createElement(Logos, null), /*#__PURE__*/React.createElement(Leistungen, null), /*#__PURE__*/React.createElement(Ablauf, null), /*#__PURE__*/React.createElement(Rechner, {
           onSurvey: openSurvey
         }), /*#__PURE__*/React.createElement(Testimonials, null), /*#__PURE__*/React.createElement(AiProof, null), /*#__PURE__*/React.createElement(FAQ, null), /*#__PURE__*/React.createElement(CtaBanner, {
           onSurvey: openSurvey,

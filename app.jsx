@@ -91,42 +91,6 @@ function MailtoFallback() {
   );
 }
 
-// Example workflow for a holding UG: same step-card pattern as the Ablauf section.
-function HoldingAnnualClose() {
-  const steps = [
-    { t: "Daten eingeben", d: "Sie geben die Daten Ihrer Holding in Mirador Tax ein." },
-    { t: "Abschluss vorbereiten", d: "Die Software strukturiert Ihre Angaben und unterstützt Sie bei der Vorbereitung des Jahresabschlusses." },
-    { t: "Prüfen & freigeben", d: "Sie prüfen die Ergebnisse, bestätigen Ihre Angaben und geben den Abschluss frei." }];
-
-  return (
-    <section className="section section--tight holding-close" aria-labelledby="holding-close-title">
-      <div className="wrap">
-        <div className="shead reveal">
-          <div className="eyebrow">Beispiel Holding-UG</div>
-          <h2 id="holding-close-title" className="h2">Jahresabschluss für Ihre Holding-UG</h2>
-          <p className="lede">Hält Ihre UG Anteile an einem operativen Unternehmen und hat sie wenige Bankbewegungen? So läuft die Vorbereitung des Jahresabschlusses mit Mirador Tax am Beispiel einer solchen Holding ab.</p>
-        </div>
-        <ol className="steps holding-close__steps">
-          {steps.map((s, i) =>
-          <li key={s.t} className="step reveal" style={{ transitionDelay: i * 80 + "ms" }}>
-              <div className="step__n" aria-hidden="true">{i + 1}</div>
-              <div className="step__t">{s.t}</div>
-              <div className="step__d">{s.d}</div>
-            </li>
-          )}
-        </ol>
-        <div className="ablauf__control reveal">
-          <Icon name="usercheck" size={26} sw={1.7} />
-          <p><b>Partnerkanzlei:</b> Für professionelle Leistungen, die ein eigenes Mandat erfordern, können Sie die unabhängige Partnerkanzlei Bauer &amp; Weigl Steuerberater PartG mbB separat beauftragen.</p>
-        </div>
-        <div className="holding-close__cta reveal">
-          <a className="btn btn--accent" href="/Kontakt.html">Kontakt zur Eignung Ihrer Holding-UG</a>
-        </div>
-      </div>
-    </section>);
-
-}
-
 function App() {
   const [t, setTweak] = useTweaks(TWEAK_DEFAULTS);
   const [surveyOpen, setSurveyOpen] = useStateA(false);
@@ -188,7 +152,6 @@ function App() {
       default: return (
         <>
           <Hero onSurvey={openSurvey} priceFrom={priceFrom} />
-          <HoldingAnnualClose />
           <Logos />
           <Leistungen />
           <Ablauf />

@@ -150,15 +150,62 @@ function AblaufPage({
     lede: "Halten Sie vorhandene Unterlagen und offene Angaben fest. Mirador Tax unterst\xFCtzt Sie als gef\xFChrte Self-Service-Software."
   }), /*#__PURE__*/React.createElement("section", {
     id: "abschlussvorbereitung",
-    className: "section",
+    className: "section section--tight",
     "aria-labelledby": "abschlussvorbereitung-title"
   }, /*#__PURE__*/React.createElement("div", {
     className: "wrap"
-  }, /*#__PURE__*/React.createElement("h2", {
-    id: "abschlussvorbereitung-title"
-  }, "Ihre Holding-UG: Abschlussvorbereitung in drei Schritten"), /*#__PURE__*/React.createElement("p", null, "Ordnen Sie vor der Dateneingabe Gesellschaft, Er\xF6ffnungswerte und Bankunterlagen dem betreffenden Gesch\xE4ftsjahr zu. Mit dieser kurzen Liste halten Sie vorhandene Angaben und offene Punkte fest."), /*#__PURE__*/React.createElement("ol", null, /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("h3", null, "Gesellschaft und Gesch\xE4ftsjahr festhalten"), /*#__PURE__*/React.createElement("p", null, "Notieren Sie den Namen Ihrer Holding und das Gesch\xE4ftsjahr, f\xFCr das Sie den Abschluss vorbereiten. So ist klar, zu welcher Gesellschaft und welchem Zeitraum Ihre Angaben geh\xF6ren.")), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("h3", null, "Er\xF6ffnungswerte bereitlegen"), /*#__PURE__*/React.createElement("p", null, "Legen Sie vorhandene Unterlagen mit den Er\xF6ffnungswerten f\xFCr dieses Gesch\xE4ftsjahr bereit. Vermerken Sie gesondert, welche Angaben noch fehlen.")), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("h3", null, "Bankunterlagen zeitlich zuordnen"), /*#__PURE__*/React.createElement("p", null, "Ordnen Sie vorhandene Kontoausz\xFCge und Belege dem Gesch\xE4ftsjahr zu. Notieren Sie erkennbare L\xFCcken, damit Sie diese vor der Freigabe Ihrer Angaben kl\xE4ren k\xF6nnen."))), /*#__PURE__*/React.createElement("p", null, "Die Liste dient zur ersten Orientierung und ist kein abschlie\xDFender Pflichtkatalog. Mirador Tax ist gef\xFChrte Self-Service-Software. Sie pr\xFCfen und best\xE4tigen Ihre Angaben und geben die Ergebnisse frei. Professionelle Leistungen erbringt auf Wunsch die unabh\xE4ngige Bauer & Weigl Steuerberater PartG mbB auf Grundlage eines separaten Mandats."), /*#__PURE__*/React.createElement("p", null, "F\xFCr eine Anfrage k\xF6nnen Sie Gesch\xE4ftsjahr, Beteiligungsstruktur und ungef\xE4hre Zahl der Bankbewegungen beschreiben. Bitte senden Sie \xFCber \xF6ffentliche Kan\xE4le keine vertraulichen Belege."), /*#__PURE__*/React.createElement("p", null, /*#__PURE__*/React.createElement("a", {
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "shead reveal"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "eyebrow"
+  }, "Checkliste"), /*#__PURE__*/React.createElement("h2", {
+    id: "abschlussvorbereitung-title",
+    className: "h2"
+  }, "Ihre Holding-UG: Abschlussvorbereitung in drei Schritten"), /*#__PURE__*/React.createElement("p", {
+    className: "lede"
+  }, "Ordnen Sie vor der Dateneingabe Gesellschaft, Er\xF6ffnungswerte und Bankunterlagen dem betreffenden Gesch\xE4ftsjahr zu. Mit dieser kurzen Liste halten Sie vorhandene Angaben und offene Punkte fest.")), /*#__PURE__*/React.createElement("ol", {
+    className: "steps steps--list"
+  }, [{
+    t: "Gesellschaft und Geschäftsjahr festhalten",
+    d: "Notieren Sie den Namen Ihrer Holding und das Geschäftsjahr, für das Sie den Abschluss vorbereiten. So ist klar, zu welcher Gesellschaft und welchem Zeitraum Ihre Angaben gehören."
+  }, {
+    t: "Eröffnungswerte bereitlegen",
+    d: "Legen Sie vorhandene Unterlagen mit den Eröffnungswerten für dieses Geschäftsjahr bereit. Vermerken Sie gesondert, welche Angaben noch fehlen."
+  }, {
+    t: "Bankunterlagen zeitlich zuordnen",
+    d: "Ordnen Sie vorhandene Kontoauszüge und Belege dem Geschäftsjahr zu. Notieren Sie erkennbare Lücken, damit Sie diese vor der Freigabe Ihrer Angaben klären können."
+  }].map((s, i) => /*#__PURE__*/React.createElement("li", {
+    key: s.t,
+    className: "step reveal",
+    style: {
+      transitionDelay: i * 80 + "ms"
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "step__n",
+    "aria-hidden": "true"
+  }, i + 1), /*#__PURE__*/React.createElement("h3", {
+    className: "step__t"
+  }, s.t), /*#__PURE__*/React.createElement("p", {
+    className: "step__d"
+  }, s.d)))), /*#__PURE__*/React.createElement("div", {
+    className: "ablauf__control reveal"
+  }, /*#__PURE__*/React.createElement(Icon, {
+    name: "shieldcheck",
+    size: 26,
+    sw: 1.7
+  }), /*#__PURE__*/React.createElement("p", null, /*#__PURE__*/React.createElement("b", null, "Zur Orientierung:"), " Die Liste ist kein abschlie\xDFender Pflichtkatalog. Mirador Tax ist gef\xFChrte Self-Service-Software. Sie pr\xFCfen und best\xE4tigen Ihre Angaben und geben die Ergebnisse frei. Professionelle Leistungen erbringt auf Wunsch die unabh\xE4ngige Bauer & Weigl Steuerberater PartG mbB auf Grundlage eines separaten Mandats.")), /*#__PURE__*/React.createElement("div", {
+    className: "ablauf__control reveal"
+  }, /*#__PURE__*/React.createElement(Icon, {
+    name: "doc",
+    size: 26,
+    sw: 1.7
+  }), /*#__PURE__*/React.createElement("p", null, /*#__PURE__*/React.createElement("b", null, "Anfrage:"), " Beschreiben Sie Gesch\xE4ftsjahr, Beteiligungsstruktur und die ungef\xE4hre Zahl der Bankbewegungen. Bitte senden Sie \xFCber \xF6ffentliche Kan\xE4le keine vertraulichen Belege.")), /*#__PURE__*/React.createElement("div", {
+    className: "section__cta reveal"
+  }, /*#__PURE__*/React.createElement("a", {
+    className: "btn btn--accent",
     href: "/Kontakt.html"
-  }, "Eignung Ihrer Holding anfragen")), /*#__PURE__*/React.createElement("p", null, /*#__PURE__*/React.createElement("a", {
+  }, "Eignung Ihrer Holding anfragen"), /*#__PURE__*/React.createElement("a", {
+    className: "btn btn--ghost",
     href: "/"
   }, "Self-Service f\xFCr Ihre Holding-UG kennenlernen")))), /*#__PURE__*/React.createElement(WechselSection, null), /*#__PURE__*/React.createElement(CtaBanner, {
     onSurvey: onSurvey,

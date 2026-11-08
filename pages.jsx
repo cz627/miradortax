@@ -110,24 +110,40 @@ function AblaufPage({ onSurvey, priceFrom }) {
       <PageHero eyebrow="So funktioniert's"
         title={<>Den Jahresabschluss Ihrer<br />Holding-UG vorbereiten.</>}
         lede="Halten Sie vorhandene Unterlagen und offene Angaben fest. Mirador Tax unterstützt Sie als geführte Self-Service-Software." />
-<section id="abschlussvorbereitung" className="section" aria-labelledby="abschlussvorbereitung-title">
-  <div className="wrap">
-    <h2 id="abschlussvorbereitung-title">Ihre Holding-UG: Abschlussvorbereitung in drei Schritten</h2>
-    <p>Ordnen Sie vor der Dateneingabe Gesellschaft, Eröffnungswerte und Bankunterlagen dem betreffenden Geschäftsjahr zu. Mit dieser kurzen Liste halten Sie vorhandene Angaben und offene Punkte fest.</p>
-    <ol>
-      <li><h3>Gesellschaft und Geschäftsjahr festhalten</h3>
-        <p>Notieren Sie den Namen Ihrer Holding und das Geschäftsjahr, für das Sie den Abschluss vorbereiten. So ist klar, zu welcher Gesellschaft und welchem Zeitraum Ihre Angaben gehören.</p></li>
-      <li><h3>Eröffnungswerte bereitlegen</h3>
-        <p>Legen Sie vorhandene Unterlagen mit den Eröffnungswerten für dieses Geschäftsjahr bereit. Vermerken Sie gesondert, welche Angaben noch fehlen.</p></li>
-      <li><h3>Bankunterlagen zeitlich zuordnen</h3>
-        <p>Ordnen Sie vorhandene Kontoauszüge und Belege dem Geschäftsjahr zu. Notieren Sie erkennbare Lücken, damit Sie diese vor der Freigabe Ihrer Angaben klären können.</p></li>
-    </ol>
-    <p>Die Liste dient zur ersten Orientierung und ist kein abschließender Pflichtkatalog. Mirador Tax ist geführte Self-Service-Software. Sie prüfen und bestätigen Ihre Angaben und geben die Ergebnisse frei. Professionelle Leistungen erbringt auf Wunsch die unabhängige Bauer &amp; Weigl Steuerberater PartG mbB auf Grundlage eines separaten Mandats.</p>
-    <p>Für eine Anfrage können Sie Geschäftsjahr, Beteiligungsstruktur und ungefähre Zahl der Bankbewegungen beschreiben. Bitte senden Sie über öffentliche Kanäle keine vertraulichen Belege.</p>
-    <p><a href="/Kontakt.html">Eignung Ihrer Holding anfragen</a></p>
-    <p><a href="/">Self-Service für Ihre Holding-UG kennenlernen</a></p>
-  </div>
-</section>
+      <section id="abschlussvorbereitung" className="section section--tight" aria-labelledby="abschlussvorbereitung-title">
+        <div className="wrap">
+          <div className="shead reveal">
+            <div className="eyebrow">Checkliste</div>
+            <h2 id="abschlussvorbereitung-title" className="h2">Ihre Holding-UG: Abschlussvorbereitung in drei Schritten</h2>
+            <p className="lede">Ordnen Sie vor der Dateneingabe Gesellschaft, Eröffnungswerte und Bankunterlagen dem betreffenden Geschäftsjahr zu. Mit dieser kurzen Liste halten Sie vorhandene Angaben und offene Punkte fest.</p>
+          </div>
+          <ol className="steps steps--list">
+            {[
+              { t: "Gesellschaft und Geschäftsjahr festhalten", d: "Notieren Sie den Namen Ihrer Holding und das Geschäftsjahr, für das Sie den Abschluss vorbereiten. So ist klar, zu welcher Gesellschaft und welchem Zeitraum Ihre Angaben gehören." },
+              { t: "Eröffnungswerte bereitlegen", d: "Legen Sie vorhandene Unterlagen mit den Eröffnungswerten für dieses Geschäftsjahr bereit. Vermerken Sie gesondert, welche Angaben noch fehlen." },
+              { t: "Bankunterlagen zeitlich zuordnen", d: "Ordnen Sie vorhandene Kontoauszüge und Belege dem Geschäftsjahr zu. Notieren Sie erkennbare Lücken, damit Sie diese vor der Freigabe Ihrer Angaben klären können." }
+            ].map((s, i) =>
+            <li key={s.t} className="step reveal" style={{ transitionDelay: i * 80 + "ms" }}>
+                <div className="step__n" aria-hidden="true">{i + 1}</div>
+                <h3 className="step__t">{s.t}</h3>
+                <p className="step__d">{s.d}</p>
+              </li>
+            )}
+          </ol>
+          <div className="ablauf__control reveal">
+            <Icon name="shieldcheck" size={26} sw={1.7} />
+            <p><b>Zur Orientierung:</b> Die Liste ist kein abschließender Pflichtkatalog. Mirador Tax ist geführte Self-Service-Software. Sie prüfen und bestätigen Ihre Angaben und geben die Ergebnisse frei. Professionelle Leistungen erbringt auf Wunsch die unabhängige Bauer &amp; Weigl Steuerberater PartG mbB auf Grundlage eines separaten Mandats.</p>
+          </div>
+          <div className="ablauf__control reveal">
+            <Icon name="doc" size={26} sw={1.7} />
+            <p><b>Anfrage:</b> Beschreiben Sie Geschäftsjahr, Beteiligungsstruktur und die ungefähre Zahl der Bankbewegungen. Bitte senden Sie über öffentliche Kanäle keine vertraulichen Belege.</p>
+          </div>
+          <div className="section__cta reveal">
+            <a className="btn btn--accent" href="/Kontakt.html">Eignung Ihrer Holding anfragen</a>
+            <a className="btn btn--ghost" href="/">Self-Service für Ihre Holding-UG kennenlernen</a>
+          </div>
+        </div>
+      </section>
       <WechselSection />
       <CtaBanner onSurvey={onSurvey} priceFrom={priceFrom} />
     </>
