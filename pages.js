@@ -355,10 +355,11 @@ function PreisePage({
   }, /*#__PURE__*/React.createElement(PovGroup, {
     label: "Limits",
     items: p.limits
-  })), /*#__PURE__*/React.createElement("button", {
+  })), /*#__PURE__*/React.createElement("a", {
     className: "btn btn--accent btn--block btn--lg",
-    onClick: onSurvey
-  }, "Angebot anfordern")))), /*#__PURE__*/React.createElement("p", {
+    href: "Kontakt.html",
+    "aria-label": `Angebot anfragen: ${p.name}`
+  }, "Angebot anfragen")))), /*#__PURE__*/React.createElement("p", {
     className: "price-endpreis"
   }, /*#__PURE__*/React.createElement(Icon, {
     name: "check",
@@ -401,14 +402,12 @@ function PreisePage({
     val: val
   }))))), /*#__PURE__*/React.createElement("tr", {
     className: "ptable__cta-row"
-  }, /*#__PURE__*/React.createElement("td", null), PKG.map((p, i) => /*#__PURE__*/React.createElement("td", {
+  }, /*#__PURE__*/React.createElement("td", null), PKG.map(p => /*#__PURE__*/React.createElement("td", {
     key: p
-  }, i < 3 ? /*#__PURE__*/React.createElement("button", {
+  }, /*#__PURE__*/React.createElement("a", {
     className: "btn btn--ghost btn--block",
-    onClick: onSurvey
-  }, "Angebot") : /*#__PURE__*/React.createElement("a", {
-    className: "btn btn--ghost btn--block",
-    href: "Kontakt.html"
+    href: "Kontakt.html",
+    "aria-label": `Anfragen: ${p}`
   }, "Anfragen"))))))))), /*#__PURE__*/React.createElement("section", {
     className: "section section--tight"
   }, /*#__PURE__*/React.createElement("div", {

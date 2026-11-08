@@ -236,7 +236,7 @@ function PreisePage({ onSurvey, priceFrom }) {
                     <PovGroup label="Limits" items={p.limits} />
                   </div>
                 )}
-                <button className="btn btn--accent btn--block btn--lg" onClick={onSurvey}>Angebot anfordern</button>
+                <a className="btn btn--accent btn--block btn--lg" href="Kontakt.html" aria-label={`Angebot anfragen: ${p.name}`}>Angebot anfragen</a>
               </div>
             )}
           </div>
@@ -269,11 +269,9 @@ function PreisePage({ onSurvey, priceFrom }) {
                 )}
                 <tr className="ptable__cta-row">
                   <td></td>
-                  {PKG.map((p, i) =>
+                  {PKG.map((p) =>
                     <td key={p}>
-                      {i < 3
-                        ? <button className="btn btn--ghost btn--block" onClick={onSurvey}>Angebot</button>
-                        : <a className="btn btn--ghost btn--block" href="Kontakt.html">Anfragen</a>}
+                      <a className="btn btn--ghost btn--block" href="Kontakt.html" aria-label={`Anfragen: ${p}`}>Anfragen</a>
                     </td>
                   )}
                 </tr>
