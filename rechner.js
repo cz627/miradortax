@@ -58,7 +58,7 @@ function Rechner({
     className: "h2"
   }, "Was kostet Ihre Holding bei Mirador?"), /*#__PURE__*/React.createElement("p", {
     className: "lede"
-  }, "Berechnen Sie Ihren Festpreis \u2013 und sehen Sie, wie viel Sie gegen\xFCber einem klassischen Steuerberater sparen.")), /*#__PURE__*/React.createElement("div", {
+  }, "Sch\xE4tzen Sie den Jahrespreis f\xFCr Ihre Holding anhand Ihrer Angaben.")), /*#__PURE__*/React.createElement("div", {
     className: "calc reveal"
   }, /*#__PURE__*/React.createElement("div", {
     className: "calc__panel"
@@ -244,9 +244,12 @@ function Rechner({
   }, r.onceTotal > 0 ? "zzgl. " + fmtEUR(r.onceTotal) + " € einmalig (Einrichtung / Eröffnungsbilanz" + (r.discountOnce > 0 ? ", abzgl. Empfehlungs-Rabatt" : "") + ")" : "inkl. " + fmtEUR(r.discountOnce) + " € Empfehlungs-Rabatt (einmalig)"), /*#__PURE__*/React.createElement("button", {
     className: "btn btn--accent btn--block btn--lg",
     onClick: onSurvey
-  }, "Unverbindliches Angebot anfordern ", /*#__PURE__*/React.createElement(Arrow, null)), /*#__PURE__*/React.createElement("p", {
+  }, "Zur Preissch\xE4tzung ", /*#__PURE__*/React.createElement(Arrow, null)), /*#__PURE__*/React.createElement("p", {
     className: "calc__fineprint"
-  }, "Unverbindlich \xB7 keine Stundenabrechnung \xB7 keine versteckten Kosten")))), /*#__PURE__*/React.createElement("p", {
+  }, "F\xFCr ein pers\xF6nliches Angebot nutzen Sie die ", /*#__PURE__*/React.createElement("a", {
+    className: "textlink",
+    href: "Kontakt.html"
+  }, "Kontaktseite"), ".")))), /*#__PURE__*/React.createElement("p", {
     className: "calc__footnote reveal"
   }, "* Referenzwert auf Basis der Mittelgeb\xFChren nach StBVV f\xFCr eine vergleichbare Holding. Mirador Tax ist eine Software zur Selbsterstellung und ersetzt keine individuelle Steuerberatung.")));
 }

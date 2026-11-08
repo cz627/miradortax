@@ -39,7 +39,7 @@ function Rechner({ onSurvey }) {
         <div className="shead shead--center reveal" style={{ marginBottom: 36 }}>
           <div className="eyebrow" style={{ justifyContent: "center", display: "flex" }}>Preisrechner</div>
           <h2 className="h2">Was kostet Ihre Holding bei Mirador?</h2>
-          <p className="lede">Berechnen Sie Ihren Festpreis – und sehen Sie, wie viel Sie gegenüber einem klassischen Steuerberater sparen.</p>
+          <p className="lede">Schätzen Sie den Jahrespreis für Ihre Holding anhand Ihrer Angaben.</p>
         </div>
 
         <div className="calc reveal">
@@ -153,8 +153,8 @@ function Rechner({ onSurvey }) {
                   </p>
                 }
 
-                <button className="btn btn--accent btn--block btn--lg" onClick={onSurvey}>Unverbindliches Angebot anfordern <Arrow /></button>
-                <p className="calc__fineprint">Unverbindlich · keine Stundenabrechnung · keine versteckten Kosten</p>
+                <button className="btn btn--accent btn--block btn--lg" onClick={onSurvey}>Zur Preisschätzung <Arrow /></button>
+                <p className="calc__fineprint">Für ein persönliches Angebot nutzen Sie die <a className="textlink" href="Kontakt.html">Kontaktseite</a>.</p>
               </>
             }
           </div>
