@@ -179,7 +179,7 @@ function BlogPostPage({ onSurvey, priceFrom }) {
           )}
 
           {slug === "kosten-jahresabschluss" && (
-            <p><a className="textlink" href="Preise.html">Preise und Angebotsrechner für Ihre Holding</a></p>
+            <p><a className="textlink" href="Preise.html">Preise und Preisschätzung für Ihre Holding</a></p>
           )}
 
           <div className="article__disclaimer">

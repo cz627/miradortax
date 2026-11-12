@@ -193,7 +193,7 @@ function BlogPostPage({
   }, "Checkliste zur Abschlussvorbereitung f\xFCr Ihre Holding-UG"))), slug === "kosten-jahresabschluss" && /*#__PURE__*/React.createElement("p", null, /*#__PURE__*/React.createElement("a", {
     className: "textlink",
     href: "Preise.html"
-  }, "Preise und Angebotsrechner f\xFCr Ihre Holding")), /*#__PURE__*/React.createElement("div", {
+  }, "Preise und Preissch\xE4tzung f\xFCr Ihre Holding")), /*#__PURE__*/React.createElement("div", {
     className: "article__disclaimer"
   }, "Dieser Beitrag dient der allgemeinen Information und stellt keine individuelle steuerliche Beratung dar. Mirador Tax ist keine Steuerkanzlei; Vorbehaltsaufgaben werden von Partner-Steuerberatern erbracht."))), /*#__PURE__*/React.createElement("section", {
     className: "section section--tight",
