@@ -104,7 +104,7 @@ function Rechner({ onSurvey }) {
                     <div className="calc__bar"><i className="other" style={{ width: "100%" }}></i></div>
                   </div>
                 </div>
-                <a className="btn btn--accent btn--block btn--lg" href="mailto:angebot@miradortax.de?subject=Angebotsanfrage%20Holding">Persönliches Angebot anfragen <Arrow /></a>
+                <a className="btn btn--accent btn--block btn--lg" href="Kontakt.html">Persönliches Angebot anfragen <Arrow /></a>
                 <p className="calc__fineprint">Antwort innerhalb eines Werktags · ohne Pauschal-Grenzen</p>
               </> :
 

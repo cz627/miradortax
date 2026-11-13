@@ -180,7 +180,7 @@ function Rechner({
     }
   })))), /*#__PURE__*/React.createElement("a", {
     className: "btn btn--accent btn--block btn--lg",
-    href: "mailto:angebot@miradortax.de?subject=Angebotsanfrage%20Holding"
+    href: "Kontakt.html"
   }, "Pers\xF6nliches Angebot anfragen ", /*#__PURE__*/React.createElement(Arrow, null)), /*#__PURE__*/React.createElement("p", {
     className: "calc__fineprint"
   }, "Antwort innerhalb eines Werktags \xB7 ohne Pauschal-Grenzen")) : /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("div", {
