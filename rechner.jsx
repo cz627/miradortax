@@ -111,7 +111,7 @@ function Rechner({ onSurvey }) {
             <>
                 <div className="calc__plan-badge"><Icon name="check" size={13} sw={3} /> {r.plan}</div>
                 <div className="calc__price">{fmtEUR(r.yearly)} €<span> / Jahr</span></div>
-                <div className="calc__monthly">entspricht ca. <b>{fmtEUR(r.monthly)} € / Monat</b>{!showBreakdown && " · alles inklusive"}</div>
+                <div className="calc__monthly">entspricht ca. <b>{fmtEUR(r.monthly)} € / Monat</b></div>
 
                 {showBreakdown &&
               <div className="calc__breakdown">

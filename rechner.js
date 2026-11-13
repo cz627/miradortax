@@ -193,7 +193,7 @@ function Rechner({
     className: "calc__price"
   }, fmtEUR(r.yearly), " \u20AC", /*#__PURE__*/React.createElement("span", null, " / Jahr")), /*#__PURE__*/React.createElement("div", {
     className: "calc__monthly"
-  }, "entspricht ca. ", /*#__PURE__*/React.createElement("b", null, fmtEUR(r.monthly), " \u20AC / Monat"), !showBreakdown && " · alles inklusive"), showBreakdown && /*#__PURE__*/React.createElement("div", {
+  }, "entspricht ca. ", /*#__PURE__*/React.createElement("b", null, fmtEUR(r.monthly), " \u20AC / Monat")), showBreakdown && /*#__PURE__*/React.createElement("div", {
     className: "calc__breakdown"
   }, /*#__PURE__*/React.createElement("div", {
     className: "calc__bd-row"
