@@ -72,7 +72,7 @@ function LeistungenPage({
   return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(PageHero, {
     eyebrow: "Leistungen",
     title: "Den Jahresabschluss Ihrer Holding selbst erstellen",
-    lede: /*#__PURE__*/React.createElement(React.Fragment, null, "Mirador Tax f\xFChrt Sie Schritt f\xFCr Schritt durch die Selbsterstellung. Sie pr\xFCfen und best\xE4tigen Ihre Angaben. F\xFCr fachliche Leistungen k\xF6nnen Sie die unabh\xE4ngige Partnerkanzlei Bauer & Weigl Steuerberater PartG mbB separat beauftragen. ", /*#__PURE__*/React.createElement("a", {
+    lede: /*#__PURE__*/React.createElement(React.Fragment, null, "Mirador Tax f\xFChrt Sie Schritt f\xFCr Schritt durch die Selbsterstellung. Sie pr\xFCfen und best\xE4tigen Ihre Angaben. Die Software bereitet Bilanz und GuV aus Ihren best\xE4tigten Angaben vor. F\xFCr fachliche Leistungen k\xF6nnen Sie die unabh\xE4ngige Partnerkanzlei Bauer & Weigl Steuerberater PartG mbB separat beauftragen. ", /*#__PURE__*/React.createElement("a", {
       className: "textlink",
       href: "Kontakt.html"
     }, "Fragen zum Leistungsumfang stellen"))
