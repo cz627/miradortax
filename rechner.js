@@ -183,7 +183,7 @@ function Rechner({
     href: "Kontakt.html"
   }, "Pers\xF6nliches Angebot anfragen ", /*#__PURE__*/React.createElement(Arrow, null)), /*#__PURE__*/React.createElement("p", {
     className: "calc__fineprint"
-  }, "Antwort innerhalb eines Werktags \xB7 ohne Pauschal-Grenzen")) : /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("div", {
+  }, "ohne Pauschal-Grenzen")) : /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("div", {
     className: "calc__plan-badge"
   }, /*#__PURE__*/React.createElement(Icon, {
     name: "check",

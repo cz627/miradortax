@@ -105,7 +105,7 @@ function Rechner({ onSurvey }) {
                   </div>
                 </div>
                 <a className="btn btn--accent btn--block btn--lg" href="Kontakt.html">Persönliches Angebot anfragen <Arrow /></a>
-                <p className="calc__fineprint">Antwort innerhalb eines Werktags · ohne Pauschal-Grenzen</p>
+                <p className="calc__fineprint">ohne Pauschal-Grenzen</p>
               </> :
 
             <>
